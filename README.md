@@ -2,7 +2,6 @@
 
 # espektro
 
-<<<<<<< HEAD
 #  without running in local machine
 
 1. clone or pull
@@ -20,6 +19,3 @@
 **We will use StdImage instead of native django ImageField**
 
 keep pushing :blush:
-=======
-python manage.py runserver
->>>>>>> cbe894ca6f8f9a8044989c33725fb287f27c39c0
