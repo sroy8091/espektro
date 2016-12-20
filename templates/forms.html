@@ -1,0 +1,39 @@
+<html>
+  <body>
+    <form action="" method="post" style="text-align:left;">
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+<div class="fieldWrapper">
+    {{ form.full_name.errors }}
+    <label for="{{ form.full_name.id_for_label }}" placeholder="your name">FULL NAME:</label>
+    {{ form.full_name }}
+</div>
+<div class="fieldWrapper">
+    {{ form.college_Name.errors }}
+    <label for="{{ form.college_Name.id_for_label }}">COLLEGE NAME</label>
+    {{ form.college_Name }}
+</div>
+<div class="fieldWrapper">
+    {{ form.college_Address.errors }}
+    <label for="{{ form.college_Address.id_for_label }}">COLLEGE address:</label>
+    {{ form.college_Address }}
+</div>
+<div class="fieldWrapper">
+    {{ form.Email_Address.errors }}
+    <label for="{{ form.Email_Address.id_for_label }}">EMAIL ID</label>
+    {{ form.Email_Address }}
+</div>
+<div class="fieldWrapper">
+    {{ form.facebook_Link.errors }}
+    <label for="{{ form.facebook_Link.id_for_label }}">FACEBOOK ID</label>
+    {{ form.facebook_Link }}
+</div>
+<div class="fieldWrapper">
+    {{ form.innitaitives.errors }}
+    <label for="{{ form.innitaitives.id_for_label }}">INNITIATIVES</label>
+    {{ form.innitaitives }}
+</div>
+      <input type="submit" value="sign up"/>
+    </form>
+  </body>
+</html>
