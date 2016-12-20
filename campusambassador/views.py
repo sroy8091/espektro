@@ -19,4 +19,4 @@ def get_name(request):
         'form' : form
     }
 
-    return render(request, 'ambassador/forms.html' ,context)
+    return render(request, 'forms.html' ,context)
