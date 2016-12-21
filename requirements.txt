@@ -1,0 +1,9 @@
+dj-database-url==0.4.1
+Django==1.9
+django-stdimage==2.3.3
+gunicorn==19.6.0
+MySQL-python==1.2.5
+Pillow==3.4.2
+progressbar2==3.11.0
+python-utils==2.0.1
+six==1.10.0
