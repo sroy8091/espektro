@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'data',
     'campusambassador.apps.CampusambassadorConfig',
     'django.contrib.admin',
     'django.contrib.auth',
