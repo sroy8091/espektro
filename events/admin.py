@@ -12,7 +12,7 @@ admin.site.register(Events, EventsAdmin)
 
 class Event_CoordinatorAdmin(admin.ModelAdmin):
     list_display = ('CoordinatorName', 'CoordinatorImage',
-                    'CoordinatorEmail', 'CoordinatorEvent')
+                    'CoordinatorEmail','CoordinatorPhone', 'CoordinatorEvent')
 admin.site.register(Event_Coordinator, Event_CoordinatorAdmin)
 
 
