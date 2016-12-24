@@ -1,5 +1,8 @@
 from django.db import models
+from django.core.exceptions import ValidationError
+from django.core.validators import RegexValidator
 from stdimage import StdImageField
+
 
 # Create your models here.
 
@@ -14,7 +17,7 @@ class Events(models.Model):
 
 	EventName = models.CharField(max_length=200)
 	EventImage = StdImageField(upload_to='event/event_image', variations={'thumbnail':(650,350, True)})
-	tagline = models.TextField(default='Rocking Tagline here', null=True)
+	tagline = models.TextField(default='Tagline here', null=True)
 	EventDetails = models.TextField(null=True)
 	EventDate = models.DateField()
 	StartTime = models.TimeField(null =True)
@@ -27,7 +30,7 @@ class Event_Coordinator(models.Model):
 	CoordinatorName = models.CharField(max_length=200)
 	CoordinatorImage = StdImageField(upload_to='event/coordinator_image', variations={'thumbnail':(150, 120, True)})
 	CoordinatorEmail = models.EmailField()
-	# CoordinatorPhone = PhoneNumberField()
+	CoordinatorPhone = models.CharField(default=1234567890, max_length=10, validators=[RegexValidator(regex='^[789]\d{9}$', message='Please enter a valid phone number', code='invalid_phonenumber'),])
 	CoordinatorEvent = models.ForeignKey(Events)
 	
 
