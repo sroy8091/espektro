@@ -30,7 +30,7 @@ class Event_Coordinator(models.Model):
 	CoordinatorName = models.CharField(max_length=200)
 	CoordinatorImage = StdImageField(upload_to='event/coordinator_image', variations={'thumbnail':(150, 120, True)})
 	CoordinatorEmail = models.EmailField()
-	CoordinatorPhone = models.CharField(default=1234567890, max_length=10, validators=[RegexValidator(regex='^[789]\d{9}$', message='Please enter a valid phone number', code='invalid_phonenumber'),])
+	CoordinatorPhone = models.CharField(default=1234567890, max_length=10, validators=[RegexValidator(regex='^[789]\d{9}$', message='Please enter a valid phone number WITHOUT any PREFIX', code='invalid_phonenumber'),])
 	CoordinatorEvent = models.ForeignKey(Events)
 	
 
