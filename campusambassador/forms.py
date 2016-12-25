@@ -6,7 +6,7 @@ class SignupForm(forms.ModelForm):
     class Meta:
         """docstring for Meta."""
         model=Signup
-        fields = ['full_name' ,'college_Name' ,'college_Address','Email_Address','facebook_Link', 'innitaitives']
+        fields = ['full_name' ,'college_Name' ,'college_Address','Email_Address','PhoneNo','facebook_Link', 'innitaitives']
         def __init__(self, arg):
             super(Meta, self).__init__()
             self.arg = arg
