@@ -1,5 +1,5 @@
-{% extends 'data/base.html' %}
-{% block title%} Register {% endblock %}
+{% extends 'profile/base.html' %}
+{% block title%} Edit Profile {% endblock %}
 
 {% block body %}
 
@@ -7,9 +7,9 @@
     <div class="col-sm-12 col-md-7">
         <div class="panel-body">
 
-            <form class="form-horizontal" action="" method="POST" enctype="multipart/form-data">
+            <form class="form-horizontal" action="." method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                {% include 'data/form-template.html' %}
+                {% include 'profile/form-template.html' %}
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="submit" class="btn btn-success">Submit</button>

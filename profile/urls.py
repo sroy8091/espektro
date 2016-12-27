@@ -4,7 +4,7 @@ from django.contrib.auth import login
 
 from . import views
 
-app_name='data'
+app_name='profile'
 
 urlpatterns = [
 
@@ -13,5 +13,8 @@ urlpatterns = [
 
     # /data/login
     url(r'^login/$', views.login_view, name='login'),
+
+    # /profile/login
+    url(r'^edit/$', views.edit, name='edit'),
     
 ]
