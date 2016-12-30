@@ -12,6 +12,19 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 
+
+#Default views added 29/12/16.
+from django.core.urlresolvers import reverse_lazy
+LOGIN_REDIRECT_URL = reverse_lazy('profile:edit')
+LOGIN_URL = reverse_lazy('profile:login')
+LOGOUT_URL = reverse_lazy('profile:logout')
+
+
+
+
+# For fake-sending mails
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
