@@ -5,6 +5,7 @@ from django.core.mail import send_mail
 from django.views.generic import View
 from .forms import UserForm, LoginForm, UserEditForm, UserDetailEditForm, team_create_form, TeamInviteForm,TeamAcceptForm
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
@@ -68,6 +69,7 @@ def login_view(request):
 
 
 
+
 @login_required
 def edit(request):
     p=request.user
@@ -114,11 +116,14 @@ def send_invite(request, id):
         if form.is_valid():
             cd = form.cleaned_data
             leader = request.user
-            secret_key = get_team.secret_key
-            subject = "Invitation to join team for Espektro"
-            message = "Join us! {}".format(get_team.get_invite_url()) 
-            send_mail(subject, message, 'lovely@hotmall.com', [cd['email']], fail_silently=False)
-            sent = True
+            if leader == get_team.leader:
+                messages.error("Sorry! You are not allowed to send this invite.")
+            else:
+                secret_key = get_team.secret_key
+                subject = "Invitation to join team for Espektro"
+                message = "Join us! {}".format(get_team.get_invite_url()) 
+                send_mail(subject, message, 'lovely@hotmall.com', [cd['email']], fail_silently=False)
+                sent = True
     else:
         form = TeamInviteForm()
     return render(request, 'profile/invite.html', {'get_team':get_team, 'form':form, 'sent':sent})
@@ -126,14 +131,22 @@ def send_invite(request, id):
 @login_required
 def accept_invite(request, id, secret_key):
     get_team = get_object_or_404(Team, id=id, secret_key=secret_key)
-    accepted = False
     if request.method == 'POST':
         form = TeamAcceptForm(request.POST)
         get_user=request.user
         get_user=get_object_or_404(UserDetail, user=get_user)
-        get_team.members.add(get_user)
-        print "I am in!"
-        accepted = True
+        if(get_user in get_team.members.all()):
+            messages.error(request, "You are already a part of this team.")
+        elif(len(get_team.members.all()) > 1): #replace >1 with >= no of participants in team.event
+            messages.error(request, "This team already has "+ str(len(get_team.members.all())) + " members.")
+        else:
+            get_team.members.add(get_user)
+            messages.success(request, "You have been added to this team.")
     else:
         form = TeamAcceptForm()
-    return render(request, 'profile/teamaccept.html', {'form': form, 'accepted':accepted})
+        
+    return render(request, 'profile/teamaccept.html', {'form': form})
+
+class TeamDetail(generic.DetailView):
+    model = Team
+    template_name = 'profile/team_detail.html'

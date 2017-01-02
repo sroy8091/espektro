@@ -24,7 +24,7 @@ class UserDetail(models.Model):
 	year = models.CharField(max_length=1, choices=YEAR_CHOICES)
 
 	def __str__(self):
-		return 'Profile for ' + self.user.username + ' from ' + self.college 
+		return self.user.username + ' from ' + self.college 
 
 
 
@@ -35,7 +35,7 @@ class Team(models.Model):
 	leader = models.ForeignKey(settings.AUTH_USER_MODEL)
 	number_of_members = models.DecimalField(max_digits=1, decimal_places=0, default=6)
 	secret_key = models.CharField(max_length=20)
-	members = models.ManyToManyField(UserDetail)
+	members = models.ManyToManyField(UserDetail, related_name='my_teams')
 
 	def __str__(self):
 		return 'Team ' + self.name + ' for ' + self.event

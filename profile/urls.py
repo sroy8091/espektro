@@ -2,7 +2,6 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.auth import login
 from django.contrib.auth import views as authviews
-
 from . import views
 
 app_name='profile'
@@ -27,5 +26,8 @@ urlpatterns = [
 
     # /profile/team/2/accept/rde3g7f95sdfgilejj56
     url(r'^team/(?P<id>[0-9]+)/accept/(?P<secret_key>[\w]{20})/$', views.accept_invite, name='accept'),
+
+    # /profile/team/2/
+    url(r'^team/(?P<pk>[0-9]+)/$', views.TeamDetail.as_view(), name='team_detail'),
     
 ]

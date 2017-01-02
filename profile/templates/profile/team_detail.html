@@ -1,0 +1,15 @@
+{% extends 'profile/base.html' %}
+{% block title%} Team Details {% endblock %}
+
+{% block body %}
+
+<h1> {{ team }} </h1>
+<h2> Leader: {{ team.leader }} </h2>
+Event: {{ team.event }} <br>
+Participants({{ team.number_of_members}}): <br>
+<div align="center">
+    {% for m in team.members.all %}
+        {{ m }} <br>
+    {% endfor %}
+</div>    
+{% endblock %}
