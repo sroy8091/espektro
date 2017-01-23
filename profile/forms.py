@@ -32,7 +32,7 @@ class team_create_form(forms.ModelForm):
 		fields = ('name', 'event')
 
 class TeamInviteForm(forms.Form):
-	#secret_key = forms.CharField(label='Secret Key', max_length=20)
+
 	email = forms.EmailField()
 
 class TeamAcceptForm(forms.Form):

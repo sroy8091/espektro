@@ -5,6 +5,7 @@ from django.core.mail import send_mail
 from django.views.generic import View
 from .forms import UserForm, LoginForm, UserEditForm, UserDetailEditForm, team_create_form, TeamInviteForm,TeamAcceptForm
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
@@ -69,6 +70,7 @@ def login_view(request):
 
 
 
+
 @login_required
 def edit(request):
     p=request.user
@@ -84,6 +86,7 @@ def edit(request):
         #show details
         user_form = UserEditForm(instance=request.user)
         user_detail_form = UserDetailEditForm(instance=p.userdetail)
+
 
     return render(request, 'profile/edit.html', { 'user_form':user_form, 'user_detail_form':user_detail_form})
 
@@ -106,6 +109,9 @@ def team_create(request):
         form = team_create_form()
     return render(request, 'profile/teamcreate.html', { 'form' : form, 'created' : created})
 
+
+
+
 @login_required
 def send_invite(request, id):
     get_team = get_object_or_404(Team, id=id)
@@ -115,11 +121,15 @@ def send_invite(request, id):
         if form.is_valid():
             cd = form.cleaned_data
             leader = request.user
-            secret_key = get_team.secret_key
-            subject = "Invitation to join team for Espektro"
-            message = "Join us! {}".format(get_team.get_invite_url()) 
-            send_mail(subject, message, 'lovely@hotmall.com', [cd['email']], fail_silently=False)
-            sent = True
+            if not leader == get_team.leader:
+                messages.error("Sorry! You are not allowed to send this invite.")
+            else:
+                secret_key = get_team.secret_key
+                subject = "Invitation to join team for Espektro"
+                message = "Join us! {}".format(get_team.get_invite_url()) 
+                send_mail(subject, message, 'lovely@hotmall.com', [cd['email']], fail_silently=False)
+                sent = True
+
     else:
         form = TeamInviteForm()
     return render(request, 'profile/invite.html', {'get_team':get_team, 'form':form, 'sent':sent})

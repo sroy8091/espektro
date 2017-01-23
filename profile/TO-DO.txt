@@ -1,0 +1,22 @@
+
+-- to do --
+
+//Change team model to integrate foreign key Event
+
+! Team acceptance related restrictions
+// If participant already a member [[ Done ]]
+// If participant already participating in the event, as part of another team --show warning? [[ no immediate necessity]]
+// If team already has enough members  [[ Done---modify variable ]]
+
+// Show a list of all my_teams (/profile/team)
+// In last, show separately my_teams and teams_i_lead
+// Restrict non-leaders from inviting
+// Restrict non-members from viewing
+
+// Show me a list of all the teams I've been invited in [[  ]]
+// Delete Member button
+// Leave team button
+
+// In profile: events I've reigstered for, team or individually
+
+// Add profile:logout view
