@@ -1,5 +1,5 @@
 {% extends 'profile/base.html' %}
-{% block title%} Login {% endblock %}
+{% block title%} Team Invite {% endblock %}
 
 {% block body %}
 
@@ -10,8 +10,10 @@
             <form class="form-horizontal" action="." method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% include 'profile/form-template.html' %}
-                <input type="hidden" name="next" value="{{ next }}" />
                 <div class="form-group">
+                {% if sent %}
+                    <b> You have successfully sent a team invitation to {{form.email.value}}!</b>
+                {% endif %}
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="submit" class="btn btn-success">Submit</button>
                     </div>

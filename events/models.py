@@ -7,7 +7,7 @@ from stdimage import StdImageField
 # Create your models here.
 
 
-class Events(models.Model):
+class Event(models.Model):
 	EventType_IN_CHOICES = (
         ('Exotica', 'Exotica'),
         ('Techtix', 'Techtix'),
@@ -31,7 +31,7 @@ class Event_Coordinator(models.Model):
 	CoordinatorImage = StdImageField(upload_to='event/coordinator_image', variations={'thumbnail':(150, 120, True)})
 	CoordinatorEmail = models.EmailField()
 	CoordinatorPhone = models.CharField(default=1234567890, max_length=10, validators=[RegexValidator(regex='^[789]\d{9}$', message='Please enter a valid phone number WITHOUT any PREFIX', code='invalid_phonenumber'),])
-	CoordinatorEvent = models.ForeignKey(Events)
+	CoordinatorEvent = models.ForeignKey(Event)
 	
 
 	def __str__(self):

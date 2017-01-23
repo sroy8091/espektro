@@ -2,6 +2,8 @@ from __future__ import unicode_literals
 from django.conf import settings
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
+from events.models import Event
 
 User._meta.get_field('email').blank = False
 
@@ -21,6 +23,7 @@ class UserDetail(models.Model):
 	city = models.CharField(max_length=20)
 	department = models.CharField(max_length=100)
 	year = models.CharField(max_length=1, choices=YEAR_CHOICES)
+	#event = models.ManyToManyField(Event)
 
 	def __str__(self):
 		return 'Profile for ' + self.user.username + ' from ' + self.college 
@@ -30,10 +33,15 @@ class UserDetail(models.Model):
 #Team model.
 class Team(models.Model):
 	name = models.CharField(max_length=20,unique=True)
-	event = models.CharField(max_length=20) # models.ForeignKey(Event, on_delete=models.CASCADE)
+	#event = models.CharField(max_length=20,blank=True)
+	event = models.ForeignKey(Event, on_delete=models.CASCADE)
 	leader = models.ForeignKey(settings.AUTH_USER_MODEL)
-	secretkey = models.CharField(max_length=20)
+	number_of_members = models.DecimalField(max_digits=1, decimal_places=0, default=6)
+	secret_key = models.CharField(max_length=20)
 	members = models.ManyToManyField(UserDetail)
 
 	def __str__(self):
-		return 'Team ' + self.name + ' for ' + self.event
+		return 'Team ' + self.name + ' for ' #+ self.event
+
+	def get_invite_url(self):
+		return reverse('profile:accept', kwargs={'id':self.id, 'secret_key':self.secret_key})

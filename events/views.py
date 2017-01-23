@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from events.models import Events, Event_Coordinator
+from events.models import Event, Event_Coordinator
 
 # Create your views here.
 
