@@ -3,10 +3,8 @@ from django.conf import settings
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
-<<<<<<< HEAD
 from events.models import Event
-=======
->>>>>>> 3c379934695e8c33240cd8543d06a134fa22da3f
+
 
 User._meta.get_field('email').blank = False
 
