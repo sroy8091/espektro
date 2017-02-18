@@ -9,7 +9,7 @@ class Signup(models.Model):
     full_name= models.CharField(max_length=30)
     college_Name = models.CharField(max_length=50)
     gender = models.CharField(max_length=6, blank=True, choices=gender_choices, default='Male')
-    Email_Address = models.EmailField()
+    Email_Address = models.EmailField(unique=True)
     PhoneNo = models.CharField(max_length=10, validators=[RegexValidator(regex='^[789]\d{9}$', message='Please enter a valid phone number WITHOUT any PREFIX', code='invalid_phonenumber'),])
     facebook_Link= models.URLField(null=True, blank=True)
     def __str__(self):
