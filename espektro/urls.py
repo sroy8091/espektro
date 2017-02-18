@@ -25,9 +25,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^ca/','campusambassador.views.get_name',name="ambassador"),
     url(r'^profile/', include('profile.urls')),
-<<<<<<< HEAD
-=======
-    #see profile.views for info: url(r'^accounts/login/', 'profile.views.redirect_to_login'),
->>>>>>> 3c379934695e8c33240cd8543d06a134fa22da3f
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
