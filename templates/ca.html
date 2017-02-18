@@ -56,19 +56,28 @@
 
             <form name="registerForm" id="form_contents" method="POST">
                 {% csrf_token %}
+
                 <label for='{{ form.full_name }}'>Name *</label>
                 {{ form.full_name }}
+                {{ form.full_name.errors }}
                 <label for='{{ form.college_Name }}'>College Name *</label>
                 {{ form.college_Name }}
+                {{ form.college_Name.errors }}
+
                 <label for='{{ form.Email_Address }}'>E-mail address *</label>
                 {{ form.Email_Address }}
+                {{ form.Email_Address.errors }}
+
                 <label for='{{ form.PhoneNo }}'>Phone Number *</label>
                 {{ form.PhoneNo }}
+                {{ form.PhoneNo.errors }}
                 <label for='{{ form.facebook_Link }}'>Facebook Id Url *</label>
                 {{ form.facebook_Link }}
+                {{ form.facebook_Link.errors }}
 
                 <label for='{{ form.gender }}'>Gender *</label>
                 {{ form.gender }}
+                {{ form.gender.errors }}
                 <!-- <p class="password-rules">Your password should contain at least 8 characters and 1 number.</p> -->
                 {#      <div class="radio-question">#}
                 {#        <p>Gender</p>#}

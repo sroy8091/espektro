@@ -166,11 +166,8 @@ input:focus {
     background: #5ec190;
 }
 
-.error-message {
+ul.errorlist {
     color: red;
-    margin-top: -50px;
-    margin-bottom: 20px;
-    font-size: 15px;
 }
 
 @media only screen and (max-width: 479px) and (min-width: 320px) {
