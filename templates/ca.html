@@ -1,0 +1,87 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Campus Ambassodor</title>
+    {% load staticfiles %}
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="{% static 'css/ca.css' %}" rel="stylesheet" type="text/css">
+    <script src="{% static 'js/ca.js' %}" rel="stylesheet" type="text/javascript"></script>
+</head>
+<body>
+<div class="bg1">
+    <section>
+        <h1 style="margin-top:-5.5vw"><p style="font-family: 'Last_King_Quest';font-size:6vw;">Espektro'17</p>
+            <p style="font-family: 'DK Midnight Chalker';font-size:3vw; letter-spacing:.5vw;color:#da9b1e;">Campus
+                Ambassador Programme</p></h1>
+    </section>
+</div>
+<div class="bg2">
+    <section class="box">
+
+        <center><h2 style="color:#da9b1e">ROLE OF A CAMPUS AMBASSADOR</h2></center>
+        <h4>The Campus Ambassador program has been undertaken by <strong>Espektro KGEC</strong> to incorporate
+            participation from students
+            spread across the state, specially the outskirts of Kolkata</h4>
+        <h4>As a Campus Ambassador you shall be co-ordinating with Espektro to ensure maximum participation from your
+            college through
+        </h4>
+        <ul class="pad">
+            <li>Online publicity of <strong>Espektro</strong> by sharing each and every event post shared in the pages
+                of
+                Espektro KGEC and Tectix KGEC in respective facebook pages and groups
+            </li>
+            <li>Promoting ESPEKTRO, KGEC in your campus</li>
+            <li>Promoting our events through the various communication channels (fb page, online notice board, word of
+                mouth etc.) in your campus
+            </li>
+            <li>Ensuring good participation number from your college in our events</li>
+            <li>Sharing each and every event, post shared in the page Espektro, KGEC and TECHTIX, KGEC in respective
+                Whatsapp groups and FB groups.
+            </li>
+        </ul>
+        <center><h2 style="color:#da9b1e">Incentives for CAs:</h2></center>
+        <ul class="pad">
+            <li>Certificate from Espektro,KGEC.</li>
+            <li>Exciting Goodies and leverages during participation.</li>
+            <li>Prizes worth 5000 rupees on being the best among all CAs.</li>
+        </ul>
+    </section>
+
+</div>
+
+
+<div class="bg3">
+    <div class="form-container">
+        <center>
+            <h2 class="form_heading">REGISTRATION FORM</h2>
+
+            <form name="registerForm" id="form_contents" method="POST">
+                {% csrf_token %}
+                <label for='{{ form.full_name }}'>Name *</label>
+                {{ form.full_name }}
+                <label for='{{ form.college_Name }}'>College Name *</label>
+                {{ form.college_Name }}
+                <label for='{{ form.Email_Address }}'>E-mail address *</label>
+                {{ form.Email_Address }}
+                <label for='{{ form.PhoneNo }}'>Phone Number *</label>
+                {{ form.PhoneNo }}
+                <label for='{{ form.facebook_Link }}'>Facebook Id Url *</label>
+                {{ form.facebook_Link }}
+
+                <label for='{{ form.gender }}'>Gender *</label>
+                {{ form.gender }}
+                <!-- <p class="password-rules">Your password should contain at least 8 characters and 1 number.</p> -->
+                {#      <div class="radio-question">#}
+                {#        <p>Gender</p>#}
+                {#        <input class="radio-input" type="radio" name="media" value="Male" /> Male <br>#}
+                {#        <input class="radio-input" type="radio" name="media" value="Female" /> Female <br>#}
+                {#      </div>#}
+                <input class="button" type="submit" value="submit" name="submit" onClick="formValidation()"/>
+            </form>
+        </center>
+    </div>
+</div>
+</body>
+</html>

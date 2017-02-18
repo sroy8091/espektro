@@ -1,0 +1,160 @@
+@font-face {
+	font-family: 'DK Midnight Chalker';
+	src: url('/static/fonts/DK Midnight Chalker.otf');
+	src: local('DK Midnight Chalker'), local('DK Midnight Chalker'), url('fonts/DK Midnight Chalker.otf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Last_King_Quest';
+  src: url('/static/fonts/Last_King_Quest/Last_King_Quest.eot');
+  src: url('/static/fonts/Last_King_Quest/Last_King_Quest.eot?#iefix') format('embedded-opentype'),
+	     url('/static/fonts/Last_King_Quest/Last_King_Quest.woff2') format('woff2'),
+       url('/static/fonts/Last_King_Quest/Last_King_Quest.woff') format('woff'),
+       url('/static/fonts/Last_King_Quest/Last_King_Quest.ttf')  format('truetype'),
+       url('/static/fonts/Last_King_Quest/Last_King_Quest.svg#svgFontName') format('svg');
+}
+
+body {
+  text-align: center;
+  color:white;
+
+}
+
+.bg1{
+  background: url("ca_bg1.jpg") fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+vertical-align: middle;
+line-height: 90px;
+padding-top:7vw;
+}
+
+
+
+.bg2{
+  background: url("ca_bg2.jpg") fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+    min-height: 100%;
+		/*max-width: 100%;*/
+		text-align: left !important;
+
+}
+.bg2 section{
+  padding:8vw 0 8vw 0;
+}
+
+ .box{
+	width: 1000px;
+	height:100%;
+    /*border:  solid green;*/
+    padding: 50px 0 0 50px;
+    margin: 50px auto;
+		background: black;
+		color: white;
+		opacity:.8;
+		max-width: 100%;
+}
+
+.bg3{
+  background: url("ca_bg3.jpg") fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+    min-height: 100%;
+
+}
+
+ul li{
+	font-size: 1.5vw;
+}
+.pad{
+	padding: 6vw 0 6vw 6vw;
+}
+
+h1 .form_heading {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Agency FB';
+}
+
+.form-container {
+  text-align: left;
+  background: black;
+  /*background-size: 50px 50px;*/
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  opacity:.8;
+  color: #da9b1e;
+  min-height: 100%;
+	width: 70%;
+	margin: auto auto;
+  /*display: none;;*/
+}
+
+label {
+  /*color:  black;*/
+  text-transform: uppercase;
+  font-weight: bold;
+	margin-top:  2vw;
+}
+
+input {
+  background: transparent;
+  font-size: 14px;
+  display: block;
+  padding: 10px 30px 10px 5px;
+  margin: 10px 0 30px 10px;
+  border: 2px solid white;
+  border-bottom: 2px solid grey;
+	color: white;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid #66cc99;;
+}
+
+.radio-question{
+  font-weight: bold;
+}
+.radio-question input {
+  margin: 10px;
+  padding: 0;
+
+}
+
+.radio-input {
+  display: inline-block;
+  color: black;
+}
+
+.button {
+  background: #66cc99;
+  border: 0;
+  padding: 15px 30px;
+  margin-top: 20px;
+  color: black;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.button:hover {
+  background: #5ec190;
+}
+/*.password-rules {
+  font-size: 10px;
+  margin-top: -20px;
+  margin-bottom: 40px;
+}*/
+.error-message {
+  color: red;
+  margin-top: -50px;
+  margin-bottom: 20px;
+  font-size: 15x;
+}

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 # Create your views here.
 from .forms import SignupForm
 
@@ -10,8 +10,9 @@ def get_name(request):
         form = SignupForm(request.POST)
 
         if form.is_valid():
+            name = str(form.cleaned_data['full_name'])
             form.save()
-            return HttpResponseRedirect('Thanks') #has to be changed according to design
+            return HttpResponse('Thanks '+name+ ' for submission') #has to be changed according to design
     else:
         form = SignupForm()
 
@@ -19,4 +20,4 @@ def get_name(request):
         'form' : form
     }
 
-    return render(request, 'forms.html' ,context)
+    return render(request, 'ca.html' ,context)
