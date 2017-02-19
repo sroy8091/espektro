@@ -2,10 +2,15 @@ from __future__ import unicode_literals
 
 from django.db import models
 from stdimage import StdImageField
+
+from imagekit.models import ImageSpecField, ProcessedImageField
+from imagekit.processors import ResizeToFill, SmartResize
+
 # Create your models here.
 class Photos(models.Model):
     image = StdImageField(upload_to='dpchange/')
     email = models.EmailField(blank=True)
+
 
     def __str__(self):
         return self.email
@@ -24,6 +29,12 @@ class UploadedImage(models.Model):
     Image = StdImageField(upload_to='dpchange/')
     Email = models.EmailField()
     Filter = models.CharField(max_length=60, choices=ThemeChoices, default='ActionAndAdventure')
+    
+    processed_image = ImageSpecField(
+        source='image', processors=[ResizeToFill(50, 50)], format='PNG',
+        options={'quality':60})
+    smart = ImageSpecField(
+        source='image', processors=[SmartResize(50, 50)], format='PNG')
    
     def __str__(self):
         return self.Email
