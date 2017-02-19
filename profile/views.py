@@ -78,7 +78,7 @@ def edit(request):
     if request.method == 'POST':
         #update details
         user_form = UserEditForm(instance=request.user,data=request.POST)
-        user_detail_form = UserDetailEditForm(instance=p.userdetail,data=request.POST)
+        user_detail_form = UserDetailEditForm(instance=p.userdetail,data=request.POST, files=request.FILES)
 
         if user_form.is_valid() and user_detail_form.is_valid():
             user_form.save()

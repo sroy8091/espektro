@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from events.models import Event
 from django.core.validators import RegexValidator
-
+from stdimage import StdImageField
 
 User._meta.get_field('email').blank = False
 
@@ -25,8 +25,10 @@ class UserDetail(models.Model):
 	city = models.CharField(max_length=20)
 	accomodation = models.BooleanField(default=False)
 	phone_no = models.CharField(max_length=10, validators=[RegexValidator(regex='^[789]\d{9}$', message='Please enter a valid phone number WITHOUT any PREFIX', code='invalid_phonenumber'),])
-	#event = models.ManyToManyField(Event)
-
+	image = StdImageField(upload_to='profile/photos/', blank=True, variations={
+        'large': (600, 400),
+        'thumbnail': (100, 100, True),
+    })
 	def __str__(self):
 		return self.user.username + ' from ' + self.college 
 
