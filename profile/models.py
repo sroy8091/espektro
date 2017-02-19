@@ -4,6 +4,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from events.models import Event
+from django.core.validators import RegexValidator
 
 
 User._meta.get_field('email').blank = False
@@ -22,8 +23,8 @@ class UserDetail(models.Model):
 	user = models.OneToOneField(settings.AUTH_USER_MODEL)
 	college = models.CharField(max_length=100)
 	city = models.CharField(max_length=20)
-	department = models.CharField(max_length=100)
-	year = models.CharField(max_length=1, choices=YEAR_CHOICES)
+	accomodation = models.BooleanField(default=False)
+	phone_no = models.CharField(max_length=10, validators=[RegexValidator(regex='^[789]\d{9}$', message='Please enter a valid phone number WITHOUT any PREFIX', code='invalid_phonenumber'),])
 	#event = models.ManyToManyField(Event)
 
 	def __str__(self):
@@ -39,10 +40,10 @@ class Team(models.Model):
 	leader = models.ForeignKey(settings.AUTH_USER_MODEL)
 	number_of_members = models.DecimalField(max_digits=1, decimal_places=0, default=6)
 	secret_key = models.CharField(max_length=20)
-	members = models.ManyToManyField(UserDetail, related_name='my_teams')
+	members = models.ManyToManyField(UserDetail, related_name='my_teams', swappable=True)
 
 	def __str__(self):
-		return 'Team ' + self.name + ' for ' + self.event
+		return 'Team ' + self.name + ' for ' + str(self.event)
 
 
 	def get_invite_url(self):

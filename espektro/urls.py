@@ -26,6 +26,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^ca/','campusambassador.views.get_name',name="ambassador"),
     url(r'^profile/', include('profile.urls')),
-
+    url(r'^', include('django.contrib.auth.urls')),
     url(r'^changedp/','changedp.views.ImageUploadForm',name="changedp"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

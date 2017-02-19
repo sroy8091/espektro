@@ -13,6 +13,7 @@ from django.contrib import messages
 from django.shortcuts import redirect
 from .models import UserDetail, Team
 from django.utils.crypto import get_random_string
+from espektro.settings import domain, protocol
 
 # Create your views here.
 class UserFormView(View):
@@ -101,9 +102,8 @@ def team_create(request):
             new_team = form.save(commit=False)
             new_team.leader = p
             new_team.secret_key = get_random_string(20)
-            new_team.number_of_members = 6
+            new_team.number_of_members = new_team.event.NumberParticipants
             new_team.save()
-            absolute_url = get_absolute
             created = True
     else:
         form = team_create_form()
@@ -126,8 +126,8 @@ def send_invite(request, id):
             else:
                 secret_key = get_team.secret_key
                 subject = "Invitation to join team for Espektro"
-                message = "Join us! {}".format(get_team.get_invite_url()) 
-                send_mail(subject, message, 'lovely@hotmall.com', [cd['email']], fail_silently=False)
+                message = "Join us! {}://{}{}".format(protocol,domain,get_team.get_invite_url()) 
+                send_mail(subject, message, 'espektro2017kgec@gmail.com', [cd['email']], fail_silently=False)
                 sent = True
 
     else:

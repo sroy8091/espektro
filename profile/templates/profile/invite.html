@@ -6,7 +6,10 @@
 <div class="container-fluid">
     <div class="col-sm-12 col-md-7">
         <div class="panel-body">
-
+        {{ get_team.leader }}<br>
+        {% for mem in get_team.members.all %}
+            {{ mem }}
+        {% endfor %}
             <form class="form-horizontal" action="." method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% include 'profile/form-template.html' %}

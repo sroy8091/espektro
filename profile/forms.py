@@ -23,7 +23,7 @@ class UserEditForm(forms.ModelForm):
 class UserDetailEditForm(forms.ModelForm):
 	class Meta:
 		model = UserDetail
-		fields = ('college','city','department','year')
+		fields = ('college','city','phone_no')
 
 
 class team_create_form(forms.ModelForm):
@@ -32,7 +32,6 @@ class team_create_form(forms.ModelForm):
 		fields = ('name', 'event')
 
 class TeamInviteForm(forms.Form):
-
 	email = forms.EmailField()
 
 class TeamAcceptForm(forms.Form):

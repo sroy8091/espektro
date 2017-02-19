@@ -12,7 +12,6 @@ urlpatterns = [
     url(r'^register/$', views.UserFormView.as_view(), name='register'),
 
     # /profile/login
-    # url(r'^login/$', views.login_view, name='login'),
     url(r'^login/$', authviews.login, {'template_name':'profile/login.html'}, name='login'),
 
     # /profile/edit/
@@ -29,5 +28,11 @@ urlpatterns = [
 
     # /profile/team/2/
     url(r'^team/(?P<pk>[0-9]+)/$', views.TeamDetail.as_view(), name='team_detail'),
+
+    # restore password urls
+    url(r'^password-reset/$',authviews.password_reset, {'post_reset_redirect' : '/profile/password-reset/done/','template_name':'profile/password_reset_form.html','email_template_name':'profile/password_reset_email.html'}, name='password_reset'),
+    url(r'^password-reset/done/$', authviews.password_reset_done, {'template_name':'profile/password_reset_done.html'}, name='password_r_done'),
+    url(r'^password-reset/confirm/(?P<uidb64>[-\w]+)/(?P<token>[-\w]+)/$', authviews.password_reset_confirm, {'post_reset_redirect' : '/profile/password-reset/complete','template_name':'profile/password_reset_confirm.html'}, name='password_reset_confirm'),
+    url(r'^password-reset/complete/$',authviews.password_reset_complete, {'template_name':'profile/password_reset_complete.html'}, name='password_reset_complete'),
     
 ]

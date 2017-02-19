@@ -20,8 +20,14 @@ LOGOUT_URL = reverse_lazy('profile:logout')
 
 
 # For fake-sending mails
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'espektro2017kgec@gmail.com'
+EMAIL_HOST_PASSWORD = 'newy3city'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+domain = "127.0.0.1:8000"
+protocol = "http"
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -93,7 +99,7 @@ DATABASES = {
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'NAME': 'espektro',
         'USER':  'root',
-        'PASSWORD':  '12345',
+        'PASSWORD':  'root',
         'HOST': 'localhost',
         'PORT': '3306',
     }
