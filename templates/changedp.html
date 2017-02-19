@@ -1,94 +1,55 @@
-
-{% load static %}
 <!DOCTYPE html>
 <html>
-<style>
-form {
-    border: 3px solid #f1f1f1;
-}
+<head>
+    <title>ChangeUrDp | Espektro 17</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-}
-
-img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
-
-.container {
-    padding: 16px;
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-}
-</style>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../static/changeurdp.css" rel="stylesheet">
+    <style>
+    @font-face{font-family: harrington; src: url(../static/HARRINGT.ttf);}
+    </style>
+</head>
 <body>
+    <br>
+    <h1 style="font-family:harrington;font-size:50px;color:white;">espektro'17</h1>
+    <h3 style="font-family:harrington;color:white;">The World Of Novels | 8th - 11th March, 2017</h3>
+    <h4 style="font-family:harrington;"></h4>
+        <div class="testbox">
+            <h1 style="color:Black;font-weight:bold;">Change Your DP</h1>
+                <form id="upload" action='.' method="post"  enctype="multipart/form-data"> 
+                {% csrf_token %}
+                <div class="container">
 
-<h2>Change Your Dp</h2>
-<form id="upload" method="post"  enctype="multipart/form-data"> {% csrf_token %}
-  <div class="imgcontainer">
-    <img src="{% static 'images/logo.png' %}" alt="Avatar" class="avatar">
-  </div>
+                    <label id="icon" for="{{ form.Name.id_for_label }}"><i class="fa fa-user"></i></label>
+                        {{form.Name}}
+                        {{ form.Name.errors }}
+                    <br>
 
-  <div class="container">
+                    <label id="icon" for="{{ form.Email.id_for_label }}"><i class="fa fa-envelope "></i></label>
+                        {{ form.Email }}
+                        {{ form.Email.errors }}
+                    <br>
 
-{% for field in form %}
-        
-        {{ field.label_tag }} {{ field }}
-        {% if field.help_text %}
-        <p class="help">{{ field.help_text|safe }}</p>
-        {% endif %}
-{% endfor %}
+                    <label id="icon" for="{{ form.Filter.id_for_label }}"><i class="fa fa-file-image-o" aria-hidden="true"></i></label>
+                    {{ form.Filter }}
+                    {{ form.Filter.errors }}
 
-
-
-
-        
-    <button type="submit">Upload Image</button>
-  </div>
-
-  </div>
-</form>
-
+                    <br>
+                    <label id="icon" for="{{ form.Image.id_for_label"><i class="fa fa-picture-o" aria-hidden="true"></i></label>
+                    {{ form.Image }}
+                    {{ form.Image.errors }}
+                    <br>
+                    <hr>
+                    <label style="color:black;"><input type="checkbox" name="Terms" required/> I <b>agree</b> on not using vulgarity or obscenity in any form and allow <b>Espektro, KGEC</b><br>to use my basic information &amp; picture for promotional activities.</label><br>
+                    <button class="button" type="submit">Upload</a>
+                    </div>
+          </form>
+        </div>
+                <br>
+            <br>
+            <br>
+            
 </body>
-</html>
