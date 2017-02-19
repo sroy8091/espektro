@@ -9,3 +9,15 @@ class Photos(models.Model):
 
     def __str__(self):
         return self.email
+
+
+
+class UploadedImage(models.Model):
+    Name = models.CharField(max_length=255)
+    #document = models.FileField(upload_to='documents/')
+    UploadedAt = models.DateTimeField(auto_now_add=True)
+    Image = StdImageField(upload_to='dpchange/')
+    Email = models.EmailField()
+   
+    def __str__(self):
+        return self.Email

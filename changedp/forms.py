@@ -1,7 +1,14 @@
 from django import forms
-from .models import Photos
+from changedp.models import UploadedImage
 
-class PhotoForm(forms.ModelForm):
+class UploadImageForm(forms.ModelForm):
+    Name = forms.CharField(widget=forms.TextInput(
+        attrs={'size': '48', 'class': 'form-control', 'placeholder': 'Your Name'}))
+    Email = forms.EmailField(widget=forms.TextInput(
+        attrs={'size': '48', 'class': 'form-control', 'placeholder': 'Email Address'}))
+    Image = forms.ImageField()
+    
+
     class Meta:
-        model = Photos
-        fields = '__all__'
+        model = UploadedImage
+        fields = ('Name', 'Email','Image', )

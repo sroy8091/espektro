@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'changedp',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -92,7 +93,7 @@ DATABASES = {
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'NAME': 'espektro',
         'USER':  'root',
-        'PASSWORD':  'root',
+        'PASSWORD':  '12345',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -134,8 +135,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, '../media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'

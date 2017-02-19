@@ -1,49 +1,94 @@
-	
+
+{% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Upload a file in Django 1.5 using Dropzone.js</title>
-        {% load staticfiles %}
-        <link href="{% static 'css/dropzone.css' %}" type="text/css" rel="stylesheet"/>
-    </head>
-    <body>
- 
-        <!-- IMPORTANT enctype attribute! -->
-        <form class="dropzone" action="{% url 'changedp.views.changedp' %}" method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-        </form>
-        <button id="submit-all">
-            Submit all files
-        </button>
- 
-        <script src="{% static 'js/dropzone.js' %}"></script>
-        <script type="text/javascript">
-            Dropzone.options.myDropzone = {
+<style>
+form {
+    border: 3px solid #f1f1f1;
+}
 
-                // Prevents Dropzone from uploading dropped files immediately
-                autoProcessQueue : false,
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
 
-                init : function() {
-                    var submitButton = document.querySelector("#submit-all")
-                    myDropzone = this;
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
 
-                    submitButton.addEventListener("click", function() {
-                        myDropzone.processQueue();
-                        alert("submitted")
-                        // Tell Dropzone to process all queued files.
-                    });
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
 
-                    // You might want to show the submit button only when
-                    // files are dropped here:
-                    this.on("addedfile", function() {
-                        // Show submit button here and/or inform user to click it.
-                    });
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
 
-                }
-            };
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+<body>
+
+<h2>Change Your Dp</h2>
+<form id="upload" method="post"  enctype="multipart/form-data"> {% csrf_token %}
+  <div class="imgcontainer">
+    <img src="{% static 'images/logo.png' %}" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+
+{% for field in form %}
+        
+        {{ field.label_tag }} {{ field }}
+        {% if field.help_text %}
+        <p class="help">{{ field.help_text|safe }}</p>
+        {% endif %}
+{% endfor %}
 
 
-        </script>
-    </body>
+
+
+        
+    <button type="submit">Upload Image</button>
+  </div>
+
+  </div>
+</form>
+
+</body>
 </html>
