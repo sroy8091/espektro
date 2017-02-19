@@ -11,6 +11,6 @@ class Signup(models.Model):
     gender = models.CharField(max_length=6, blank=True, choices=gender_choices, default='Male')
     Email_Address = models.EmailField(unique=True)
     PhoneNo = models.CharField(max_length=10, validators=[RegexValidator(regex='^[789]\d{9}$', message='Please enter a valid phone number WITHOUT any PREFIX', code='invalid_phonenumber'),])
-    facebook_Link= models.URLField(null=True, blank=True)
+    facebook_Link= models.URLField()
     def __str__(self):
         return self.full_name

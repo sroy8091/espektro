@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'DK Midnight Chalker';
     src: url('/static/fonts/DK Midnight Chalker.otf');
-    src: local('DK Midnight Chalker'), local('DK Midnight Chalker'), url('fonts/DK Midnight Chalker.otf') format('truetype');
+    src: local('/DK Midnight Chalker'), local('DK Midnight Chalker'), url('/static/fonts/DK Midnight Chalker.otf') format('truetype');
 }
 
 @font-face {

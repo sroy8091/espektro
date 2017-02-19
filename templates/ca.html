@@ -7,14 +7,14 @@
     {% load staticfiles %}
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href="{% static 'css/ca.css' %}" rel="stylesheet" type="text/css">
-    <script src="{% static 'js/ca.js' %}" rel="stylesheet" type="text/javascript"></script>
+{#    <script src="{% static 'js/ca.js' %}" rel="stylesheet" type="text/javascript"></script>#}
 </head>
 <body>
 <div class="bg1 bg">
     <section>
         <h1><p id="esp_heading">Espektro'17</p>
             <p id="ca_heading">Campus
-                Ambassador Programme</p></h1>
+                Ambassador Program</p></h1>
     </section>
 </div>
 <div class="bg2 bg">
@@ -84,10 +84,17 @@
                 {#        <input class="radio-input" type="radio" name="media" value="Male" /> Male <br>#}
                 {#        <input class="radio-input" type="radio" name="media" value="Female" /> Female <br>#}
                 {#      </div>#}
-                <input class="button" type="submit" value="submit" name="submit" onClick="formValidation()"/>
+                <input class="button" type="submit" value="submit" name="submit"/>
             </form>
         </center>
     </div>
 </div>
+
+
+<script>
+    $('form_contents').submit(function (e) {
+        e.preventDefault();
+    });
+</script>
 </body>
 </html>
