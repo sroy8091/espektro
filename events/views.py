@@ -5,9 +5,8 @@ from events.models import Event, Event_Coordinator
 
 
 def event(request, event):
-
     e_list = Event.objects.filter(EventName=event)
-   	eco_list=Event_Coordinator.objects.filter(EventName=event)
+    eco_list=Event_Coordinator.objects.filter(EventName=event)
     context = {'event': event, 'event_list': e_list, 'eventcoordinator_list':eco_list}
     return render(request, 'events.html', context)
 
