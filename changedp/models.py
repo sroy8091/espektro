@@ -13,11 +13,17 @@ class Photos(models.Model):
 
 
 class UploadedImage(models.Model):
+    ThemeChoices = (('ActionAndAdventure', 'ActionAndAdventure'),
+                      ('FantasyAndScienceFiction', 'FantasyAndScienceFiction'),
+			('RomanceAndPoetry','RomanceAndPoetry'),
+                        ('ScienceAndSpirituality','ScienceAndSpirituality'),
+                        ('MysteryAndThriller','MysteryAndThriller'),
+                       ('ComicsAndManga','ComicsAndManga'),)
     Name = models.CharField(max_length=255)
-    #document = models.FileField(upload_to='documents/')
     UploadedAt = models.DateTimeField(auto_now_add=True)
     Image = StdImageField(upload_to='dpchange/')
     Email = models.EmailField()
+    Filter = models.CharField(max_length=60, choices=ThemeChoices, default='ActionAndAdventure')
    
     def __str__(self):
         return self.Email
