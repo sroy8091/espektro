@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'DK Midnight Chalker';
+    src: url('/static/fonts/DK Midnight Chalker.otf');
+    src: local('DK Midnight Chalker'), local('DK Midnight Chalker'), url('fonts/DK Midnight Chalker.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Last_King_Quest';
+    src: url('/static/fonts/Last_King_Quest/Last_King_Quest.eot');
+    src: url('/static/fonts/Last_King_Quest/Last_King_Quest.eot?#iefix') format('embedded-opentype'),
+    url('/static/fonts/Last_King_Quest/Last_King_Quest.woff') format('woff'),
+    url('/static/fonts/Last_King_Quest/Last_King_Quest.ttf') format('truetype'),
+    url('/static/fonts/Last_King_Quest/Last_King_Quest.svg#svgFontName') format('svg');
+}
+
+body {
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+section h1 {
+    margin-top: -5.5vw;
+}
+
+#esp_heading {
+    font-family: "Last King Quest";
+    font-size: 6vw;
+    padding-top: 30px;
+}
+
+#ca_heading {
+    font-family: "DK Midnight Chalker";
+    font-size: 3vw;
+    letter-spacing: 0.5vw;
+    color: #479ad4;
+}
+
+.bg1 {
+    background: url("ca_bg1.jpg") fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100%;
+    text-align: center;
+    padding-top: 7vw;
+}
+
+.bg2 {
+    background: url("ca_bg2.jpg") fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    text-align: left !important;
+
+}
+
+.bg2 section {
+    padding: 8vw 0 8vw 0;
+}
+
+.box {
+    width: 73%;
+    height: 100%;
+    /*border:  solid green;*/
+    padding: 50px 0 0 50px;
+    margin: 50px auto;
+    background: black;
+    color: white;
+    opacity: .8;
+}
+
+.bg3 {
+    background: url("ca_bg3.jpg") fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+
+}
+
+ul li {
+    font-size: 1.5vw;
+    padding-bottom: 10px;
+}
+
+.pad {
+    padding: 6vw 0 6vw 6vw;
+}
+
+h1 .form_heading {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Agency FB';
+}
+
+.form-container {
+    text-align: left;
+    background: black;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    opacity: .8;
+    color: #479ad4;
+    min-height: 100%;
+    width: 70%;
+    margin: auto auto;
+}
+
+label {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 2vw;
+}
+
+input {
+    background: transparent;
+    font-size: 14px;
+    display: block;
+    padding: 10px 30px 10px 5px;
+    margin: 10px 0 30px 10px;
+    border: 2px solid white;
+    border-bottom: 2px solid grey;
+    color: white;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid #66cc99;;
+}
+
+.radio-question {
+    font-weight: bold;
+}
+
+.radio-question input {
+    margin: 10px;
+    padding: 0;
+
+}
+
+.radio-input {
+    display: inline-block;
+    color: black;
+}
+
+.button {
+    background: #66cc99;
+    border: 0;
+    padding: 15px 30px;
+    margin-top: 20px;
+    color: black;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #5ec190;
+}
+
+/*.password-rules {
+  font-size: 10px;
+  margin-top: -20px;
+  margin-bottom: 40px;
+}*/
+.error-message {
+    color: red;
+    margin-top: -50px;
+    margin-bottom: 20px;
+    font-size: 15x;
+}
+
+@media only screen and(max-width: 479px) and (min-width: 320px) {
+    #esp_heading {
+        font-size: 8vw;
+
+    }
+
+    #ca_heading {
+        font-size: 7vw;
+    }
+
+    ul li {
+        font-size: 4vw;
+    }
+
+    .bg {
+        margin-top: -17vw;
+    }
+}
+
+@media only screen and(max-width: 768px) and (min-width: 480px) {
+    #esp_heading {
+        font-size: 7vw;
+
+    }
+
+    #ca_heading {
+        font-size: 6vw;
+    }
+
+    ul li {
+        font-size: 2.2vw;
+    }
+
+    .bg {
+        margin-top: -6.5vw;
+    }
+}
+
+@media only screen and(max-width: 1366px) and (min-width: 769px) {
+    .bg {
+        margin-top: -5vw;
+    }
+}

@@ -1,0 +1,100 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Campus Ambassador</title>
+    {% load staticfiles %}
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="{% static 'css/ca.css' %}" rel="stylesheet" type="text/css">
+{#    <script src="{% static 'js/ca.js' %}" rel="stylesheet" type="text/javascript"></script>#}
+</head>
+<body>
+<div class="bg1 bg">
+    <section>
+        <h1><p id="esp_heading">Espektro'17</p>
+            <p id="ca_heading">Campus
+                Ambassador Program</p></h1>
+    </section>
+</div>
+<div class="bg2 bg">
+    <section class="box">
+
+
+        <center><h2 class="pad" style="color:#479ad4">ROLE OF A CAMPUS AMBASSADOR</h2></center>
+       <center> <h3 style="padding-bottom: 3vw;">Campus Ambassadors are liaisons between <b>Espektro</b> and their university. The Campus Ambassador program has been undertaken by <b>Espektro, KGEC</b> to incorporate
+            participation from students spread across the country, specially the outskirts of Kolkata.
+        As a Campus Ambassador you shall be co-ordinating with Espektro to ensure maximum participation from your
+            college in <b>Espektro'17</b> through :
+       </h3></center>
+        <ul >
+            <li>Online publicity of <strong>Espektro</strong> via social media in your college.</li>
+            <li>Sharing each and every event post shared in the Facebook page of <b>Espektro, KGEC</b> and <b>Techtix, KGEC</b> in respective
+                Whatsapp and Facebook groups.
+            </li>
+            <li>Promoting <b>Espektro, KGEC</b> in your campus through posters, word of mouth etc.</li>
+
+        </ul>
+        <center><h2 class="pad" style="color:#479ad4">WHY BE A CAMPUS AMBASSADOR?</h2></center>
+        <ul >
+            <li>Unique opportunity to develop your communication and leadership skills</li>
+            <li>Certificate from <strong>Espektro</strong>, KGEC.</li>
+            <li>Exciting Gift Hampers.</li>
+            <li>Prizes worth 5000 rupees on being the best among all other Campus Ambassadors.</li>
+            <li>Leverages during participation.</li>
+        </ul>
+        <center><h2 style="padding-top: 4vw;">So what are you waiting for?Register Below.</h2></center>
+    </section>
+
+</div>
+
+
+<div class="bg3 bg">
+    <div class="form-container">
+        <center>
+            <h2 class="form_heading">REGISTRATION FORM</h2>
+
+            <form name="registerForm" id="form_contents" method="POST">
+                {% csrf_token %}
+
+                <label for='{{ form.full_name }}'>Name *</label>
+                {{ form.full_name }}
+                {{ form.full_name.errors }}
+                <label for='{{ form.college_Name }}'>College Name *</label>
+                {{ form.college_Name }}
+                {{ form.college_Name.errors }}
+
+                <label for='{{ form.Email_Address }}'>E-mail address *</label>
+                {{ form.Email_Address }}
+                {{ form.Email_Address.errors }}
+
+                <label for='{{ form.PhoneNo }}'>Phone Number *</label>
+                {{ form.PhoneNo }}
+                {{ form.PhoneNo.errors }}
+                <label for='{{ form.facebook_Link }}'>Facebook Id Url *</label>
+                {{ form.facebook_Link }}
+                {{ form.facebook_Link.errors }}
+
+                <label for='{{ form.gender }}'>Gender *</label>
+                {{ form.gender }}
+                {{ form.gender.errors }}
+                <!-- <p class="password-rules">Your password should contain at least 8 characters and 1 number.</p> -->
+                {#      <div class="radio-question">#}
+                {#        <p>Gender</p>#}
+                {#        <input class="radio-input" type="radio" name="media" value="Male" /> Male <br>#}
+                {#        <input class="radio-input" type="radio" name="media" value="Female" /> Female <br>#}
+                {#      </div>#}
+                <input class="button" type="submit" value="submit" name="submit"/>
+            </form>
+        </center>
+    </div>
+</div>
+
+
+<script>
+    $('form_contents').submit(function (e) {
+        e.preventDefault();
+    });
+</script>
+</body>
+</html>
