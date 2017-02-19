@@ -14,6 +14,9 @@ urlpatterns = [
     # /profile/login
     url(r'^login/$', authviews.login, {'template_name':'profile/login.html'}, name='login'),
 
+    # /profile/logout
+    url(r'^logout/$', authviews.logout, {'template_name':'proofile/logout.html'}, name='logout'),
+
     # /profile/edit/
     url(r'^edit/$', views.edit, name='edit'),
 
