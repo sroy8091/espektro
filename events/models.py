@@ -27,7 +27,7 @@ class Event(models.Model):
 	StartTime = models.TimeField(null =True)
 	EndTime = models.TimeField(null=True)
 	# For single-participant events, add registered users to this:
-	Participants = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='my_events')
+	Participants = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='events_registered')
 	
 	def __str__(self):
 		return self.EventName

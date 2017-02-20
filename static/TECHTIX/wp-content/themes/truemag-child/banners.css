@@ -1,0 +1,170 @@
+.banners {
+  width: 85%;
+  margin: 22px auto;
+  text-align: center;
+}
+.banner {
+  display: inline-block;
+  width: 73%;
+  margin: 0 auto;
+  border: 1px solid #143e4a;
+  text-align: center;
+  background-color: #010000
+}
+.banner h2 {
+  color:#fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 34px;
+  font-family: 'MetricWeb-Bold';
+  margin-bottom: 0;
+  margin-top: 6px;
+  font-weight: bold;
+  text-shadow: 1px 1px #fff;
+}
+
+.banner span {
+  font-family: 'MetricWeb-Regular';
+  color:#0bb1b1;
+  font-size: 17px;
+  line-height:1;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  width: 77%;
+
+}
+
+.banner .img-section {
+  text-align: right;
+  padding-right: 0;
+  padding-bottom: 7%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.banner .text-section {
+  background-color: #000;
+}
+.banner .url-section {
+  background-color: #000;
+  text-align: center;
+}
+.banner .url-section .btn {
+  padding: 16px 0 16px 0;
+}
+.banner .url-section .start-poll {
+  background-color: #28dddb;
+  color:#010000;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding: 0px 31px;
+  font-family: 'MetricWeb-Bold' !important;
+}
+.banner .url-section .start-poll:hover {
+  background-color: #07ffff;
+}
+
+@media (max-width:320px) {
+  .banners {
+      width: 100%;
+      margin: 10px auto;
+      text-align: center;
+  }
+  .banner {
+    width: 100%;
+  }
+  .banner .img-section {
+    padding-bottom: 48%;
+    background-size: contain;
+  }
+}
+@media (min-width:1024px) and (max-width:1150px) and (orientation:landscape) {
+  .banner .img-section {
+    padding-bottom: 8.7%;
+    background-size: 100% 100%;
+  }
+  .banner {
+    width: 100%;
+  /*  height: 82px;*/
+  }
+  .banner h2 {
+    font-size: 25px;
+    margin-top: 5px;
+  }
+  .banner span {
+    font-size: 15px;
+    width: 95%;
+    line-height: 1;
+  }
+  .banner .url-section .btn {
+        padding: 22px 0 2px 15px;
+  }
+  .banner .url-section .start-poll {
+    font-size: 26px;
+    padding: 2px 35px;
+  }
+}
+@media (min-width:770px) and (max-width:880px)  {
+  .banner {
+    width: 100%;
+  }
+  .banner .img-section {
+      padding-bottom:46%;
+  }
+
+}
+@media (max-width:1024px) and (orientation:portrait) {
+  .banner {
+    width: 100%;
+  }
+  .banner .img-section {
+      padding-bottom: 50%;
+  }
+}
+@media (min-width:1240px) and (max-width:1439px) {
+  .banner {
+    width: 100%;
+  }
+  .banner .img-section {
+    background-size: 100% 100%;
+    padding-bottom: 9%;
+  }
+  .banner span {
+    width: 90%;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .banner .url-section .btn {
+		padding: 27px 0px 0px;/*14px 0 14px 0px;*/
+	}
+  .banner h2 {
+    margin-top: 13px;
+  }
+
+}
+@media (min-width:1440px) and (max-width:1900px){
+  .banner .img-section {
+    background-size: 100% 100%;
+    padding-bottom: 10%;
+  }
+  .banner {
+    width: 95%;
+  }
+  .banner .img-section {
+    padding-bottom: 8%;
+  }
+  .banner h2 {
+    margin-top: 12px;
+  }
+  .banner span {
+    width: 88%;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: bold;
+  }
+  .banner .url-section .btn {
+      padding: 25px 0 17px 0;
+  }
+
+}

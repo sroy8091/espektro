@@ -1,0 +1,29 @@
+.blog-heading{padding:30px 0 0px;background:#131515 !important;}
+.blog-heading.shows{padding:0;}
+.blog-heading .container{padding:0 75px;font-size:16px;font-family:'MetricWeb-Regular';}
+article.single-video-view .item-content, .content-single{width:90%;margin:0 auto;color:#b4b4b4;text-align:justify;}
+.partners{width:88%;margin:0 auto;}
+.partners-container{text-align:center;}
+.item-partners{padding-bottom:60px;}
+.item-partners a img, .item-partners a .img-container{transition:transform 0.4s ease-in;}
+.item-partnes a span
+.item-partners a, .item-partners a:visited, .item-partners a:hover{text-decoration:none;}
+.item-partners a:hover span{color:white;}
+.item-partners a .img-container{text-align:center;margin:0 auto;}
+.item-partners a:hover .img-container{}
+.item-partners a:hover img{transform:scale(1.0);opacity:1;}
+.item-partners a:hover .img-container{transform:scale(1.05);}
+.img-circle{border-radius:0;text-align:center;}
+.partners-title{color:#0ae8e9;padding-bottom:30px;font-weight:bold;text-transform:uppercase;}
+.partner-name{text-align:center;color:#858585;}
+@media (max-width:768px){.blog-heading .container{padding:0 15px;}
+article.single-video-view .item-content, .content-single{width:100%;margin:0;padding:0 20px;}
+.content-single h1{font-size:24px;}
+.blog-heading .container .hero-item{padding-top:51.25%;background-size:cover;background-position:50%;margin-bottom:20px;}
+}
+@media (max-width:768px){.partners-title{text-align:center;font-size:24px;}
+}
+@media (min-width:768px) and (orientation:portrait){.blog-heading .container .hero-item{padding-top:36%;background-size:cover;background-position:0;}
+}
+@media (min-width:1024px) and (max-width:1440px){.col-md-3{width:25%;}
+}

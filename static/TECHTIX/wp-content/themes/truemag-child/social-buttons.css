@@ -1,0 +1,45 @@
+#top-nav .social-icon{background:none;border-color:none;margin-right:-7px;}
+#top-nav .social-icon.search{margin-top:7px;margin-right:-5px;}
+.social-links .social-icon{transition:none;}
+#top-nav .social-icon .fa-search:before, #top-nav .social-icon .fa-facebook:before, #top-nav .social-icon .fa-twitter:before, #top-nav .social-icon .fa-youtube:before, #top-nav .social-icon .fa-instagram:before{content:"";}
+#top-nav .social-icon.search{background:url('assets/images/sprites/top-icons.png') no-repeat 7px -27px;height:27px;}
+#top-nav .social-icon .fa-search{background:url('assets/images/sprites/top-icons.png') no-repeat 5px 0;opacity:0;width:30px;height:27px;-webkit-transition:background 0s 0.1s, opacity 0.6s ease-out;-ms-transition:background 0s 0.1s, opacity 0.6s ease-out;-o-transition:background 0s 0.1s, opacity 0.6s ease-out;transition:background 0s 0.1s, opacity 0.6s ease-out;}
+#top-nav .social-icon .fa-search:hover{background:url('assets/images/sprites/top-icons.png') no-repeat 5px top;height:27px;opacity:1;}
+#top-nav .social-icon.icon-fa-facebook{background:url('assets/images/sprites/top-icons.png') no-repeat -27px -27px;height:27px;width:26px;margin-right:0px;margin-left: 4px;}
+#top-nav .social-icon .fa-facebook{background:url('assets/images/sprites/top-icons.png') no-repeat -27px -27px;width:24px;height:27px;opacity:0;-webkit-transition:background 0s 0.1s, opacity 0.6s ease-out;-ms-transition:background 0s 0.1s, opacity 0.6s ease-out;-o-transition:background 0s 0.1s, opacity 0.6s ease-out;transition:background 0s 0.1s, opacity 0.6s ease-out;}
+#top-nav .social-icon .fa-facebook:hover{background:url('assets/images/sprites/top-icons.png') no-repeat -27px 0;height:27px;width:25px;opacity:1;}
+#top-nav .social-icon.icon-fa-twitter{background:url('assets/images/sprites/top-icons.png') no-repeat -52px -27px;height:27px;width:25px;margin-right:1px;}
+#top-nav .social-icon .fa-twitter{background:url('assets/images/sprites/top-icons.png') no-repeat -52px top;width:25px;height:27px;opacity:0;-webkit-transition:background 0s 0.1s, opacity 0.6s ease-out;-ms-transition:background 0s 0.1s, opacity 0.6s ease-out;-o-transition:background 0s 0.1s, opacity 0.6s ease-out;transition:background 0s 0.1s, opacity 0.6s ease-out;}
+#top-nav .social-icon .fa-twitter:hover{background:url('assets/images/sprites/top-icons.png') no-repeat -52px top;height:27px;opacity:1;}
+#top-nav .social-icon.icon-fa-youtube{background:url('assets/images/sprites/top-icons.png') no-repeat -77px -27px;height:27px;width:26px;margin-right:-1px;}
+#top-nav .social-icon .fa-youtube{background:url('assets/images/sprites/top-icons.png') no-repeat -77px -27px;width:27px;height:27px;opacity:0;-webkit-transition:background 0s 0.1s, opacity 0.6s ease-out;-ms-transition:background 0s 0.1s, opacity 0.6s ease-out;-o-transition:background 0s 0.1s, opacity 0.6s ease-out;transition:background 0s 0.1s, opacity 0.6s ease-out;}
+#top-nav .social-icon .fa-youtube:hover{background:url('assets/images/sprites/top-icons.png') no-repeat -77px 0;height:27px;opacity:1;}
+#top-nav .social-icon.icon-fa-instagram{background:url('assets/images/sprites/top-icons.png') no-repeat -105px -27px;height:27px;width:26px;margin-left:4px;}
+#top-nav .social-icon .fa-instagram{background:url('assets/images/sprites/top-icons.png') no-repeat -105px -27px;width:26px;height:27px;opacity:0;-webkit-transition:background 0s 0.1s, opacity 0.6s ease-out;-ms-transition:background 0s 0.1s, opacity 0.6s ease-out;-o-transition:background 0s 0.1s, opacity 0.6s ease-out;transition:background 0s 0.1s, opacity 0.6s ease-out;}
+#top-nav .social-icon .fa-instagram:hover{background:url('assets/images/sprites/top-icons.png') no-repeat -105px 0;height:27px;opacity:1;}
+.dark-form .input-group:hover .form-control:focus, .dark-form .input-group:hover .form-control, .dark-form .input-group:hover .input-group-btn .btn-default, .dark-form .form-control:focus{border-color:#05e8e8;}
+.dark-div button:hover, .dark-div input[type='submit']:hover{color:#05e8e8;}
+@media (max-width: 768px) {#bottom-nav .social-icon.icon-ft-fa-facebook {margin-right:7px !important;}}
+@media (max-width:1024px){#top-nav .social-icon.search{margin-right:-5px; } #top-nav .social-icon.icon-fa-facebook {width: 24px;margin-right: 0px;margin-left: 4px;}
+}
+#bottom-nav .social-icon{background:none;border-color:none;margin-right:-6px;}
+#bottom-nav .social-icon.search{margin-top:7px;margin-right:-15px;}
+#bottom-nav .social-icon .fa-facebook:before, #bottom-nav .social-icon .fa-twitter:before, #bottom-nav .social-icon .fa-youtube:before, #bottom-nav .social-icon .fa-instagram:before{content:"";}
+#bottom-nav .social-icon.icon-ft-fa-facebook{background:url('assets/images/sprites/bottom-icons.png') no-repeat 0 -27px;height:27px;width:26px;margin-right:-2px;}
+#bottom-nav .social-icon .fa-facebook{background:url('assets/images/sprites/bottom-icons.png') no-repeat 0 -27px;width:24px;height:27px;opacity:0;-webkit-transition:background 0s 0.1s, opacity 0.6s ease-out;;-ms-transition:background 0s 0.1s, opacity 0.6s ease-out;;-o-transition:background 0s 0.1s, opacity 0.6s ease-out;;transition:background 0s 0.1s, opacity 0.6s ease-out;}
+#bottom-nav .social-icon .fa-facebook:hover{background:url('assets/images/sprites/bottom-icons.png') no-repeat -1px top;height:27px;opacity:1;}
+#bottom-nav .social-icon.icon-ft-fa-twitter{background:url('assets/images/sprites/bottom-icons.png') no-repeat -25px -27px;height:27px;width:26px;margin-right:2px;margin-left:4px;}
+#bottom-nav .social-icon .fa-twitter{background:url('assets/images/sprites/bottom-icons.png') no-repeat -25px -27px;width:24px;height:27px;opacity:0;-webkit-transition:background 0s 0.1s, opacity 0.6s ease-out;-ms-transition:background 0s 0.1s, opacity 0.6s ease-out;-o-transition:background 0s 0.1s, opacity 0.6s ease-out;transition:background 0s 0.1s, opacity 0.6s ease-out;}
+#bottom-nav .social-icon .fa-twitter:hover{background:url('assets/images/sprites/bottom-icons.png') no-repeat -26px 0;height:27px;opacity:1;}
+#bottom-nav .social-icon.icon-ft-fa-youtube{background:url('assets/images/sprites/bottom-icons.png') no-repeat -50px -27px;height:27px;width:26px;margin-right:4px;}
+#bottom-nav .social-icon .fa-youtube{background:url('assets/images/sprites/bottom-icons.png') no-repeat -50px -27px;width:24px;height:27px;opacity:0;-webkit-transition:background 0s 0.1s, opacity 0.6s ease-out;-ms-transition:background 0s 0.1s, opacity 0.6s ease-out;-o-transition:background 0s 0.1s, opacity 0.6s ease-out;transition:background 0s 0.1s, opacity 0.6s ease-out;}
+#bottom-nav .social-icon .fa-youtube:hover{background:url('assets/images/sprites/bottom-icons.png') no-repeat -51px top;height:27px;opacity:1;}
+#bottom-nav .social-icon.icon-ft-fa-instagram{background:url('assets/images/sprites/bottom-icons.png') no-repeat -76px -27px;height:27px;width:26px;}
+#bottom-nav .social-icon .fa-instagram{background:url('assets/images/sprites/bottom-icons.png') no-repeat -76px -27px;width:24px;height:27px;opacity:0;-webkit-transition:background 0s 0.1s, opacity 0.6s ease-out;-ms-transition:background 0s 0.1s, opacity 0.6s ease-out;-o-transition:background 0s 0.1s, opacity 0.6s ease-out;transition:background 0s 0.1s, opacity 0.6s ease-out;}
+#bottom-nav .social-icon .fa-instagram:hover{background:url('assets/images/sprites/bottom-icons.png') no-repeat -77px 0;height:27px;opacity:1;}
+.social-links-mobile .social-icon .fa-facebook, .social-links-mobile .social-icon .fa-twitter, .social-links-mobile .social-icon .fa-youtube, .social-links-mobile .social-icon .fa-instagram{width:45px;height:53px;background-repeat:no-repeat;background-size:100%;}
+.social-links-mobile .social-icon .fa-facebook:before, .social-links-mobile .social-icon .fa-twitter:before, .social-links-mobile .social-icon .fa-youtube:before, .social-links-mobile .social-icon .fa-instagram:before{content:"";}
+.social-links-mobile .social-icon .fa-facebook{background-image:url('assets/images/fb-icon-mobile.png');}
+.social-links-mobile .social-icon .fa-twitter{background-image:url('assets/images/tw-icon-mobile.png');}
+.social-links-mobile .social-icon .fa-youtube{background-image:url('assets/images/yt-icon-mobile.png');}
+.social-links-mobile .social-icon .fa-instagram{background-image:url('assets/images/inst-icon-mobile.png');}

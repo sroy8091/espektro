@@ -28,7 +28,7 @@ class UserDetail(models.Model):
 	image = StdImageField(upload_to='profile/photos/', blank=True, variations={
         'large': (600, 400),
         'thumbnail': (100, 100, True),
-    })
+    	})
 	def __str__(self):
 		return self.user.username + ' from ' + self.college 
 

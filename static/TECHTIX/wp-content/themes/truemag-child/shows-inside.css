@@ -1,0 +1,91 @@
+.blog-heading .container.shows{background-color:#0a2330;}
+.hero-item.shows{height:0;padding-top:42%;position:relative;overflow:hidden;max-height:100%;margin:-32px -69px 0 -73px;background-size:cover;background-repeat:no-repeat;background-position:0;}
+.section.content.show p{font-size:18px;}
+.section.content.show img{}
+.episodes{margin:0 0 -50px 0;padding:0;width:100%;background-color:#122c3a;}
+.episodes .title-section{text-transform:uppercase;background-color:#122c3a !important;}
+.question-section{background-color:#0a2330;text-align:center;margin:0;}
+.question-section .question{font-size:29px;font-family:'FlamaLight' !important;letter-spacing:10px;line-height:2;text-transform:uppercase;color:#00ffff;margin-top:0;padding-top:0px;}
+.question-section span{letter-spacing:2px;display:inline;}
+.question-section .tw-btn{background-color:#1a7092;color:#ffffff;padding:1px 15px 4px;line-height:1;font-family:'FlamaLight' !important;text-transform:capitalize;font-size:20px;letter-spacing:2px;margin-right:10px;}
+.question-section .tw-btn .tw-icon{display:inline-block;font:normal normal normal 20px/1 FontAwesome !important;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;padding-right:5px;}
+.question-section .tw-btn .tw-icon:before{content:"\f099";}
+.question-section .suggestion{font-size:21px;font-family:'FlamaLight' !important;color:#00ffff;padding-bottom:20px;}
+.twitter-show-section{height:33px;background:#000;border-top:2px solid #000;margin-left:-700px;margin-right:-90px;}
+.left-section{background:url('assets/images/TWITTER_BG.png') no-repeat;background-position:-3px;width:699px;height:31px;float:left;}
+.twitter-fedd{float:left;}
+.twitter-show-section .twitter-feed .twitter{background:url('assets/images/TWITTER_BLUE.png') no-repeat;height:17px;width:180px;float:left;margin-top:7px;margin-left:20px;padding-left:26px;line-height:1.5;text-transform:none;font-size:11px;color:#05ffff;font-family:'MetricWeb-Light';}
+.twitter-feed span{font-size:14px;font-family:'MetricWeb-Light';}
+.twitter-feed .tw-quote{position:relative;line-height:2;padding-right:30px;}
+.mtphr-dnt-twitter-name:before{content:"@";color:#05ffff;}
+.mtphr-dnt-twitter-name:after{content:" :";color:#05ffff;}
+.mtphr-dnt-twitter-name a:visited, .mtphr-dnt-twitter-name a:active, .mtphr-dnt-twitter-name a:focus{color:#05ffff;}
+.mtphr-dnt-twitter-name{padding-right:5px;}
+.mtphr-dnt-twitter-text{color:#8d8e8f !important;}
+.mtphr-dnt-twitter-time{padding-left:5px;color:#fff;}
+.question-section a{text-decoration:none;}
+.question-section a:hover .tw-btn{background-color:#666;}
+.section.content{margin-top:50px;}
+.video-listing.shows .video-item{margin-bottom:0;padding-left:0;padding-right:0;}
+.video-listing.shows .row{background-color:#333333;}
+.video-item .item-thumbnail .link-overlay:before{display:none;}
+.shows .item-thumbnail h3{text-transform:uppercase;white-space:normal !important;overflow:inherit !important;text-overflow:initial !important;width:75%;margin-left:-20px;font-family:'MetricWeb-Bold';line-height:1;}
+.shows .item-thumbnail h3 a{font-size:22px !important;}
+.shows .item-thumbnail span{font-size:18px !important;color:#b4b4b4;text-transform:uppercase;margin-left:-20px;margin-top:0;font-family:'MetricWeb-Light';}
+.show-video-item .item-thumbnail .shows.featured{background-size:100%;height:85px;width:134px;top:0;right:0;position:absolute;opacity:0.7;}
+.show-video-item .item-thumbnail .featured.original{background:url('assets/images/LABEL_ORIGINAL.svg') no-repeat;}
+.show-video-item .item-thumbnail .featured.exclusive{background:url('assets/images/LABEL_EXCLUSIVE.svg') no-repeat;}
+.show-video-item{position:relative;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0);-webkit-transition:background-color 0.2s ease;transition:background-color 0.2s ease;}
+.video-listing.shows:not(.style-list-1) .show-video-item .item-thumbnail{padding-top:65.25%;}
+.video-listing.shows:not(.style-list-1) .show-video-item .item-thumbnail img{top:0px;}
+.video-listing:not(.style-list-1) .show-video-item .item-thumbnail img{width:100%;position:absolute;top:0;left:0;}
+.show-video-item .item-thumbnail img{max-width:100%;width:100%;}
+.show-video-item .item-thumbnail>a{display:block}
+.twitter-feed span {display:inline !important;}
+@media (min-width:320px) and (max-width:640px){.section.content.show img{}
+.blog-heading .container .hero-item.shows{background-size:80% !important;padding-top:80.25%;background-position:50%;margin-top:-67px;margin-bottom:-64px;}
+.twitter-show-section .twitter-feed .twitter{width:20px;}
+.twitter-show-section .twitter-feed .twitter span{display:none !important;}
+.question-section{margin:20px -120px 0 -120px;}
+.question-section .question{font-size:12px;letter-spacing:1px;padding-bottom:10px;padding-top:0px;}
+.question-section span{display:block;letter-spacing:1px;}
+.question-section .tw-btn{width:25%;margin:0 auto;padding:7px 15px 7px;}
+.suggestion-text{width:40%;margin:0 auto;font-size:14px;line-height:1;}
+.twitter-show-section{margin-left:-725px;}
+}
+@media (max-width:320px){.blog-heading .container .hero-item.shows{background-size:80% !important;padding-top:88.25%;background-position:50%;margin-top:-67px;margin-bottom:-64px;}
+}
+@media (min-width:320px) and (max-width:568px) and (orientation:landscape){.section.content.show img{margin-right:45px;}
+.blog-heading .container .hero-item.shows{margin-top:-100px;margin-bottom:-48px;padding-top:52.25%;}
+.question-section .question{padding-top:18px;}
+}
+@media (min-width:640px) and (max-width:738px) and (orientation:landscape){.hero-item.shows{background-size:91% !important;margin-top:-150px;margin-bottom:-65px;padding-top:62.25% !important;}
+.question-section .question{font-size:15px;letter-spacing:8px;line-height:3;}
+.question-section .suggestion{font-size:15px;}
+.twitter-show-section .twitter-feed .twitter{margin-left:0;width:30px;}
+.twitter-show-section .twitter-feed .twitter span{display:none;}
+}
+@media (min-width:668px) and (max-width:768px){.question-section .question{font-size:16px;padding-bottom:10px;}
+.suggestion-text{font-size:16px;}
+.twitter-show-section .twitter-feed .twitter{margin-left:0;width:30px;}
+.twitter-show-section .twitter-feed .twitter span{display:none;}
+}
+@media (max-width:1024px) and (min-width:768px){.section.content.show .content-single .row{margin-left:0;margin-right:0;width:100%;}
+.shows .episodes .row, .shows .gallery .row{margin-bottom:0;}
+.episodes .title-section h3{padding:10px 10px 10px 48px;}
+}
+@media (min-width:1024px){.twitter-show-section .twitter-feed .twitter{margin-left:0;width:240px;}
+.twitter-show-section .twitter-feed .twitter span{display:inline;line-height:1;}
+.section.content.show .content-single{width:90%;}
+}
+@media (max-width:1024px){.section.content.show p{font-size:13px;}
+}
+@media (max-width:1024px) and (min-width:1024px){.gallery .title-section h3{padding:10px 10px 10px 30px;}
+}
+@media (min-width:1024px) and (max-width:1440px){.section.content.show p{font-size:16px;}
+.video-listing.shows:not(.style-list-1) .show-video-item .item-thumbnail{padding-top:52.25%;}
+.video-listing:not(.style-list-1) .show-video-item .item-thumbnail img{max-height:100%;}
+}
+@media (min-width:1441px){.video-listing.shows:not(.style-list-1) .show-video-item .item-thumbnail{padding-top:54.25%;}
+.video-listing:not(.style-list-1) .show-video-item .item-thumbnail img{max-height:100%;}
+}

@@ -1,0 +1,1 @@
+;(function($){$.preload=function(){var imgs=Object.prototype.toString.call(arguments[0])==='[object Array]'?arguments[0]:arguments;var tmp=[];var i=imgs.length;for(;i--;)tmp.push($('<img />').attr('src',imgs[i]));};})(jQuery);
