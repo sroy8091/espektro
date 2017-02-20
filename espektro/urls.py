@@ -30,4 +30,5 @@ urlpatterns = [
     # url(r'^changedp/','changedp.views.ImageUploadForm',name="changedp"),
     url(r'^changedp/', include('changedp.urls')),
     url(r'^about/$', TemplateView.as_view(template_name='about.html'), name='about'),
+    url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='about'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

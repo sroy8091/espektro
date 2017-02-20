@@ -45,13 +45,13 @@
     
 </head>
     
-<body class="fixed-header scroll-content">
+<body style="overflow-y: auto">
  
     <!--NAVIGATION BAR-->
 <nav class="page-sidebar" data-pages="sidebar" >
 
     <center style="padding-top:10px">
-        <img src="{% static 'assets/img/E-logo.png' %}" width=auto height="60">
+        <a href="/home"> <img src="{% static 'assets/img/E-logo.png' %}" width=auto height="60"></a>
     </center>
 
 
@@ -60,7 +60,7 @@
         <ul class="menu-items">
         
         <li class="m-t-30 ">
-            <a href="index.html" class="detailed">
+            <a href="/about" class="detailed">
             <span class="title">About Us</span>
             </a>
             <span class="bg-success icon-thumbnail"><i class="pg-grid"></i></span>
@@ -86,50 +86,50 @@
             
         </li>
         
-        <li class="">
-            <a href="email.html" class="detailed">
-            <span class="title">Pronites</span>
-            </a>
-            <span class="icon-thumbnail"><i class="pg-mail"></i></span>
-        </li>
+{#        <li class="">#}
+{#            <a href="email.html" class="detailed">#}
+{#            <span class="title">Pronites</span>#}
+{#            </a>#}
+{#            <span class="icon-thumbnail"><i class="pg-mail"></i></span>#}
+{#        </li>#}
         
-        <li class="">
-            <a href="javascript:;"><span class="title">Summit</span>
-            <span class=" arrow"></span></a>
-            <span class="icon-thumbnail"><i class="pg-social"></i></span>
-            
-                <ul class="sub-menu">
-                    <li class="">
-                    <a href="calendar.html">MUN</a>
-                    <span class="icon-thumbnail">M</span>
-                    </li>
-                    
-                    <li class="">
-                    <a href="calendar_lang.html">Workshops</a>
-                    <span class="icon-thumbnail">W</span>
-                    </li>
-                </ul>
-            
-        </li>
+{#        <li class="">#}
+{#            <a href="javascript:;"><span class="title">Summit</span>#}
+{#            <span class=" arrow"></span></a>#}
+{#            <span class="icon-thumbnail"><i class="pg-social"></i></span>#}
+{#            #}
+{#                <ul class="sub-menu">#}
+{#                    <li class="">#}
+{#                    <a href="calendar.html">MUN</a>#}
+{#                    <span class="icon-thumbnail">M</span>#}
+{#                    </li>#}
+{#                    #}
+{#                    <li class="">#}
+{#                    <a href="calendar_lang.html">Workshops</a>#}
+{#                    <span class="icon-thumbnail">W</span>#}
+{#                    </li>#}
+{#                </ul>#}
+{#            #}
+{#        </li>#}
         
-        <li>
-        <a href="javascript:;" title="Event Calender"><span class="title">Event Calendar</span>
-        <span class=" arrow"></span></a>
-        <span class="icon-thumbnail"><i class="pg-calender"></i></span>
-            
-            <ul class="sub-menu">
-                <li class="">
-                <a href="calendar.html">Techtix</a>
-                <span class="icon-thumbnail">Tx</span>
-                </li>
-                
-                <li class="">
-                <a href="calendar_lang.html">Exotica</a>
-                <span class="icon-thumbnail">Ex</span>
-                </li>
-            </ul>
-            
-        </li>
+{#        <li>#}
+{#        <a href="javascript:;" title="Event Calender"><span class="title">Event Calendar</span>#}
+{#        <span class=" arrow"></span></a>#}
+{#        <span class="icon-thumbnail"><i class="pg-calender"></i></span>#}
+{#            #}
+{#            <ul class="sub-menu">#}
+{#                <li class="">#}
+{#                <a href="calendar.html">Techtix</a>#}
+{#                <span class="icon-thumbnail">Tx</span>#}
+{#                </li>#}
+{#                #}
+{#                <li class="">#}
+{#                <a href="calendar_lang.html">Exotica</a>#}
+{#                <span class="icon-thumbnail">Ex</span>#}
+{#                </li>#}
+{#            </ul>#}
+{#            #}
+{#        </li>#}
         
         <li class="">
             <a href="builder.html">
@@ -144,7 +144,7 @@
         </li>
         
         <li>
-            <a href="javascript:;">
+            <a href="/profile/register">
             <span class="title">Register</span>
             </a>
             <span class="icon-thumbnail"><i class="pg-form"></i></span>
@@ -152,7 +152,7 @@
         
         
         <li class="">
-            <a href="views.html">
+            <a href="/contact">
             <span class="title">Contact Us</span>
             </a>
             <span class="icon-thumbnail"><i class="pg pg-ui"></i></span>
@@ -288,7 +288,7 @@
     <script src="{% static 'assets/plugins/bootstrapv3/js/bootstrap.min.js' %}" type="text/javascript"></script>
     <script src="{% static 'assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js' %}"></script>
     <script src="{% static 'pages/js/pages.min.js' %}"></script>
-    -->
+
 
 </body>
 
