@@ -31,4 +31,5 @@ urlpatterns = [
     url(r'^changedp/', include('changedp.urls')),
     url(r'^about/$', TemplateView.as_view(template_name='about.html'), name='about'),
     url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='about'),
+    url(r'^gallery/$', TemplateView.as_view(template_name='gallery.html'), name='gallery')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
