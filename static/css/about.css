@@ -4,7 +4,7 @@ body {
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .text-muted {
-  color: #777777;
+  color: #c1bfbf !important;
 }
 .text-primary {
   color: #fed136;

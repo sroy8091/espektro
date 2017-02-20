@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block title %}<title>Home</title>{% endblock %}
+
+{% block styles %}
+    {% load staticfiles %}
+  <!-- <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
+  <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css">
+  <!-- <script src="home.js" type="text/javascript"></script> -->
+{% endblock %}
+
+{% block body %}
+<div class="home_animation">
+    <img src="{% static 'images/doodle_logo.png' %}" alt="Espektro Doodle" class="esp_doodle">
+    <img src="{% static 'images/text_logo.png' %}" alt="Espektro Book" class="esp_book">
+    <img src="{% static 'images/world_of_novels.png' %}" alt="World of Novels" class="world_of_novels" id="world_of_novels">
+  </div>
+{% endblock %}
+
