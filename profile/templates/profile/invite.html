@@ -1,29 +1,39 @@
+
 {% extends 'profile/base.html' %}
-{% block title%} Team Invite {% endblock %}
+{% block title%} Invite {% endblock %}
+{% block styles %}
+    {% load staticfiles %}
+    <link href="{% static 'css/edit_profile.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block body %}            
+            <div class="edit_profile_bg">
 
-{% block body %}
+              <div class="reg_form-container">
+                <!-- <a id="esp_logo" href="#"><img src="esp_logo.png"></a> -->
+              <center>
+              <br><h2 class="reg_form_heading">Send Team Invite</h2>
 
-<div class="container-fluid">
-    <div class="col-sm-12 col-md-7">
-        <div class="panel-body">
-        {{ get_team.leader }}<br>
-        {% for mem in get_team.members.all %}
-            {{ mem }}
-        {% endfor %}
-            <form class="form-horizontal" action="." method="post" enctype="multipart/form-data">
+                <form name="InviteForm" id="form_contents" action="." method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                {% include 'profile/form-template.html' %}
-                <div class="form-group">
-                {% if sent %}
-                    <b> You have successfully sent a team invitation to {{form.email.value}}!</b>
-                {% endif %}
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-success">Submit</button>
-                    </div>
-                </div>
-            </form>
+                  <label for='{{ form.email }}'>Email</label>
+                  {{ form.email }}
+                  <br>
+                  {% if sent %}
+                  <span class='sent'>You have succesfully sent an invite to {{ form.email.value }}. Please ask them to check their mail (and spam folder) to have the accept your invitation.</span>
+                  {% endif %}
+                  {% if messages %}
+                    {% for message in messages %}
+                        {{ message | safe }}
+                        <a href="#" class="close">✖</a>
+                    {% endfor %}
+                  {% endif %}
 
-        </div>
-    </div>
-</div>
+
+                    <input class="reg_button" type="submit" value="submit" name="submit" onClick="formValidation()" />
+                 </form>
+              </div>
+                  </form>
+                  </center>
+                </div>
+                </div>
 {% endblock %}

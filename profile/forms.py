@@ -30,7 +30,7 @@ class UserEditForm(forms.ModelForm):
 class UserDetailEditForm(forms.ModelForm):
 	class Meta:
 		model = UserDetail
-		fields = ('college','city','phone_no','image')
+		fields = ('college','city','phone_no','image','accomodation')
 
 
 class team_create_form(forms.ModelForm):

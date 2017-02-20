@@ -122,7 +122,7 @@ def send_invite(request, id):
             cd = form.cleaned_data
             leader = request.user
             if not leader == get_team.leader:
-                messages.error("Sorry! You are not allowed to send this invite.")
+                messages.error(request, "Sorry! You are not allowed to send this invite.")
             else:
                 secret_key = get_team.secret_key
                 subject = "Invitation to join team for Espektro"
