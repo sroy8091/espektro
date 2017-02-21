@@ -222,9 +222,9 @@
                         <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                             <span class="thumbnail-wrapper d32 circular inline m-t-5">
-                                <img src="{% static 'assets/img/profiles/avatar.jpg' %}" alt=""
-                                     data-src="{% static 'assets/img/profiles/avatar.jpg' %}"
-                                     data-src-retina="{% static 'assets/img/profiles/avatar_small2x.jpg' %}" width="32"
+                                <img src="{{ request.user_details.image.thumbnail.url }}" alt=""
+                                     data-src="url({{ request.user_details.image.thumbnail.url }})"
+                                     data-src-retina="url({{ request.user_details.image.thumbnail.url }})" width="32"
                                      height="32">
                             </span>
                         </button>
@@ -236,7 +236,7 @@
                             </li>
 
                             <li class="bg-master-lighter">
-                                <a href="/profile/logout" class="clearfix">
+                                <a href="/profile/logout" id='logout' class="clearfix">
                                     <span class="pull-left">Logout</span>
                                     <span class="pull-right"><i class="pg-power"></i></span>
                                 </a>
@@ -248,6 +248,16 @@
 
             </div>
             </div>
+{#            <script>#}
+{#                $(document).on('click', '#logout', function (e) {#}
+{#                    .ajax({#}
+{#                        type:'POST',#}
+{#                        url: '/profile/logout',#}
+{##}
+{#                    })#}
+{#                    #}
+{#                })#}
+{#            </script>#}
         {% else %}
             <div class=" pull-right">
                 <div class="visible-lg visible-md m-t-10">
@@ -260,8 +270,8 @@
                         <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                             <span class="thumbnail-wrapper d32 circular inline m-t-5">
-                                <img src="{% static 'assets/img/profiles/avatar.jpg' %}" alt=""
-                                     data-src="{% static 'assets/img/profiles/avatar.jpg' %}"
+                                <img src="https://www.helptobuyese.org.uk/Sitefinity/WebsiteTemplates/BPHA-HTB/App_Themes/BPHA-HTB/Images/user-avatar.png" alt=""
+                                     data-src="url({{ request.user_details.image.thumbnail.url }})"
                                      data-src-retina="{% static 'assets/img/profiles/avatar_small2x.jpg' %}" width="32"
                                      height="32">
                             </span>

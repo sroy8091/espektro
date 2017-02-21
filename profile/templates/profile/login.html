@@ -11,14 +11,16 @@
               <div class="reg_form-container">
                 <!-- <a id="esp_logo" href="#"><img src="esp_logo.png"></a> -->
               <center>
-              <br><h2 class="reg_form_heading">EDIT PROFILE</h2>
+              <br><h2 class="reg_form_heading">LOGIN</h2>
 
                 <form name="InviteForm" id="form_contents" action="." method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                   <label for='{{ form.username }}'>Email</label>
                   {{ form.username }}
+                {{ form.username.errors }}
                   <label for='{{ form.password }}'>Password</label>
                   {{ form.password }}
+                {{ form.password.errors }}
                   <br>
                   {% if messages %}
                     {% for message in messages %}
@@ -28,10 +30,10 @@
                   {% endif %}
 
                   <input type="hidden" name="next" value="{{ next }}" />
-                    <input class="reg_button" type="submit" value="submit" name="submit" onClick="formValidation()" />
+                    <input class="reg_button" type="submit" value="submit" name="submit" />
                  </form>
-              </div>
                   </form>
+                  <a href=""> <p>Don't Have Account? Sign Up</p></a>
                   </center>
                 </div>
                 </div>
