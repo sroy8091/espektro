@@ -23,10 +23,12 @@ from campusambassador.views import get_name
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="index.html"), name='index'),
+    url(r'^home/', TemplateView.as_view(template_name='home.html'), name='home'),
+    url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
+    url(r'^gallery/$', TemplateView.as_view(template_name='gallery.html'), name='gallery'),
     url(r'^admin/', admin.site.urls),
     url(r'^ca/','campusambassador.views.get_name',name="ambassador"),
     url(r'^profile/', include('profile.urls')),
-    # url(r'^changedp/','changedp.views.ImageUploadForm',name="changedp"),
     url(r'^changedp/', include('changedp.urls')),
     url(r'^techtix/', include('events.urls')),
     url(r'^about/', TemplateView.as_view(template_name='about.html'), name='about'),
