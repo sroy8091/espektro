@@ -1,0 +1,26 @@
+
+{% extends 'profile/base.html' %}
+{% block title%} MyTeams {% endblock %}
+{% block styles %}
+    {% load staticfiles %}
+    <link href="{% static 'css/edit_profile.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block body %}            
+            <div class="edit_profile_bg">
+
+              <div class="reg_form-container">
+                <!-- <a id="esp_logo" href="#"><img src="esp_logo.png"></a> -->
+              <center>
+              <br><h2 class="reg_form_heading">My Teams</h2>
+
+{% for team in usrteams %}
+    <a href="{% url 'profile:invite' id=team.id %}">{{ team.name }}</a> -- {{ team.event }}
+    <br>
+{% endfor %}
+              </div>
+                  </form>
+                  </center>
+                </div>
+                </div>
+{% endblock %}
+

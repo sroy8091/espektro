@@ -104,6 +104,8 @@ def team_create(request):
             new_team.secret_key = get_random_string(20)
             new_team.number_of_members = new_team.event.NumberParticipants
             new_team.save()
+            new_team.members.add(p)
+            new_team.save()
             created = True
     else:
         form = team_create_form()
@@ -156,3 +158,9 @@ def accept_invite(request, id, secret_key):
 class TeamDetail(generic.DetailView):
     model = Team
     template_name = 'profile/team_detail.html'
+
+@login_required
+def my_teams(request):
+    usr = request.user
+    usrteams = usr.team_set.all()
+    return render(request, 'profile/my_teams.html', {'usrteams':usrteams})

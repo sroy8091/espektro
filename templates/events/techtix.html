@@ -1147,7 +1147,7 @@
         </style>
 </head>
 
-<body class="home page page-id-952 page-template page-template-page-templates page-template-front-page page-template-page-templatesfront-page-php full-width template-front-page custom-background-empty wpb-js-composer js-comp-ver-4.10 vc_responsive">LLLLLLLL<ul id=lemon></ul>
+<body class="home page page-id-952 page-template page-template-page-templates page-template-front-page page-template-page-templatesfront-page-php full-width template-front-page custom-background-empty wpb-js-composer js-comp-ver-4.10 vc_responsive">
     <a name="top" style="height:0; position:absolute; top:0;" id="top-anchor"></a>
     <div id="pageloader">
         <div class="loader-item">
@@ -1499,7 +1499,7 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <center>
 
-                                <form method="post" action="/techtix/addcontent/">
+                                <form method="post" action=".">
                                     {% csrf_token %}
                                 <a>
                                     <button name="rules" types="submit" class="tbutton" id="tbutton1" value="0"><span>Rules</span></button>
@@ -1508,6 +1508,10 @@
 
                                 <a>
                                     <button name="register" types="submit" class="tbutton" id="tbutton2" value="0"><span>Register</span></button>
+                                    <br>    
+                                    {% if message %}
+                                    <div class='message'> {{ message }} </div>
+                                    {% endif %}
 
                                 </a>
                                 </form>

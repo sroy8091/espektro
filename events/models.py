@@ -19,7 +19,7 @@ class Event(models.Model):
         max_length=20, choices=EventType_IN_CHOICES, default='Exotica')
 
 	EventName = models.CharField(max_length=200)
-	EventImage = StdImageField(upload_to='event/event_image', variations={'thumbnail':(650,350, True)})
+	EventImage = StdImageField(upload_to='event/event_image', variations={'thumbnail':(650,350, True)}, blank=True)
 	NumberParticipants = models.DecimalField(decimal_places=0, max_digits=2)
 	tagline = models.TextField(default='Tagline here', null=True)
 	EventDetails = models.TextField(null=True)
@@ -27,7 +27,9 @@ class Event(models.Model):
 	StartTime = models.TimeField(null =True)
 	EndTime = models.TimeField(null=True)
 	# For single-participant events, add registered users to this:
-	Participants = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='events_registered')
+	Participants = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='events_registered', blank=True)
+	# The unique number values associated with the register-button for each techtix event:
+	key = models.CharField(max_length=2)
 	
 	def __str__(self):
 		return self.EventName

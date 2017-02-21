@@ -8,8 +8,5 @@ urlpatterns = [
 
     # /techtix/
     url(r'^$', views.techtix, name='techtix'),
-
-    # /addcontent/
-    url(r'^addcontent/$', views.addcontent),
    
 ]

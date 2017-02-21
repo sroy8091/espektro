@@ -20,6 +20,8 @@ class UserDetail(models.Model):
 		('4','4th'),
 		('5','5th'),
 		)
+
+
 	user = models.OneToOneField(settings.AUTH_USER_MODEL)
 	college = models.CharField(max_length=100)
 	city = models.CharField(max_length=20)
@@ -37,8 +39,7 @@ class UserDetail(models.Model):
 #Team model.
 class Team(models.Model):
 	name = models.CharField(max_length=20,unique=True)
-	#event = models.CharField(max_length=20,blank=True)
-	event = models.ForeignKey(Event, on_delete=models.CASCADE)
+	event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='participating_teams')
 	leader = models.ForeignKey(settings.AUTH_USER_MODEL)
 	number_of_members = models.DecimalField(max_digits=1, decimal_places=0, default=6)
 	secret_key = models.CharField(max_length=20)
