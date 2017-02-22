@@ -14,7 +14,7 @@
     <title> TECHTIX | 2017</title>
 
     <script type="text/javascript">
-        var theme_url = "wp-content/themes/truemag-child/techtix.html";
+        var theme_url = "{% static 'TECHTIX/wp-content/themes/truemag-child/techtix.html' %}";
         var site_url = "techtix.html";
         var coming = "true";
         var tag = '';
@@ -54,7 +54,7 @@
           href="{% static 'TECHTIX/wp-content/themes/truemag/inc/megamenu/css/mashmenu4698.css' %}" type='text/css' media='all'/>
 
     <script type='text/javascript'
-            src="{% static 'TECHTIX/ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.minc1d8.js' %}"></script>
+            src="{% static 'ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.minc1d8.js' %}"></script>
 
     <script type='text/javascript'
             src="{% static 'TECHTIX/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.minb62d.js' %}"></script>
@@ -1191,7 +1191,7 @@
         }
 
         .events_description {
-            background-image: url(wp-content/uploads/2016/03/SCREEN_EDITED.png);
+            background-image: url(/static/TECHTIX/wp-content/uploads/2016/03/SCREEN_EDITED.png);
             /*                background-color: black;*/
             background-position: center;
             background-repeat: no-repeat;
@@ -1323,11 +1323,11 @@
 
 <body class="home page page-id-952 page-template page-template-page-templates page-template-front-page page-template-page-templatesfront-page-php full-width template-front-page custom-background-empty wpb-js-composer js-comp-ver-4.10 vc_responsive">
 <a name="top" style="height:0; position:absolute; top:0;" id="top-anchor"></a>
-<div id="pageloader">
-    <div class="loader-item">
-        <img class="spinner-cont"/>
-    </div>
-</div>
+{#<div id="pageloader">#}
+{#    <div class="loader-item">#}
+{#        <img class="spinner-cont"/>#}
+{#    </div>#}
+{#</div>#}
 <div id="body-wrap">
     <div id="wrap">
         <header class="dark-div">
@@ -1336,13 +1336,13 @@
                 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
                     <div class="container header col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
-                            <img src="wp-content/uploads/2016/03/kgec_logo.png"
+                            <img src="{% static 'TECHTIX/wp-content/uploads/2016/03/kgec_logo.png' %}"
                                  style="width:95px; height:95px; padding:10px;">
                         </div>
                         <div class="navbar-header hidden-sm hidden-xs" id="trapezoid">
                             <center>
                                 <a class="logo" href="techtix.html" title="TECHTIX"><img
-                                        src="wp-content/uploads/2016/03/LOGO_TECHTIX.png" alt="TECHTIX_LOGO"/></a>
+                                        src="{% static 'TECHTIX/wp-content/uploads/2016/03/LOGO_TECHTIX.png' %}" alt="TECHTIX_LOGO"/></a>
                                 <p class="header-description">The Techno-Management fest of KGEC</p>
                             </center>
                         </div>
@@ -1350,7 +1350,7 @@
                         <div class="navbar-header hidden-lg hidden-md">
                             <center>
                                 <a class="logo" href="techtix.html" title="TECHTIX"><img
-                                        src="wp-content/uploads/2016/03/LOGO_TECHTIX.png" alt="TECHTIX_LOGO"/></a>
+                                        src="{% static 'TECHTIX/wp-content/uploads/2016/03/LOGO_TECHTIX.png' %}" alt="TECHTIX_LOGO"/></a>
                                 <p class="header-description">The Techno-Management fest of KGEC</p>
                             </center>
                         </div>
@@ -1372,28 +1372,28 @@
                     <div class="slider-hero-content">
                         <div class="video-item">
                             <div class="item-thumbnail">
-                                <img src="wp-content/uploads/2017/01/img1.jpg" width="1920" height="1080"
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2017/01/img1.jpg' %}" width="1920" height="1080"
                                      alt="TECHTIX 2017"/>
                             </div>
                         </div>
 
                         <div class="video-item">
                             <div class="item-thumbnail">
-                                <img src="wp-content/uploads/2017/01/img2.jpg" width="1920" height="1080"
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2017/01/img2.jpg' %}" width="1920" height="1080"
                                      alt="TECHTIX 2017">
                             </div>
                         </div>
 
                         <div class="video-item">
                             <div class="item-thumbnail">
-                                <img src="wp-content/uploads/2017/01/img3.jpg" width="1280" height="720"
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2017/01/img3.jpg' %}" width="1280" height="720"
                                      alt="TECHTIX 2017"/>
                             </div>
                         </div>
 
                         <div class="video-item">
                             <div class="item-thumbnail">
-                                <img src="wp-content/uploads/2017/01/img4.jpg" width="2000" height="819" alt="Grow"
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2017/01/img4.jpg' %}" width="2000" height="819" alt="Grow"
                                      title="Grow"/>
                             </div>
                         </div>
@@ -1416,56 +1416,56 @@
                         <div class="item-genres">
                             <a href="#top_bar" id="robotics" onclick="sub_events_1()">
                                 <div class="img"
-                                     style="background-image:url(wp-content/uploads/2016/03/ICON_POSTHUMAN.svg);"></div>
+                                     style="background-image:url(/static/TECHTIX/wp-content/uploads/2016/03/ICON_POSTHUMAN.svg);"></div>
                                 <div class="name"> ROBOTICS</div>
                             </a>
                         </div>
                         <div class="item-genres">
                             <a href="#top_bar" id="coding" onclick="sub_events_2()">
                                 <div class="img"
-                                     style="background-image:url(wp-content/uploads/2016/03/ICON_CODING.svg);"></div>
+                                     style="background-image:url(/static/TECHTIX/wp-content/uploads/2016/03/ICON_CODING.svg);"></div>
                                 <div class="name"> CODING</div>
                             </a>
                         </div>
                         <div class="item-genres">
                             <a href="#top_bar" id="gaming" onclick="sub_events_3()">
                                 <div class="img"
-                                     style="background-image:url(wp-content/uploads/2016/03/ICON_MILITARYSF.svg);"></div>
+                                     style="background-image:url(/static/TECHTIX/wp-content/uploads/2016/03/ICON_MILITARYSF.svg);"></div>
                                 <div class="name"> GAMING</div>
                             </a>
                         </div>
                         <div class="item-genres">
                             <a href="#top_bar" id="online" onclick="sub_events_4()">
                                 <div class="img"
-                                     style="background-image:url(wp-content/uploads/2016/03/ICON_ONLINE.png);"></div>
+                                     style="background-image:url(/static/TECHTIX/wp-content/uploads/2016/03/ICON_ONLINE.png);"></div>
                                 <div class="name"> ONLINE</div>
                             </a>
                         </div>
                         <div class="item-genres">
                             <a href="#top_bar" id="quizzard" onclick="sub_events_5()">
                                 <div class="img"
-                                     style="background-image:url(wp-content/uploads/2016/03/ICON_QUIZZARD.png);"></div>
+                                     style="background-image:url(/static/TECHTIX/wp-content/uploads/2016/03/ICON_QUIZZARD.png);"></div>
                                 <div class="name"> QUIZZARD</div>
                             </a>
                         </div>
                         <div class="item-genres">
                             <a href="#top_bar" id="business" onclick="sub_events_6()">
                                 <div class="img"
-                                     style="background-image:url(wp-content/uploads/2016/03/ICON_DYSTOPIANOIR.svg);"></div>
+                                     style="background-image:url(/static/TECHTIX/wp-content/uploads/2016/03/ICON_DYSTOPIANOIR.svg);"></div>
                                 <div class="name"> BUSINESS</div>
                             </a>
                         </div>
                         <div class="item-genres">
                             <a href="#top_bar" id="solve_it" onclick="sub_events_7()">
                                 <div class="img"
-                                     style="background-image:url(wp-content/uploads/2016/03/ICON_TIMETRAVEL.svg);"></div>
+                                     style="background-image:url(/static/TECHTIX/wp-content/uploads/2016/03/ICON_TIMETRAVEL.svg);"></div>
                                 <div class="name"> SOLVE IT</div>
                             </a>
                         </div>
                         <div class="item-genres">
                             <a href="#top_bar" id="misc" onclick="sub_events_8()">
                                 <div class="img"
-                                     style="background-image:url(wp-content/uploads/2016/03/ICON_MULTIVERSE.svg);"></div>
+                                     style="background-image:url(/static/TECHTIX/wp-content/uploads/2016/03/ICON_MULTIVERSE.svg);"></div>
                                 <div class="name"> MISCELLANEOUS</div>
                             </a>
                         </div>
@@ -1569,22 +1569,22 @@
 
         <!-- SUB EVENTS DISPLAY MAIN-->
         <div class="events-description col-lg-12 col-md-12 col-sm-12 col-xs-12"
-             style="background-image: url(wp-content/uploads/2016/03/SCREEN_EDITED.png); background-position: center; background-repeat: no-repeat; background-size: 100% 100%;">
+             style="background-image: url(/static/TECHTIX/wp-content/uploads/2016/03/SCREEN_EDITED.png); background-position: center; background-repeat: no-repeat; background-size: 100% 100%;">
 
             <div class="events-container col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:50px 8%;">
 
                 <div class="te-header col-lg-12 col-md-12 hidden-sm-12 col-xs-12">
-                    <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" style="width:auto; height:50px;"
+                    <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:50px;"
                          id="sub_events_footer">
                 </div>
 
                 <div class="te-header hidden-lg hidden-md hidden-sm-12 col-xs-12">
-                    <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" style="width:auto; height:100px;"
+                    <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:100px;"
                          id="sub_events_footer">
                 </div>
 
                 <div class="te-header-logo col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <center><img src="wp-content/uploads/2016/HEADINGS/TECHTIX.png" width="auto" height="50px" id="tse">
+                    <center><img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/TECHTIX.png' %}" width="auto" height="50px" id="tse">
                     </center>
                 </div>
 
@@ -1626,7 +1626,7 @@
                     <div class="hidden-lg hidden-md col-sm-12 hidden-xs">
                         <div class="hidden-lg hidden-md col-sm-12 hidden-xs">
                             <div class="te-header col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" style="width:auto; height:25px;"
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:25px;"
                                      id="sub_events_footer">
                             </div>
                             <a>
@@ -1646,7 +1646,7 @@
                             </a>
                         </div>
                         <div class="te-header col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" style="width:auto; height:25px;"
+                            <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:25px;"
                                  id="sub_events_footer">
                         </div>
                         <div class="hidden-lg hidden-md col-sm-12 hidden-xs">
@@ -1668,8 +1668,8 @@
                         </div>
                     </div>
                     <div class="hidden-lg hidden-md hidden-sm col-xs-12">
-                        <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" style="width:auto; height:20px;">
-                        <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" style="width:auto; height:20px;">
+                        <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:20px;">
+                        <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:20px;">
                         <div class="hidden-lg hidden-md hidden-sm col-xs-12">
                             <a>
                                     <span class="tse-ele tse_1" id="tse_1d"
@@ -1677,7 +1677,7 @@
                                           onclick="tse-sub-1()">
                                         2
                                     </span>
-                                <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" style="width:auto; height:20px;">
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:20px;">
                             </a>
                         </div>
                         <div class="hidden-lg hidden-md hidden-sm col-xs-12">
@@ -1687,7 +1687,7 @@
                                           onclick="tse-sub-1()">
                                         0
                                     </span>
-                                <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" style="width:auto; height:20px;">
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:20px;">
                             </a>
                         </div>
                         <div class="hidden-lg hidden-md hidden-sm col-xs-12">
@@ -1697,7 +1697,7 @@
                                           onclick="tse-sub-1()">
                                         1
                                     </span>
-                                <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" style="width:auto; height:20px;">
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:20px;">
                             </a>
                         </div>
                         <div class="hidden-lg hidden-md hidden-sm col-xs-12">
@@ -1707,7 +1707,7 @@
                                           onclick="tse-sub-1()">
                                         7
                                     </span>
-                                <br><img src="wp-content/uploads/2016/HEADINGS/FOOTER.png"
+                                <br><img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}"
                                          style="width:auto; height:20px;">
                             </a>
                         </div>
@@ -1715,7 +1715,7 @@
                 </div>
 
                 <div class="te-header col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" style="width:auto; height:50px"
+                    <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:50px"
                          id="sub_events_footer">
                 </div>
 
@@ -1723,7 +1723,7 @@
                     <div class="col-lg-1 col-md-1 hidden-sm hidden-xs">
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12"
-                         style="background-image: url(wp-content/uploads/2016/03/box.png); background-size:100% 100%; background-repeat: no-repeat; padding:30px; text-align:center; font-size:18px; color:rgb(97,224,227);">
+                         style="background-image: url(/static/TECHTIX/wp-content/uploads/2016/03/box.png); background-size:100% 100%; background-repeat: no-repeat; padding:30px; text-align:center; font-size:18px; color:rgb(97,224,227);">
                         <p id="tse_rules" style="padding:10px 20px;">Welcome to TECHTIX 2017</p>
                     </div>
                     <div class="col-lg-1 col-md-1 hidden-sm hidden-xs">
@@ -1733,18 +1733,18 @@
 
                 <!--
                                     <div class="te-footer hidden-lg hidden-md hidden-sm-12 col-xs-12">
-                                        <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" width="auto" height="25px" id="sub_events_footer">
+                                        <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" width="auto" height="25px" id="sub_events_footer">
                                     </div>
                 -->
 
                 <div class="te-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" style="width:100%; height:2px;"
+                    <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:100%; height:2px;"
                          id="sub_events_footer">
                 </div>
 
                 <div class="buttons col-lg-12 col-md-12 col-sm-12 col-xs-12" id="buttons" style="visibility:hidden;">
                     <div class="te-footer col-lg-12 col-md-12 hidden-sm hidden-xs">
-                        <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" style="width:auto; height:25px;"
+                        <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:25px;"
                              id="sub_events_footer">
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -1770,7 +1770,7 @@
                 </div>
 
                 <div class="te-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" style="width:auto; height:5px;"
+                    <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:5px;"
                          id="sub_events_footer">
                 </div>
 
@@ -1782,7 +1782,7 @@
                     </center>
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix"
-                         style="background-image: url(wp-content/uploads/2016/03/box.png); background-size:100% 100%; background-repeat: no-repeat; color: rgb(94,224,227); padding:30px;">
+                         style="background-image: url(/static/TECHTIX/wp-content/uploads/2016/03/box.png); background-size:100% 100%; background-repeat: no-repeat; color: rgb(94,224,227); padding:30px;">
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <center>
                                 <div class="col-lg-6 col-mg-6 col-sm-6 col-xs-6">
@@ -1809,7 +1809,7 @@
                                 </div>
                             </center>
                             <div class="te-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" style="width:auto; height:5px;"
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:5px;"
                                      id="sub_events_footer">
                             </div>
                         </div>
@@ -1840,7 +1840,7 @@
                                 </div>
                             </center>
                             <div class="te-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" style="width:auto; height:5px;"
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:5px;"
                                      id="sub_events_footer">
                             </div>
                         </div>
@@ -1871,7 +1871,7 @@
                                 </div>
                             </center>
                             <div class="te-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" style="width:auto; height:5px;"
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:5px;"
                                      id="sub_events_footer">
                             </div>
                         </div>
@@ -1880,12 +1880,12 @@
 
 
                 <div class="te-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" width="auto" height="25px"
+                    <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" width="auto" height="25px"
                          id="sub_events_footer">
                 </div>
 
                 <div class="te-footer hidden-lg hidden-md hidden-sm col-xs-12">
-                    <img src="wp-content/uploads/2016/HEADINGS/FOOTER.png" style="width:100%; height:100px"
+                    <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:100%; height:100px"
                          id="sub_events_footer">
                 </div>
 
@@ -1909,11 +1909,11 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <center>
-                            <a href=""
+                            <a href="/home"
                                style="border:2px rgb(94,225,227) solid; color:rgb(94,225,227); padding:10px; font-size:1.5em;"><span
                                     style="color:rgb(94,225,227); font-weight:bold;">HOME</span></a>
                             &nbsp;&nbsp;
-                            <a href=""
+                            <a href="/events/exotica"
                                style="border:2px rgb(94,225,227) solid; color:rgb(94,225,227); padding:10px; font-size:1.5em;"><span
                                     style="color:rgb(94,225,227); font-weight:bold;">EXOTICA</span></a>
                         </center>
@@ -1921,26 +1921,28 @@
                     <nav class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:right;">
                         <div class="row">
 
-                            <div class="social-links col-lg-3 col-md-3 col-sm-12">
-                                <div>
-                                    <a class="social-icon maincolor1 bordercolor1hover bgcolor1hover icon-ft-fa-facebook"
-                                       id="hexagon" href="https://www.facebook.com/techtix.KGEC" target="_blank">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>&nbsp;
-                                    <a class="social-icon maincolor1 bordercolor1hover bgcolor1hover icon-ft-fa-youtube"
-                                       id="hexagon" href="https://www.youtube.com/channel/UCdgWoKQQ9usyOkEMycOFQXA"
-                                       target="_blank">
-                                        <i class="fa fa-youtube"></i>
-                                    </a>
-                                    <a class="social-icon maincolor1 bordercolor1hover bgcolor1hover icon-ft-fa-instagram"
-                                       id="hexagon" href="https://www.instagram.com/espektro_kgec" target="_blank">
-                                        <i class="fa fa-instagram"></i>
-                                    </a>
-                                </div>
-                            </div>
+{#                            <div class="social-links col-lg-3 col-md-3 col-sm-12">#}
+{#                                <div>#}
+{#                                    <a class="social-icon maincolor1 bordercolor1hover bgcolor1hover icon-ft-fa-facebook"#}
+{#                                       id="hexagon" href="https://www.facebook.com/techtix.KGEC" target="_blank">#}
+{#                                        <i class="fa fa-facebook"></i>#}
+{#                                    </a>&nbsp;#}
+{#                                    <a class="social-icon maincolor1 bordercolor1hover bgcolor1hover icon-ft-fa-youtube"#}
+{#                                       id="hexagon" href="https://www.youtube.com/channel/UCdgWoKQQ9usyOkEMycOFQXA"#}
+{#                                       target="_blank">#}
+{#                                        <i class="fa fa-youtube"></i>#}
+{#                                    </a>#}
+{#                                    <a class="social-icon maincolor1 bordercolor1hover bgcolor1hover icon-ft-fa-instagram"#}
+{#                                       id="hexagon" href="https://www.instagram.com/espektro_kgec" target="_blank">#}
+{#                                        <i class="fa fa-instagram"></i>#}
+{#                                    </a>#}
+{#                                </div>#}
+{#                            </div>#}
                         </div>
                     </nav>
                 </div>
+            </div>
+        </div>
     </footer>
 
     <div class="wrap-overlay">
@@ -1948,7 +1950,6 @@
 
 </div>
 
-</div>
 <script>off_canvas_enable = 1;</script>
 <div class="bg-ad">
     <div class="container">
@@ -1961,21 +1962,21 @@
     <i class="fa fa-angle-up"></i>
 </a>
 
-<link rel="stylesheet" href="wp-content/themes/truemag-child/fonts.css" type="text/css">
-<link rel="stylesheet" href="wp-content/themes/truemag-child/social-buttons.css" type="text/css">
-<link rel="stylesheet" href="wp-content/themes/truemag-child/slider.css" type="text/css">
-<link rel="stylesheet" href="wp-content/themes/truemag-child/tooltip.css" type="text/css">
-<link rel="stylesheet" href="wp-content/themes/truemag-child/video-page.css" type="text/css">
-<link rel="stylesheet" href="wp-content/themes/truemag-child/browse.css" type="text/css">
-<link rel="stylesheet" href="wp-content/themes/truemag-child/sub-genres.css" type="text/css">
-<link rel="stylesheet" href="wp-content/themes/truemag-child/about.css" type="text/css">
-<link rel="stylesheet" href="wp-content/themes/truemag-child/contributor.css" type="text/css">
-<link rel="stylesheet" href="wp-content/themes/truemag-child/shows-menu.css" type="text/css">
-<link rel="stylesheet" href="wp-content/themes/truemag-child/news.css" type="text/css">
-<link rel="stylesheet" href="wp-content/themes/truemag-child/news-details.css" type="text/css">
-<link rel="stylesheet" href="wp-content/themes/truemag-child/shows-inside.css" type="text/css">
-<link rel="stylesheet" href="wp-content/themes/truemag-child/banners.css" type="text/css">
-<link rel="stylesheet" href="wp-content/themes/truemag-child/blog-listing.css" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/fonts.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/social-buttons.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/slider.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/tooltip.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/video-page.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/browse.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/sub-genres.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/about.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/contributor.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/shows-menu.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/news.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/news-details.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/shows-inside.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/banners.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/blog-listing.css' %}" type="text/css">
 
 <script type="text/javascript">(function () {
     function addEventListener(element, event, handler) {
@@ -2015,23 +2016,31 @@
 })();
 </script>
 
-<script type='text/javascript' src='wp-includes/js/jquery/ui/core.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-includes/js/jquery/ui/core.mine899.js' %}?ver=1.11.4"></script>
 
-<script type='text/javascript' src='wp-includes/js/jquery/ui/widget.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-includes/js/jquery/ui/widget.mine899.js' %}?ver=1.11.4"></script>
 
-<script type='text/javascript' src='wp-includes/js/jquery/ui/mouse.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-includes/js/jquery/ui/mouse.mine899.js' %}?ver=1.11.4"></script>
 
-<script type='text/javascript' src='wp-includes/js/jquery/ui/resizable.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-includes/js/jquery/ui/resizable.mine899.js' %}?ver=1.11.4"></script>
 
-<script type='text/javascript' src='wp-includes/js/jquery/ui/draggable.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-includes/js/jquery/ui/draggable.mine899.js' %}?ver=1.11.4"></script>
 
-<script type='text/javascript' src='wp-includes/js/jquery/ui/button.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-includes/js/jquery/ui/button.mine899.js' %}?ver=1.11.4"></script>
 
-<script type='text/javascript' src='wp-includes/js/jquery/ui/position.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-includes/js/jquery/ui/position.mine899.js' %}?ver=1.11.4"></script>
 
-<script type='text/javascript' src='wp-includes/js/jquery/ui/dialog.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-includes/js/jquery/ui/dialog.mine899.js' %}?ver=1.11.4"></script>
 
-<script type='text/javascript' src='wp-includes/js/wpdialog.min4698.js?ver=4.6.3'></script>
+<script type='text/javascript' src="{% static 'TECHTIX/wp-includes/js/wpdialog.min4698.js' %}?ver=4.6.3"></script>
 
 <script type='text/javascript'>/* <![CDATA[ */
 var pbd_alp = {
@@ -2046,9 +2055,10 @@ var pbd_alp = {
 /* ]]> */
 </script>
 
-<script type='text/javascript' src='wp-content/plugins/truemag-movie/js/load-posts5152.js?ver=1.0'></script>
 <script type='text/javascript'
-        src='wp-content/plugins/contact-form-7/includes/js/jquery.form.mind03d.js?ver=3.51.0-2014.06.20'></script>
+        src="{% static 'TECHTIX/wp-content/plugins/truemag-movie/js/load-posts5152.js' %}?ver=1.0"></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/plugins/contact-form-7/includes/js/jquery.form.mind03d.js' %}?ver=3.51.0-2014.06.20 "></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
     var _wpcf7 = {
@@ -2060,18 +2070,22 @@ var pbd_alp = {
     /* ]]> */
 </script>
 
-<script type='text/javascript' src='wp-content/themes/truemag/js/bootstrap.min4698.js?ver=4.6.3'></script>
 <script type='text/javascript'
-        src='wp-content/themes/truemag/js/jquery.caroufredsel-6.2.1.min4698.js?ver=4.6.3'></script>
+        src="{% static 'TECHTIX/wp-content/themes/truemag/js/bootstrap.min4698.js' %}?ver=4.6.3"></script>
 <script type='text/javascript'
-        src='wp-content/themes/truemag/js/helper-plugins/jquery.touchSwipe.min4698.js?ver=4.6.3'></script>
-<script type='text/javascript' src='wp-content/themes/truemag/js/jquery.hammer4698.js?ver=4.6.3'></script>
-<script type='text/javascript' src='wp-content/themes/truemag/js/template4698.js?ver=4.6.3'></script>
+        src="{% static 'TECHTIX/wp-content/themes/truemag/js/jquery.caroufredsel-6.2.1.min4698.js' %}?ver=4.6.3"></script>
 <script type='text/javascript'
-        src='wp-content/themes/truemag/js/colorbox/jquery.colorbox-min4698.js?ver=4.6.3'></script>
-<script type='text/javascript' src='wp-content/themes/truemag/js/jquery.tooltipster4698.js?ver=4.6.3'></script>
+        src="{% static 'TECHTIX/wp-content/themes/truemag/js/helper-plugins/jquery.touchSwipe.min4698.js' %}?ver=4.6.3"></script>
 <script type='text/javascript'
-        src='wp-content/themes/truemag/js/malihu-scroll/jquery.mCustomScrollbar.concat.min4698.js?ver=4.6.3'></script>
+        src="{% static 'TECHTIX/wp-content/themes/truemag/js/jquery.hammer4698.js' %}?ver=4.6.3"></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/themes/truemag/js/template4698.js' %}?ver=4.6.3"></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/themes/truemag/js/colorbox/jquery.colorbox-min4698.js' %}?ver=4.6.3"></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/themes/truemag/js/jquery.tooltipster4698.js' %}?ver=4.6.3"></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/themes/truemag/js/malihu-scroll/jquery.mCustomScrollbar.concat.min4698.js' %}?ver=4.6.3 "></script>
 
 <script type='text/javascript'>
     /* <![CDATA[ */
@@ -2083,7 +2097,8 @@ var pbd_alp = {
     /* ]]> */
 </script>
 
-<script type='text/javascript' src='wp-content/themes/truemag/inc/megamenu/js/mashmenuf24c.js?ver=1.6'></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/themes/truemag/inc/megamenu/js/mashmenuf24c.js' %}?ver=1.6"></script>
 
 <script type='text/javascript'>/* <![CDATA[ */
 var countVars = {"disqusShortname": "recursor-tv"};
@@ -2092,13 +2107,14 @@ var countVars = {"disqusShortname": "recursor-tv"};
 <script type='text/javascript'>/* <![CDATA[ */
 var mc4wp_forms_config = [];
 /* ]]> */</script>
-<script type='text/javascript' src='wp-content/plugins/mailchimp-for-wp/assets/js/forms-api.min1678.js?ver=4.0.7'>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/plugins/mailchimp-for-wp/assets/js/forms-api.min1678.js' %}?ver=4.0.7">
 </script>
 
 
-<link rel="stylesheet" href="wp-content/themes/truemag-child/traditional-skin.css" type="text/css"/>
-<script type="text/javascript" src="wp-content/themes/truemag/js/jquery.preload.js"></script>
-<script type="text/javascript" src="wp-content/themes/truemag/js/jquery-ui.js"></script>
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/traditional-skin.css' %}" type="text/css"/>
+<script type="text/javascript" src="{% static 'TECHTIX/wp-content/themes/truemag/js/jquery.preload.js' %}"></script>
+<script type="text/javascript" src="{% static 'TECHTIX/wp-content/themes/truemag/js/jquery-ui.js' %}"></script>
 
 
 </body>
