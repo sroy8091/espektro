@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="index.html"), name='index'),
     url(r'^home/', TemplateView.as_view(template_name='home.html'), name='home'),
     url(r'^maps/$', TemplateView.as_view(template_name='maps.html'), name='maps'),
-    url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
+    url(r'^contacts/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
     url(r'^gallery/$', TemplateView.as_view(template_name='gallery.html'), name='gallery'),
     url(r'^sponsors/$', TemplateView.as_view(template_name='sponsors.html'), name='sponsors'),
     url(r'^admin/', admin.site.urls),
