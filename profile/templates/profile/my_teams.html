@@ -17,7 +17,7 @@
                     <a href="{% url 'profile:invite' id=team.id %}">{{ team.name }}</a> -- {{ team.event }}
                     <br>
                 {% endfor %}
-                
+
             </center>
         </div>
         <div class="reg_form-container">
@@ -26,10 +26,11 @@
                 <br>
                 <h2 class="reg_form_heading">My Events</h2>
 
-                {% for evnt in usrevents %}
-                    {{ evnt }}
+                {% for event in usrevents %}
+                    {{ event }}
                     <br>
                 {% endfor %}
+
             </center>
         </div>
     </div>
