@@ -22,11 +22,17 @@ from campusambassador.views import get_name
 # from changedp.views import ImageUploadForm
 
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name="index.html"), name='index'),
+    url(r'^$', TemplateView.as_view(template_name="home.html"), name='index'),
+    # url(r'^home/', TemplateView.as_view(template_name='home.html'), name='home'),
+    url(r'^maps/$', TemplateView.as_view(template_name='maps.html'), name='maps'),
+    url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
+    url(r'^gallery/$', TemplateView.as_view(template_name='gallery.html'), name='gallery'),
+    url(r'^sponsors/$', TemplateView.as_view(template_name='sponsors.html'), name='sponsors'),
     url(r'^admin/', admin.site.urls),
     url(r'^ca/','campusambassador.views.get_name',name="ambassador"),
     url(r'^profile/', include('profile.urls')),
-    # url(r'^changedp/','changedp.views.ImageUploadForm',name="changedp"),
     url(r'^changedp/', include('changedp.urls')),
+    url(r'^events/', include('events.urls')),
     url(r'^about/', TemplateView.as_view(template_name='about.html'), name='about'),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

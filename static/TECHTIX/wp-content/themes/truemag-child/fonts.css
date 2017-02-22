@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'MetricWeb-Regular';
+    src: url('assets/fonts/MetricWeb-Regular.eot'); /* IE9 Compat Modes */
+    src: url('assets/fonts/MetricWeb-Regulard41d.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/MetricWeb-Regular.woff') format('woff'),
+        url('assets/fonts/MetricWeb-Regular.woff2') format('woff2'),
+        url('assets/fonts/MetricWeb-Regular.html')  format('truetype'); /* Safari, Android, iOS */
+
+}
+@font-face {
+    font-family: 'MetricWeb-Light';
+    src: url('assets/fonts/MetricWeb-Light.eot'); /* IE9 Compat Modes */
+    src: url('assets/fonts/MetricWeb-Lightd41d.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/MetricWeb-Light.woff') format('woff'),
+        url('assets/fonts/MetricWeb-Light.woff2') format('woff2'),
+        url('assets/fonts/MetricWeb-Light.html')  format('truetype'); /* Safari, Android, iOS */
+
+}
+@font-face {
+    font-family: 'MetricWeb-Bold';
+    src: url('assets/fonts/MetricWeb-Bold.eot'); /* IE9 Compat Modes */
+    src: url('assets/fonts/MetricWeb-Boldd41d.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/MetricWeb-Bold.woff') format('woff'),
+        url('assets/fonts/MetricWeb-Bold.woff2') format('woff2'),
+        url('assets/fonts/MetricWeb-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+
+}
+
+@font-face {
+    font-family: 'FlamaLight';
+    src: url('assets/fonts/FlamaLight.eot'); /* IE9 Compat Modes */
+    src: url('assets/fonts/FlamaLightd41d.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/FlamaLight.woff') format('woff'),
+        url('assets/fonts/FlamaLight.woff2') format('woff2'),
+        url('assets/fonts/FlamaLight.ttf')  format('truetype'); /* Safari, Android, iOS */
+
+}

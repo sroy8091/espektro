@@ -1,0 +1,53 @@
+.blog-heading{min-height:100vh;}
+.contributor{background-color:#131515 !important;}
+.contributor .content-single{width:100%;}
+.container .content{padding-left:0;padding-right:0px;}
+.container .content article{margin-top:-10px;}
+.container .content-form{padding-right:0;padding-left:25px;margin-left:40px;}
+.container .content-form.left{margin-left:0;}
+.container .ads{text-align:right;padding-right:0;}
+.content-single h1{margin-top:0;}
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="url"],
+.wpcf7 textarea,
+.wpcf7 input[type="checkbox"]{background:#1e2121;color:#b4b4b4;font-family:'MetricWeb-Regular';border-radius:0;border:1px solid #303434;}
+.wpcf7 input[type="checkbox"]{margin-left:-20px;position:absolute;z-index:9;width:20px;height:14px;opacity:0;-webkit-appearance:none;appearance:none;}
+@media screen and (min-width:0\0){.wpcf7 input[type="checkbox"]{margin-left:10px;}
+.wpcf7 input[type=checkbox]:checked + span{border:solid 1px #0aadad;}
+.wpcf7 input[type=checkbox]:checked + span:after{color:#0aadad !important;}
+}
+@supports (-ms-accelerator:true){.wpcf7 input[type="checkbox"]{margin-left:10px;}
+.wpcf7 input[type=checkbox]:checked + span{border:solid 1px #0aadad;}
+.wpcf7 input[type=checkbox]:checked + span:after{color:#0aadad !important;}
+}
+.wpcf7 input[type=checkbox] + span{position:relative;background:#1e2121;height:20px;width:20px;display:block;border-radius:50%;border:solid 1px #303434;}
+.wpcf7 input[type=checkbox]:checked + span{border:solid 1px #0aadad;}
+.wpcf7 input[type=checkbox]:checked + span:after{content:url('data:image/gif;base64,R0lGODlhCgAKAIABAAqtrf///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4zLWMwMTEgNjYuMTQ1NjYxLCAyMDEyLzAyLzA2LTE0OjU2OjI3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBOTE3Qjc5QzI4MzUxMUU2QTk1Q0MyNUNCQUUxMjM0RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBOTE3Qjc5RDI4MzUxMUU2QTk1Q0MyNUNCQUUxMjM0RCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkE5MTdCNzlBMjgzNTExRTZBOTVDQzI1Q0JBRTEyMzREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkE5MTdCNzlCMjgzNTExRTZBOTVDQzI1Q0JBRTEyMzREIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAAoACgAAAhKMbwB4yrmeeyFKWyPOanOaPQUAOw==');height:1em;position:absolute;top:0;left:0;bottom:0;right:0;margin:auto;color:#0aadad !important;line-height:1;font-size:18px;text-align:center;}
+.wpcf7 input[type="submit"],
+.wpcf7 input[type="button"]{background-color:#1c3e50;width:100%;height:41px;text-align:center;text-transform:uppercase;border-radius:0;border:1px solid #303434;}
+.wpcf7 input[type="submit"]:hover,
+.wpcf7 input[type="button"]:hover{background-color:#0aadad;color:#122c3a;}
+.wpcf7 textarea{resize:none;}
+.wpcf7 input.wpcf7-not-valid, .wpcf7 textarea.wpcf7-not-valid{border:1px solid red;}
+.wpcf7-checkbox.wpcf7-validates-as-required.wpcf7-not-valid input[type=checkbox] + span{border:1.7px solid red;}
+div.wpcf7-validation-errors{color:red;margin-bottom:40px;background-color:#0a2330;border-color:#09d9db;border-radius:0;font-family:'MetricWeb-Bold' !important;}
+.wpcf7-not-valid-tip{display:none !important;}
+.contact-title{color:#b4b4b4;font-weight:bold;}
+.wpcf7-form input:focus::-webkit-input-placeholder, .wpcf7-form input:focus:-moz-placeholder, .wpcf7-form input:focus::-moz-placeholder, .wpcf7-form input:focus:-ms-input-placeholder{color:transparent;}
+.wpcf7-form-control-wrap.agree{width:auto;float:left;margin-top:0;margin-left:-20px;padding-bottom:20px;}
+span.wpcf7-form-control-wrap input[type="checkbox"]{width:21px;float:left;cursor:pointer;}
+span.wpcf7-list-item-label{float:left;margin-left:10px;margin-top:0px;}
+.form-link{width:auto;float:left;margin-top:0px;padding-right:5px;}
+.form-link a:visited, .form-link a:focus{color:#0ae8e9;}
+@media (max-width:800px){.container .content{padding-right:0;}
+.container .content-form{padding-right:15px;padding-left:15px;margin-left:0;}
+.container .ads{text-align:center;}
+}
+@media (min-width:801px) and (max-width:1024px){.container .content-form{padding-right:35px;padding-left:0;margin-left:-12px;}
+.container .ads{text-align:center;}
+}
+@media (min-width:1200px) and (max-width:1440px){.container .content-form{padding-right:40px;padding-left:0;margin-left:0px;}
+}
+@media (min-width:1441px) and (max-width:1600px){.container .content-form{padding-right:40px;padding-left:0;margin-left:40px;}
+}

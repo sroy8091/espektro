@@ -9,14 +9,20 @@ app_name='profile'
 urlpatterns = [
 
     # /data/register/
-    url(r'^register/$', views.UserFormView.as_view(), name='register'),
+    url(r'^register/$', views.UserFormView, name='register'),
 
     # /profile/login
     url(r'^login/$', authviews.login, {'template_name':'profile/login.html'}, name='login'),
 
+    # /profile/logout
+    url(r'^logout/$', authviews.logout, {'template_name':'profile/logout.html'}, name='logout'),
+
     # /profile/edit/
     url(r'^edit/$', views.edit, name='edit'),
 
+    # /profile/teams/
+    url(r'^teams/$', views.my_teams, name='my_teams'),
+    
     # /profile/team/create/
     url(r'^team/create/$', views.team_create, name='createteam'),
 

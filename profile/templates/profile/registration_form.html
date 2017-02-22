@@ -1,23 +1,75 @@
 {% extends 'profile/base.html' %}
 {% block title%} Register {% endblock %}
-
-{% block body %}
-
-<div class="container-fluid">
-    <div class="col-sm-12 col-md-7">
-        <div class="panel-body">
-
-            <form class="form-horizontal" action="" method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                {% include 'profile/form-template.html' %}
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-success">Submit</button>
-                    </div>
-                </div>
-            </form>
-
-        </div>
-    </div>
-</div>
+{% block styles %}
+    {% load staticfiles %}
+    <link href="{% static 'css/edit_profile.css' %}" rel="stylesheet" type="text/css">
 {% endblock %}
+{% block body %}            
+            <div class="edit_profile_bg">
+
+              <div class="reg_form-container">
+                <!-- <a id="esp_logo" href="#"><img src="esp_logo.png"></a> -->
+              <center>
+              <br><h2 class="reg_form_heading">Register</h2>
+
+                <form name="InviteForm" id="form_contents" action="." method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                  <label for='{{ form.username }}'>Username*</label>
+                  {{ form.username }}
+                {{ form.username.errors }}
+
+                <label for='{{ form.first_name }}'>First Name*</label>
+                  {{ form.first_name }}
+                {{ form.first_name.errors }}
+
+                <label for='{{ form.last_name }}'>Last name*</label>
+                  {{ form.last_name }}
+                {{ form.last_name.errors }}
+
+                <label for='{{ form.email }}'>Email Address*</label>
+                  {{ form.email }}
+                {{ form.email.errors }}
+
+                <label for='{{ form.password }}'>Password*</label>
+                  {{ form.password }}
+                {{ form.passsword.errors }}
+
+                <label for='{{ form.password2 }}'>Repeat password*</label>
+                  {{ form.password2 }}
+                {{ form.passsword2.errors }}
+                {{ form.errors.password2 }}
+                {{ form.non_field_errors }}
+<!--                <label for='{{ detailform.college }}'>College*</label>
+                  {{ detailform.college }}
+                {{ detailform.college.errors }}
+
+                <label for='{{ detailform.city }}'>City*</label>
+                  {{ detailform.city }}
+                {{ detailform.city.errors }}
+
+                <label for='{{ detailform.phone_no }}'> Phone No*</label>
+                  {{ detailform.phone_no }}
+                {{ detailform.phone_no.errors }}
+
+                <label for='{{ detailform.accomodation }}'>Accomodation Required?*</label>
+                  {{ detailform.accomodation }}
+                {{ detailform.accomodation.errors }}
+-->
+                  <br>
+                  {% if messages %}
+                    {% for message in messages %}
+                        {{ message | safe }}
+                        <a href="#" class="close">✖</a>
+                    {% endfor %}
+                  {% endif %}
+
+                  <input type="hidden" name="next" value="{{ next }}" />
+                    <input class="reg_button" type="submit" value="submit" name="submit" />
+                 </form>
+                <br><br>
+                  <a href="{% url 'profile:login' %}"> <p>Have an account? Sign in.</p></a>
+                  </center>
+                </div>
+                </div>
+{% endblock %}
+

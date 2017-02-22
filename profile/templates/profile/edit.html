@@ -1,23 +1,44 @@
+
 {% extends 'profile/base.html' %}
 {% block title%} Edit Profile {% endblock %}
+{% block styles %}
+    {% load staticfiles %}
+    <link href="{% static 'css/edit_profile.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block body %}            
+            <div class="edit_profile_bg">
 
-{% block body %}
+              <div class="reg_form-container">
+                <!-- <a id="esp_logo" href="#"><img src="esp_logo.png"></a> -->
+              <center>
+              <br><h2 class="reg_form_heading">EDIT PROFILE</h2>
 
-<div class="container-fluid">
-    <div class="col-sm-12 col-md-7">
-        <div class="panel-body">
-
-            <form class="form-horizontal" action="." method="post" enctype="multipart/form-data">
+                <form name="EditForm" id="form_contents" action="." method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                {% include 'profile/form-template.html' %}
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-success">Submit</button>
-                    </div>
+                  <label for='{{ user_form.first_name }}'>First Name *</label>
+                  {{ user_form.first_name }}
+                  <label for='{{ user_form.last_name }}'>Last Name *</label>
+                  {{ user_form.last_name }}
+                    <label for='{{ user_detail_form.image }}'>Profile Pic</label>
+                    {{ user_detail_form.image }}
+                  <label for='{{ user_form.email }}'>E-mail address *</label>
+                  {{ user_form.email }}
+                  
+                  <label for='{{ user_detail_form.phone_no }}'>Phone Number *</label>
+                  {{ user_detail_form.phone_no }}
+                  
+                    <label for='{{ user_detail_form.city }}'>City *</label>
+                    {{ user_detail_form.city }}
+                    <label for='{{ user_detail_form.college }}'>College *</label>
+                    {{ user_detail_form.college }}
+                    <br>
+                    <label for='{{ user_detail_form }}'>Accomodation Required</label>{{ user_detail_form.accomodation }}
+                    
+                    <input class="reg_button" type="submit" value="submit" name="submit" onClick="formValidation()" />
+                 </form>
+              </div>
+                  </form>
+                  </center>
                 </div>
-            </form>
-
-        </div>
-    </div>
-</div>
+                </div>
 {% endblock %}

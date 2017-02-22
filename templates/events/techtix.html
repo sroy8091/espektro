@@ -1,0 +1,2122 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
+    <link rel="shortcut icon"
+          href="{% static 'TECHTIX/wp-content/themes/truemag-child/assets/images/espektro_logo.png' %}"/>
+    <title> TECHTIX | 2017</title>
+
+    <script type="text/javascript">
+        var theme_url = "{% static 'TECHTIX/wp-content/themes/truemag-child/techtix.html' %}";
+        var site_url = "techtix.html";
+        var coming = "true";
+        var tag = '';
+    </script>
+
+    <link rel='stylesheet' id='wp-jquery-ui-dialog-css' href="{% static 'TECHTIX/wp-includes/css/jquery-ui-dialog.min4698.css' %}"
+          type='text/css' media='all'/>
+
+    <link rel='stylesheet' id='rs-plugin-settings-css'
+          href="{% static 'TECHTIX/wp-content/plugins/revslider/public/assets/css/settingsb62d.css' %}"
+          type='text/css' media='all'/>
+
+    <link rel='stylesheet' id='wp-pagenavi-css' href="{% static 'TECHTIX/wp-content/plugins/wp-pagenavi/pagenavi-css44fd.css' %}"
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='bootstrap-css' href="{% static 'TECHTIX/wp-content/themes/truemag/css/bootstrap.min68b3.css' %}"
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='colorbox-css' href="{% static 'TECHTIX/wp-content/themes/truemag/js/colorbox/colorbox4698.css' %}"
+          type='text/css' media='all'/>
+
+    <link rel='stylesheet' id='fontastic-entypo-css'
+          href="{% static 'TECHTIX/wp-content/themes/truemag/fonts/fontastic-entypo68b3.css' %}" type='text/css' media='all'/>
+
+    <link rel='stylesheet' id='parent-style-css' href="{% static 'TECHTIX/wp-content/themes/truemag/style4698.css' %}"
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='child-style-css' href="{% static 'TECHTIX/wp-content/themes/truemag-child/style4698.css' %}"
+          type='text/css' media='all'/>
+
+    <link rel='stylesheet' id='style-css' href="{% static 'TECHTIX/wp-content/themes/truemag-child/style68b3.css' %}" type='text/css'
+          media='all'/>
+    <link rel='stylesheet' id='truemag-icon-blg-css'
+          href="{% static 'TECHTIX/wp-content/themes/truemag/css/justVectorFont/stylesheets/justVector68b3.css' %}" type='text/css'
+          media='all'/>
+    <link rel='stylesheet' id='malihu-scroll-css-css'
+          href="{% static 'TECHTIX/wp-content/themes/truemag/js/malihu-scroll/jquery.mCustomScrollbar.min68b3.css' %}?ver=1"
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='mashmenu-css-css'
+          href="{% static 'TECHTIX/wp-content/themes/truemag/inc/megamenu/css/mashmenu4698.css' %}" type='text/css' media='all'/>
+
+    <script type='text/javascript'
+            src="{% static 'ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.minc1d8.js' %}"></script>
+
+    <script type='text/javascript'
+            src="{% static 'TECHTIX/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.minb62d.js' %}"></script>
+    <script type='text/javascript'
+            src="{% static 'TECHTIX/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.minb62d.js' %}"></script>
+
+    <style type="text/css">
+        h1 {
+            font-size: 30px;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        h3,
+        .cactus-widget-posts .widget-posts-title {
+            font-size: 17.5px;
+        }
+
+        body,
+        .cactus-listing-config .load-more {
+            font-size: 13px;
+        }
+
+        .main-menu .nav > li > a {;
+        }
+    </style>
+
+    <script type="text/javascript" src="{% static 'TECHTIX/wp-content/themes/truemag/js/colorbox/jquery.colorbox-min.js' %}"></script>
+
+    <script language="javascript">
+
+        var events_list = ["{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/ROBOTICS.png' %}",
+            "{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/CODING.png' %}",
+            "{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/GAMING.png' %}",
+            "{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/ONLINE.png' %}",
+            "{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/QUIZZARD.png' %}",
+            "{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/BUSINESS.png' %}",
+            "{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/SOLVE_IT.png' %}",
+            "{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/MISC.png' %}"];
+
+        function sub_events_1() {
+
+            document.getElementById("tse").src = events_list[0];
+            document.getElementById("tse_rules").textContent = "RULES FOR ROBOTICS";
+            document.getElementById("tse_1c").textContent = "Robo-T-Racer";
+            document.getElementById("tse_1d").textContent = "Robo-T-Racer";
+            document.getElementById("tse_1").textContent = "Robo-T-Racer";
+            document.getElementById("tse_2").textContent = "Turbulence";
+            document.getElementById("tse_3").textContent = "Wrestle Mania";
+            document.getElementById("tse_4").textContent = "Robo Soccer";
+            document.getElementById("tse_1").style.display = "inline";
+            document.getElementById("tse_2").style.display = "inline";
+            document.getElementById("tse_3").style.display = "inline";
+            document.getElementById("tse_4").style.display = "inline";
+
+            document.getElementById("tse_1c").textContent = "Robo-T-Racer";
+            document.getElementById("tse_2c").textContent = "Turbulence";
+            document.getElementById("tse_3c").textContent = "Wrestle Mania";
+            document.getElementById("tse_4c").textContent = "Robo Soccer";
+            document.getElementById("tse_1c").style.display = "inline";
+            document.getElementById("tse_2c").style.display = "inline";
+            document.getElementById("tse_3c").style.display = "inline";
+            document.getElementById("tse_4c").style.display = "inline";
+
+            document.getElementById("tse_1d").textContent = "Robo-T-Racer";
+            document.getElementById("tse_2d").textContent = "Turbulence";
+            document.getElementById("tse_3d").textContent = "Wrestle Mania";
+            document.getElementById("tse_4d").textContent = "Robo Soccer";
+            document.getElementById("tse_1d").style.display = "inline";
+            document.getElementById("tse_2d").style.display = "inline";
+            document.getElementById("tse_3d").style.display = "inline";
+            document.getElementById("tse_4d").style.display = "inline";
+            document.getElementById("coordinators").style.visibility = "visible";
+            document.getElementById("buttons").style.visibility = "visible";
+
+            document.getElementById("tse_1").onclick = tse_1_1;
+            document.getElementById("tse_2").onclick = tse_1_2;
+            document.getElementById("tse_3").onclick = tse_1_3;
+            document.getElementById("tse_4").onclick = tse_1_4;
+            document.getElementById("tse_1c").onclick = tse_1_1;
+            document.getElementById("tse_2c").onclick = tse_1_2;
+            document.getElementById("tse_3c").onclick = tse_1_3;
+            document.getElementById("tse_4c").onclick = tse_1_4;
+            document.getElementById("tse_1d").onclick = tse_1_1;
+            document.getElementById("tse_2d").onclick = tse_1_2;
+            document.getElementById("tse_3d").onclick = tse_1_3;
+            document.getElementById("tse_4d").onclick = tse_1_4;
+
+            tse_1_1();
+        }
+        function sub_events_2() {
+
+            document.getElementById("tse").src = events_list[1];
+            document.getElementById("tse_rules").textContent = "RULES FOR CODING";
+            document.getElementById("tse_1").textContent = "Code Dictator";
+            document.getElementById("tse_2").textContent = "Bug Debug";
+            document.getElementById("tse_3").textContent = "";
+            document.getElementById("tse_4").textContent = "";
+            document.getElementById("tse_1").style.display = "inline";
+            document.getElementById("tse_2").style.display = "inline";
+            document.getElementById("tse_3").style.display = "none";
+            document.getElementById("tse_4").style.display = "none";
+
+            document.getElementById("tse_1c").textContent = "Code Dictator";
+            document.getElementById("tse_2c").textContent = "Bug Debug";
+            document.getElementById("tse_3c").textContent = "";
+            document.getElementById("tse_4c").textContent = "";
+            document.getElementById("tse_1c").style.display = "inline";
+            document.getElementById("tse_2c").style.display = "inline";
+            document.getElementById("tse_3c").style.display = "none";
+            document.getElementById("tse_4c").style.display = "none";
+
+            document.getElementById("tse_1d").textContent = "Code Dictator";
+            document.getElementById("tse_2d").textContent = "Bug Debug";
+            document.getElementById("tse_3d").textContent = "";
+            document.getElementById("tse_4d").textContent = "";
+            document.getElementById("tse_1d").style.display = "inline";
+            document.getElementById("tse_2d").style.display = "inline";
+            document.getElementById("tse_3d").style.display = "none";
+            document.getElementById("tse_4d").style.display = "none";
+            document.getElementById("coordinators").style.visibility = "visible";
+            document.getElementById("buttons").style.visibility = "visible";
+
+
+            document.getElementById("tse_1").onclick = tse_2_1;
+            document.getElementById("tse_2").onclick = tse_2_2;
+            document.getElementById("tse_3").onclick = tse_2_3;
+            document.getElementById("tse_4").onclick = tse_2_4;
+            document.getElementById("tse_1c").onclick = tse_2_1;
+            document.getElementById("tse_2c").onclick = tse_2_2;
+            document.getElementById("tse_3c").onclick = tse_2_3;
+            document.getElementById("tse_4c").onclick = tse_2_4;
+            document.getElementById("tse_1d").onclick = tse_2_1;
+            document.getElementById("tse_2d").onclick = tse_2_2;
+            document.getElementById("tse_3d").onclick = tse_2_3;
+            document.getElementById("tse_4d").onclick = tse_2_4;
+
+
+            tse_2_1();
+
+        }
+        function sub_events_3() {
+
+            document.getElementById("tse").src = events_list[2];
+            document.getElementById("tse_rules").textContent = "RULES FOR GAMING";
+            document.getElementById("tse_1").textContent = "FIFA 11";
+            document.getElementById("tse_2").textContent = "CS 1.6";
+            document.getElementById("tse_3").textContent = "NFS";
+            document.getElementById("tse_4").textContent = "";
+            document.getElementById("tse_1").style.display = "inline";
+            document.getElementById("tse_2").style.display = "inline";
+            document.getElementById("tse_3").style.display = "inline";
+            document.getElementById("tse_4").style.display = "none";
+
+            document.getElementById("tse_1c").textContent = "FIFA 11";
+            document.getElementById("tse_2c").textContent = "CS 1.6";
+            document.getElementById("tse_3c").textContent = "NFS";
+            document.getElementById("tse_4c").textContent = "";
+            document.getElementById("tse_1c").style.display = "inline";
+            document.getElementById("tse_2c").style.display = "inline";
+            document.getElementById("tse_3c").style.display = "inline";
+            document.getElementById("tse_4c").style.display = "none";
+
+            document.getElementById("tse_1d").textContent = "FIFA 11";
+            document.getElementById("tse_2d").textContent = "CS 1.6";
+            document.getElementById("tse_3d").textContent = "NFS";
+            document.getElementById("tse_4d").textContent = "";
+            document.getElementById("tse_1d").style.display = "inline";
+            document.getElementById("tse_2d").style.display = "inline";
+            document.getElementById("tse_3d").style.display = "inline";
+            document.getElementById("tse_4d").style.display = "none";
+            document.getElementById("coordinators").style.visibility = "visible";
+            document.getElementById("buttons").style.visibility = "visible";
+
+            document.getElementById("tse_1").onclick = tse_3_1;
+            document.getElementById("tse_2").onclick = tse_3_2;
+            document.getElementById("tse_3").onclick = tse_3_3;
+            document.getElementById("tse_4").onclick = tse_3_4;
+            document.getElementById("tse_1c").onclick = tse_3_1;
+            document.getElementById("tse_2c").onclick = tse_3_2;
+            document.getElementById("tse_3c").onclick = tse_3_3;
+            document.getElementById("tse_4c").onclick = tse_3_4;
+            document.getElementById("tse_1d").onclick = tse_3_1;
+            document.getElementById("tse_2d").onclick = tse_3_2;
+            document.getElementById("tse_3d").onclick = tse_3_3;
+            document.getElementById("tse_4d").onclick = tse_3_4;
+
+            tse_3_1();
+        }
+        function sub_events_4() {
+
+            document.getElementById("tse").src = events_list[3];
+            document.getElementById("tse_rules").textContent = "RULES FOR ONLINE";
+            document.getElementById("tse_1").textContent = "Cryptography";
+            document.getElementById("tse_2").textContent = "";
+            document.getElementById("tse_3").textContent = "";
+            document.getElementById("tse_4").textContent = "";
+            document.getElementById("tse_1").style.display = "inline";
+            document.getElementById("tse_2").style.display = "none";
+            document.getElementById("tse_3").style.display = "none";
+            document.getElementById("tse_4").style.display = "none";
+
+            document.getElementById("tse_1c").textContent = "Cryptography";
+            document.getElementById("tse_2c").textContent = "";
+            document.getElementById("tse_3c").textContent = "";
+            document.getElementById("tse_4c").textContent = "";
+            document.getElementById("tse_1c").style.display = "inline";
+            document.getElementById("tse_2c").style.display = "none";
+            document.getElementById("tse_3c").style.display = "none";
+            document.getElementById("tse_4c").style.display = "none";
+
+            document.getElementById("tse_1d").textContent = "Cryptography";
+            document.getElementById("tse_2d").textContent = "";
+            document.getElementById("tse_3d").textContent = "";
+            document.getElementById("tse_4d").textContent = "";
+            document.getElementById("tse_1d").style.display = "inline";
+            document.getElementById("tse_2d").style.display = "none";
+            document.getElementById("tse_3d").style.display = "none";
+            document.getElementById("tse_4d").style.display = "none";
+            document.getElementById("coordinators").style.visibility = "visible";
+            document.getElementById("buttons").style.visibility = "visible";
+
+            document.getElementById("tse_1d").onclick = tse_4_1;
+            document.getElementById("tse_2d").onclick = tse_4_2;
+            document.getElementById("tse_3d").onclick = tse_4_3;
+            document.getElementById("tse_4d").onclick = tse_4_4;
+            document.getElementById("tse_1").onclick = tse_4_1;
+            document.getElementById("tse_2").onclick = tse_4_2;
+            document.getElementById("tse_3").onclick = tse_4_3;
+            document.getElementById("tse_4").onclick = tse_4_4;
+            document.getElementById("tse_1c").onclick = tse_4_1;
+            document.getElementById("tse_2c").onclick = tse_4_2;
+            document.getElementById("tse_3c").onclick = tse_4_3;
+            document.getElementById("tse_4c").onclick = tse_4_4;
+
+            tse_4_1();
+        }
+        function sub_events_5() {
+
+            document.getElementById("tse").src = events_list[4];
+            document.getElementById("tse_rules").textContent = "RULES FOR QUIZZARD";
+            document.getElementById("tse_1").textContent = "Inquizimania";
+            document.getElementById("tse_2").textContent = "Muse the Moot";
+            document.getElementById("tse_3").textContent = "Have your Say";
+            document.getElementById("tse_4").textContent = "";
+            document.getElementById("tse_1").style.display = "inline";
+            document.getElementById("tse_2").style.display = "inline";
+            document.getElementById("tse_3").style.display = "inline";
+            document.getElementById("tse_4").style.display = "none";
+
+            document.getElementById("tse_1c").textContent = "Inquizimania";
+            document.getElementById("tse_2c").textContent = "Muse the Moot";
+            document.getElementById("tse_3c").textContent = "Have your Say";
+            document.getElementById("tse_4c").textContent = "";
+            document.getElementById("tse_1c").style.display = "inline";
+            document.getElementById("tse_2c").style.display = "inline";
+            document.getElementById("tse_3c").style.display = "inline";
+            document.getElementById("tse_4c").style.display = "none";
+
+            document.getElementById("tse_1d").textContent = "Inquizimania";
+            document.getElementById("tse_2d").textContent = "Muse the Moot";
+            document.getElementById("tse_3d").textContent = "Have your Say";
+            document.getElementById("tse_4d").textContent = "";
+            document.getElementById("tse_1d").style.display = "inline";
+            document.getElementById("tse_2d").style.display = "inline";
+            document.getElementById("tse_3d").style.display = "inline";
+            document.getElementById("tse_4d").style.display = "none";
+            document.getElementById("coordinators").style.visibility = "visible";
+            document.getElementById("buttons").style.visibility = "visible";
+
+            document.getElementById("tse_1").onclick = tse_5_1;
+            document.getElementById("tse_2").onclick = tse_5_2;
+            document.getElementById("tse_3").onclick = tse_5_3;
+            document.getElementById("tse_4").onclick = tse_5_4;
+            document.getElementById("tse_1c").onclick = tse_5_1;
+            document.getElementById("tse_2c").onclick = tse_5_2;
+            document.getElementById("tse_3c").onclick = tse_5_3;
+            document.getElementById("tse_4c").onclick = tse_5_4;
+            document.getElementById("tse_1d").onclick = tse_5_1;
+            document.getElementById("tse_2d").onclick = tse_5_2;
+            document.getElementById("tse_3d").onclick = tse_5_3;
+            document.getElementById("tse_4d").onclick = tse_5_4;
+
+            tse_5_1();
+        }
+        function sub_events_6() {
+
+            document.getElementById("tse").src = events_list[5];
+            document.getElementById("tse_rules").textContent = "RULES FOR BUSINESS";
+            document.getElementById("tse_1").textContent = "Case Study";
+            document.getElementById("tse_2").textContent = "";
+            document.getElementById("tse_3").textContent = "";
+            document.getElementById("tse_4").textContent = "";
+            document.getElementById("tse_1").style.display = "inline";
+            document.getElementById("tse_2").style.display = "none";
+            document.getElementById("tse_3").style.display = "none";
+            document.getElementById("tse_4").style.display = "none";
+
+            document.getElementById("tse_1c").textContent = "Case Study";
+            document.getElementById("tse_2c").textContent = "";
+            document.getElementById("tse_3c").textContent = "";
+            document.getElementById("tse_4c").textContent = "";
+            document.getElementById("tse_1c").style.display = "inline";
+            document.getElementById("tse_2c").style.display = "none";
+            document.getElementById("tse_3c").style.display = "none";
+            document.getElementById("tse_4c").style.display = "none";
+
+            document.getElementById("tse_1d").textContent = "Case Study";
+            document.getElementById("tse_2d").textContent = "";
+            document.getElementById("tse_3d").textContent = "";
+            document.getElementById("tse_4d").textContent = "";
+            document.getElementById("tse_1d").style.display = "inline";
+            document.getElementById("tse_2d").style.display = "none";
+            document.getElementById("tse_3d").style.display = "none";
+            document.getElementById("tse_4d").style.display = "none";
+            document.getElementById("coordinators").style.visibility = "visible";
+            document.getElementById("buttons").style.visibility = "visible";
+
+            document.getElementById("tse_1").onclick = tse_6_1;
+            document.getElementById("tse_2").onclick = tse_6_2;
+            document.getElementById("tse_3").onclick = tse_6_3;
+            document.getElementById("tse_4").onclick = tse_6_4;
+            document.getElementById("tse_1c").onclick = tse_6_1;
+            document.getElementById("tse_2c").onclick = tse_6_2;
+            document.getElementById("tse_3c").onclick = tse_6_3;
+            document.getElementById("tse_4c").onclick = tse_6_4;
+            document.getElementById("tse_1d").onclick = tse_6_1;
+            document.getElementById("tse_2d").onclick = tse_6_2;
+            document.getElementById("tse_3d").onclick = tse_6_3;
+            document.getElementById("tse_4d").onclick = tse_6_4;
+            tse_6_1();
+        }
+        function sub_events_7() {
+
+            document.getElementById("tse").src = events_list[6];
+            document.getElementById("tse_rules").textContent = "RULES FOR SOLVE_IT";
+            document.getElementById("tse_1").textContent = "Matematicos";
+            document.getElementById("tse_2").textContent = "Sudoku";
+            document.getElementById("tse_3").textContent = "Checkmate";
+            document.getElementById("tse_4").textContent = "Rubik's Riddle";
+            document.getElementById("tse_1").style.display = "inline";
+            document.getElementById("tse_2").style.display = "inline";
+            document.getElementById("tse_3").style.display = "inline";
+            document.getElementById("tse_4").style.display = "none";
+
+            document.getElementById("tse_1c").textContent = "Matematicos";
+            document.getElementById("tse_2c").textContent = "Sudoku";
+            document.getElementById("tse_3c").textContent = "Checkmate";
+            document.getElementById("tse_4c").textContent = "Rubik's Riddle";
+            document.getElementById("tse_1c").style.display = "inline";
+            document.getElementById("tse_2c").style.display = "inline";
+            document.getElementById("tse_3c").style.display = "inline";
+            document.getElementById("tse_4c").style.display = "none";
+
+            document.getElementById("tse_1d").textContent = "Matematicos";
+            document.getElementById("tse_2d").textContent = "Sudoku";
+            document.getElementById("tse_3d").textContent = "Checkmate";
+            document.getElementById("tse_4d").textContent = "Rubik's Riddle";
+            document.getElementById("tse_1d").style.display = "inline";
+            document.getElementById("tse_2d").style.display = "inline";
+            document.getElementById("tse_3d").style.display = "inline";
+            document.getElementById("tse_4d").style.display = "none";
+            document.getElementById("coordinators").style.visibility = "visible";
+            document.getElementById("buttons").style.visibility = "visible";
+
+            document.getElementById("tse_1").onclick = tse_7_1;
+            document.getElementById("tse_2").onclick = tse_7_2;
+            document.getElementById("tse_3").onclick = tse_7_3;
+            document.getElementById("tse_4").onclick = tse_7_4;
+            document.getElementById("tse_1c").onclick = tse_7_1;
+            document.getElementById("tse_2c").onclick = tse_7_2;
+            document.getElementById("tse_3c").onclick = tse_7_3;
+            document.getElementById("tse_4c").onclick = tse_7_4;
+            document.getElementById("tse_1d").onclick = tse_7_1;
+            document.getElementById("tse_2d").onclick = tse_7_2;
+            document.getElementById("tse_3d").onclick = tse_7_3;
+            document.getElementById("tse_4d").onclick = tse_7_4;
+            tse_7_1();
+        }
+        function sub_events_8() {
+
+            document.getElementById("tse").src = events_list[7];
+            document.getElementById("tse_rules").textContent = "RULES FOR MISCELLANEOUS";
+
+            document.getElementById("tse_1").textContent = "Best out of Waste";
+            document.getElementById("tse_2").textContent = "Mad ADS";
+            document.getElementById("tse_3").textContent = "Paint-T";
+            document.getElementById("tse_4").textContent = "";
+            document.getElementById("tse_1").style.display = "inline";
+            document.getElementById("tse_2").style.display = "inline";
+            document.getElementById("tse_3").style.display = "inline";
+            document.getElementById("tse_4").style.display = "none";
+
+            document.getElementById("tse_1c").textContent = "Best out of Waste";
+            document.getElementById("tse_2c").textContent = "Mad ADS";
+            document.getElementById("tse_3c").textContent = "Paint-T";
+            document.getElementById("tse_4c").textContent = "";
+            document.getElementById("tse_1c").style.display = "inline";
+            document.getElementById("tse_2c").style.display = "inline";
+            document.getElementById("tse_3c").style.display = "inline";
+            document.getElementById("tse_4c").style.display = "none";
+
+            document.getElementById("tse_1d").textContent = "Best out of Waste";
+            document.getElementById("tse_2d").textContent = "Mad ADS";
+            document.getElementById("tse_3d").textContent = "Paint-T";
+            document.getElementById("tse_4d").textContent = "";
+            document.getElementById("tse_1d").style.display = "inline";
+            document.getElementById("tse_2d").style.display = "inline";
+            document.getElementById("tse_3d").style.display = "inline";
+            document.getElementById("tse_4d").style.display = "none";
+            document.getElementById("coordinators").style.visibility = "visible";
+            document.getElementById("buttons").style.visibility = "visible";
+
+            document.getElementById("tse_1").onclick = tse_8_1;
+            document.getElementById("tse_2").onclick = tse_8_2;
+            document.getElementById("tse_3").onclick = tse_8_3;
+            document.getElementById("tse_4").onclick = tse_8_4;
+            document.getElementById("tse_1c").onclick = tse_8_1;
+            document.getElementById("tse_2c").onclick = tse_8_2;
+            document.getElementById("tse_3c").onclick = tse_8_3;
+            document.getElementById("tse_4c").onclick = tse_8_4;
+            document.getElementById("tse_1d").onclick = tse_8_1;
+            document.getElementById("tse_2d").onclick = tse_8_2;
+            document.getElementById("tse_3d").onclick = tse_8_3;
+            document.getElementById("tse_4d").onclick = tse_8_4;
+            tse_8_1();
+        }
+
+        //event wise func begins//
+
+        function tse_1_1() {
+
+            reset_style();
+            color_style("1");
+
+            document.getElementById("tse_rules").textContent = "Students from EE, ECE, CSE and IT would be interested in this event. They require the basic concept of logic gates and programming to construct this bot. Here they have to build an autonomous bot which can trace black line of 4 cm width (background will be white). Robot should detect boom barrier of white color and wait until boom barrier is not removed... Each group should have a maximum of four members and the team with minimum time to complete the whole path will be the winner.";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+//                document.getElementById("tbutton1").value = "11";
+            document.getElementById("tbutton2").value = "11";
+
+//                alert("entered the zone so you are fucked up=/ selected!!");
+        }
+
+        function tse_1_2() {
+
+            reset_style();
+            color_style("2");
+
+            document.getElementById("tse_rules").textContent = "Design a manually controlled bot & ride your way through the narrow alleys to find a way out of the perplexing maze and collect maximum points as you travel through it. Here bots are to be made to overcome obstacles like sand, stone, inclination and much more than expected. The robot completing all the tasks with minimum time will be the winner. Students from all departments are interested in this event.";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "12";
+
+        }
+
+        function tse_1_3() {
+
+            reset_style();
+            color_style("3");
+
+            document.getElementById("tse_rules").textContent = "Gone are the days of peace and now it's time to put your bot's muscle to test. Wrestlemania is another manually controlled robotics event which involves two bot's to fight to the last brink of their health to stay in the competition. The event gives participants a chance to showcase their skills in warfare which brings with it a lot of innovation and one of the very few events in which no two bots have the same functionality. Power up the motors, boost up the torque and let those gears speak.";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "13";
+        }
+
+        function tse_1_4() {
+
+            reset_style();
+            color_style("4");
+
+            document.getElementById("tse_rules").textContent = "Are you confident that your bot can challenge the soccer legends we adore? If so it's time to prove it. Robo Soccer brings to you the opportunity of displaying your bot's finesse in the game of soccer. Compete and fight until you can shout \"GOAL\".";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "14";
+        }
+
+        function tse_2_1() {
+
+            reset_style();
+            color_style("1");
+
+            document.getElementById("tse_rules").textContent = "Inspecting the willing of students in computer languages and codes we have decided to add this event in this year. Code Dictator is coding competition based on computer language other than C. So, regarding the publicity and popularity of this event we think that it will be one of the most interesting events also in TECHTIX \'17.";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "21";
+        }
+
+        function tse_2_2() {
+
+            reset_style();
+            color_style("2");
+
+            document.getElementById("tse_rules").textContent = "A problem or trouble (bug) will be given and candidates will have to debug it using their brain, where a wrong code is needed to be corrected. We expect a lot of participation in it. So, regarding the publicity and popularity of this event we think that it will be one of the most interesting events also in TECHTIX '17. So, we include this event as a part of TECHTIX \'17.";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "22";
+        }
+
+        function tse_2_3() {
+
+            reset_style();
+            color_style("3");
+
+            document.getElementById("tse_rules").textContent = "";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "0";
+        }
+
+        function tse_2_4() {
+
+            reset_style();
+            color_style("4");
+
+            document.getElementById("tse_rules").textContent = "";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "0";
+        }
+
+        function tse_3_1() {
+
+            reset_style();
+            color_style("1");
+
+            document.getElementById("tse_rules").textContent = "FIFA is most popular computer gaming based on football introduced by EA Sports. Our busy schedule of study is the reason of the monotony in student life. That's why all the indoor and outdoor games are quiet in catching the attention of people of all ages. It is the proper way to refresh you both mentally and physically. Moreover, this game really increases mind concentration on a particular thing. Thus we decide to include this game in TECHTIX \'17.";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "31";
+        }
+
+        function tse_3_2() {
+
+            reset_style();
+            color_style("2");
+
+            document.getElementById("tse_rules").textContent = "This is the gaming session of TECHTIX '17. We here introduce a group wise (5 members per team) competitive game named \"Counter Strike 1.6\" for this event. As all of us know that too much of anything leads to monotony. Our busy schedule of study is the reason of the monotony in student life. That's why all the indoor and outdoor games are quiet in catching the attention of people of all ages. It is the proper way to refresh you both mentally and physically. Moreover, we know that any computer game helps in increasing the reflex of the students. Thus we decide to organize the most popular live-action multiplayer game.";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "32";
+        }
+
+        function tse_3_3() {
+
+            reset_style();
+            color_style("3");
+
+            document.getElementById("tse_rules").textContent = "Need For Speed Most Wanted is one of the most popular racing game in the world of computer games introduced by EA games. Today, in the era of Virtual Reality, all the computer games are very successful in gaining the attention of players of all the ages. For this reason, we introduce this event in TECHTIX '17. In the previous years, we saw that the students in a very good number take participation in this event which helps to distribute the popularity of TECHTIX'17. We are also as the previous year's very hopeful about the success of this event";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "33";
+        }
+
+        function tse_3_4() {
+
+            reset_style();
+            color_style("4");
+
+            document.getElementById("tse_rules").textContent = "";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "0";
+        }
+
+        function tse_4_1() {
+
+            reset_style();
+            color_style("1");
+            document.getElementById("tse_rules").textContent = "CRYPTIX";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "41";
+        }
+
+        function tse_4_2() {
+            reset_style();
+            color_style("2");
+            document.getElementById("tse_rules").textContent = "";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "0";
+        }
+
+        function tse_4_3() {
+            reset_style();
+            color_style("3");
+            document.getElementById("tse_rules").textContent = "";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "0";
+        }
+
+        function tse_4_4() {
+            reset_style();
+            color_style("4");
+            document.getElementById("tse_rules").textContent = "";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "0";
+        }
+
+        function tse_5_1() {
+            reset_style();
+            color_style("1");
+            document.getElementById("tse_rules").textContent = "Tricky Questions to vindicate their erudition of the goofy as well as the pedantic. Inquisimania, based on one of the most addictive mind sports, is very popular and commands great viewership. Amidst the nail biting tension and deafening silence, the best minds in the KGEC battle out their wits for questions put forth by the quizmaster. The silence is broken by the enthusiastic crowd, which greets every brilliant answer with a roaring applause. With higher participation figures and great rewards this event would certainly grab more eyeballs and turn more heads.";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "51";
+        }
+
+        function tse_5_2() {
+            reset_style();
+            color_style("2");
+            document.getElementById("tse_rules").textContent = "The event will feature the best spokespersons and debaters of KGEC fighting it out to be the best in our college. This event is organized keeping in mind the increasing demand for good speaking skills. Fierce debating amidst a courtroom buzz; arguing as lawyers has always proved its excitement.";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "52";
+        }
+
+        function tse_5_3() {
+            reset_style();
+            color_style("3");
+            document.getElementById("tse_rules").textContent = "Have your Say";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "53";
+        }
+
+        function tse_5_4() {
+            reset_style();
+            color_style("4");
+            document.getElementById("tse_rules").textContent = "";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "0";
+        }
+
+        function tse_6_1() {
+            reset_style();
+            color_style("1");
+            document.getElementById("tse_rules").textContent = "CASE STUDY";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "61";
+        }
+
+        function tse_6_2() {
+            reset_style();
+            color_style("2");
+            document.getElementById("tse_rules").textContent = "";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "0";
+        }
+
+        function tse_6_3() {
+            reset_style();
+            color_style("3");
+            document.getElementById("tse_rules").textContent = "";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "0";
+        }
+
+        function tse_6_4() {
+            reset_style();
+            color_style("4");
+            document.getElementById("tse_rules").textContent = "";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "0";
+        }
+
+        function tse_7_1() {
+            reset_style();
+            color_style("1");
+            document.getElementById("tse_rules").textContent = "Mathematicians need not be boring or orthodox. Do you have an innate desire to do with numbers what artists do with paint brushes? Or you can see music in equations. In this event participants have got a chance to showcase their mathematic talent. This event is a sheer display of talented math minds. So pit yourself against the toughest opponents in the battle to solve the trickiest questions the fastest.";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "71";
+        }
+
+        function tse_7_2() {
+            reset_style();
+            color_style("2");
+            document.getElementById("tse_rules").innerHTML = "\"You have brains in your head and feet in your shoes. You can steer in any directions you choose.\"<br>Sudoku is most renowned event to check your manipulation capability with numbers. Participant who can solve the given Sudoku in minimum time will be the winner.";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "72";
+        }
+
+        function tse_7_3() {
+            reset_style();
+            color_style("3");
+            document.getElementById("tse_rules").innerHTML = "\"Chess is eminently and emphatically the philosopher's game.\"<br>Come with all the practice in the world and great moves under your sleeve. The time is right to use your mind to overpower your opponent's move and utter at last Checkmate. Crown yourself as the Grandmaster of Techtix '17.";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "73";
+        }
+
+        function tse_7_4() {
+            reset_style();
+            color_style("4");
+            document.getElementById("tse_rules").innerHTML = "\"We turn the cube and it twists us.\"<br>We should continue various type of extracurricular activity beside study. Many people have their habit to solve Rubik's cube which is a generally 3x3x3 cube with different color of blocks. Participant who can solve the Rubik's Cube in minimum time will be the winner.";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "74";
+        }
+
+        function tse_8_1() {
+            reset_style();
+            color_style("1");
+            document.getElementById("tse_rules").innerHTML = "\"RETHINK RECYCLE REMAKE.\"<br>An event heavily loaded with fun & innovations, it also carries with it primal social cause, and a showcase of unprecedented creativity. A competition to conjure up the most refreshing art.";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "81";
+        }
+
+        function tse_8_2() {
+            reset_style();
+            color_style("2");
+            document.getElementById("tse_rules").innerHTML = "\"It's not about Ideas, It's about making Ideas happen.\"<br>This event is also a new attraction of this year's technical fest. In this event there will be a group of 5 student's each. Each group will be given a specific product which they have to advertise or promote. The best part is that they have to do the promotion by acting out a skit much like a real life ad campaign.";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "82";
+        }
+
+        function tse_8_3() {
+            reset_style();
+            color_style("3");
+            document.getElementById("tse_rules").innerHTML = "\"Painting is silent poetry, and poetry is painting that speaks.\"<br>Use your creativity and imagination to paint the masterpiece and be coined as the Picasso of the campus. Design what you think. This time get your ideas on T-shirt. Share them. Wear them.";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "83";
+        }
+
+        function tse_8_4() {
+            reset_style();
+            color_style("4");
+            document.getElementById("tse_rules").textContent = "";
+            document.getElementById("cood_name1").textContent = "";
+            document.getElementById("cood_contact1").textContent = "";
+            document.getElementById("cood_name2").textContent = "";
+            document.getElementById("cood_contact2").textContent = "";
+            document.getElementById("cood_name3").textContent = "";
+            document.getElementById("cood_contact3").textContent = "";
+            document.getElementById("cood_name4").textContent = "";
+            document.getElementById("cood_contact4").textContent = "";
+            document.getElementById("cood_name5").textContent = "";
+            document.getElementById("cood_contact5").textContent = "";
+            document.getElementById("cood_name6").textContent = "";
+            document.getElementById("cood_contact6").textContent = "";
+            document.getElementById("tbutton2").value = "0";
+        }
+
+        function reset_style() {
+            document.getElementById("tse_1").style.backgroundColor = "transparent";
+            document.getElementById("tse_1c").style.backgroundColor = "transparent";
+            document.getElementById("tse_1d").style.backgroundColor = "transparent";
+
+            document.getElementById("tse_1").style.color = "rgb(94,224,227)";
+            document.getElementById("tse_1c").style.color = "rgb(94,224,227)";
+            document.getElementById("tse_1d").style.color = "rgb(94,224,227)";
+
+            document.getElementById("tse_2").style.backgroundColor = "transparent";
+            document.getElementById("tse_2c").style.backgroundColor = "transparent";
+            document.getElementById("tse_2d").style.backgroundColor = "transparent";
+
+            document.getElementById("tse_2").style.color = "rgb(94,224,227)";
+            document.getElementById("tse_2c").style.color = "rgb(94,224,227)";
+            document.getElementById("tse_2d").style.color = "rgb(94,224,227)";
+
+            document.getElementById("tse_3").style.backgroundColor = "transparent";
+            document.getElementById("tse_3c").style.backgroundColor = "transparent";
+            document.getElementById("tse_3d").style.backgroundColor = "transparent";
+
+            document.getElementById("tse_3").style.color = "rgb(94,224,227)";
+            document.getElementById("tse_3c").style.color = "rgb(94,224,227)";
+            document.getElementById("tse_3d").style.color = "rgb(94,224,227)";
+
+            document.getElementById("tse_4").style.backgroundColor = "transparent";
+            document.getElementById("tse_4c").style.backgroundColor = "transparent";
+            document.getElementById("tse_4d").style.backgroundColor = "transparent";
+
+            document.getElementById("tse_4").style.color = "rgb(94,224,227)";
+            document.getElementById("tse_4c").style.color = "rgb(94,224,227)";
+            document.getElementById("tse_4d").style.color = "rgb(94,224,227)";
+        }
+
+        function color_style(x) {
+            var w = "tse_" + x + "";
+            var y = "tse_" + x + "c";
+            var z = "tse_" + x + "d";
+            document.getElementById(w).style.backgroundColor = "rgb(94,224,227)";
+            document.getElementById(y).style.backgroundColor = "rgb(94,224,227)";
+            document.getElementById(z).style.backgroundColor = "rgb(94,224,227)";
+
+            document.getElementById(w).style.color = "rgb(0,0,0)";
+            document.getElementById(y).style.color = "rgb(0,0,0)";
+            document.getElementById(z).style.color = "rgb(0,0,0)";
+        }
+
+    </script>
+
+    <style>
+        #robotics:hover, #robotics:active, #coding:hover, #coding:active, #gaming:hover, #gaming:active, #online:hover, #online:active, #quizzard:hover, #quizzard:active, #business:hover, #business:active, #solve_it:hover, #solve_it:active, #misc:hover, #misc:active, .tse-ele:hover, .tse-ele:active {
+            cursor: pointer;
+        }
+
+        .t-event-heading {
+            font-size: 1.5em;
+            color: #228DFF;
+            font-family: Iceland;
+        }
+
+        .t-event-heading:hover {
+            -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+            -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+            animation: neon2 1.5s ease-in-out infinite alternate;
+        }
+
+        .events_description {
+            background-image: url(/static/TECHTIX/wp-content/uploads/2016/03/SCREEN_EDITED.png);
+            /*                background-color: black;*/
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #trapezoid {
+            width: 50%;
+            height: 100px;
+            background: black;
+            margin: 0px 0px;
+            position: relative
+        }
+
+        #trapezoid:before {
+            content: '';
+            line-height: 0;
+            font-size: 0;
+            width: 0;
+            height: 0;
+            border-top: 50px solid transparent;
+            border-bottom: 50px solid black;
+            border-left: 50px solid transparent;
+            border-right: 50px solid black;
+            position: absolute;
+            top: 0;
+            left: -99px;
+        }
+
+        #trapezoid:after {
+            content: '';
+            line-height: 0;
+            font-size: 0;
+            width: 0;
+            height: 0;
+            border-top: 50px solid transparent;
+            border-bottom: 50px solid black;
+            border-left: 50px solid black;
+            border-right: 50px solid transparent;
+            position: absolute;
+            top: 0;
+            right: -99px;
+        }
+
+        .tbutton {
+            background-color: rgba(94, 224, 237, 0.5);
+            border-radius: 4px;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 10px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+
+        }
+
+        .tbutton span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        #tbutton1 span:before {
+            content: '\00ab';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: -20px;
+            transition: 0.5s;
+        }
+
+        #tbutton2 span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        #tbutton2:hover span {
+            padding-right: 25px;
+        }
+
+        #tbutton1:hover span {
+            padding-left: 25px;
+        }
+
+        #tbutton1:hover span:before {
+            opacity: 1;
+            left: 0;
+        }
+
+        #tbutton2:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .tbutton:hover {
+            background-color: rgba(94, 224, 237, 0.7);
+            box-shadow: 0px 0px 5px 5px rgba(94, 224, 247, 0.3);
+        }
+
+        .cood_name, .cood_contact {
+            font-size: 16px;
+            font-family: batman;
+        }
+
+        @-webkit-keyframes neon2 {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+            }
+            to {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+            }
+
+        }
+
+        @font-face {
+            font-family: batman;
+            src: url(/static/TECHTIX/wp-content/fonts/batman.ttf);
+        }
+    </style>
+</head>
+
+<body class="home page page-id-952 page-template page-template-page-templates page-template-front-page page-template-page-templatesfront-page-php full-width template-front-page custom-background-empty wpb-js-composer js-comp-ver-4.10 vc_responsive">
+<a name="top" style="height:0; position:absolute; top:0;" id="top-anchor"></a>
+{#<div id="pageloader">#}
+{#    <div class="loader-item">#}
+{#        <img class="spinner-cont"/>#}
+{#    </div>#}
+{#</div>#}
+<div id="body-wrap">
+    <div id="wrap">
+        <header class="dark-div">
+
+            <div id="top-nav" class="topnav-dark ">
+                <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+                    <div class="container header col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+                            <img src="{% static 'TECHTIX/wp-content/uploads/2016/03/kgec_logo.png' %}"
+                                 style="width:95px; height:95px; padding:10px;">
+                        </div>
+                        <div class="navbar-header hidden-sm hidden-xs" id="trapezoid">
+                            <center>
+                                <a class="logo" href="techtix.html" title="TECHTIX"><img
+                                        src="{% static 'TECHTIX/wp-content/uploads/2016/03/LOGO_TECHTIX.png' %}" alt="TECHTIX_LOGO"/></a>
+                                <p class="header-description">The Techno-Management fest of KGEC</p>
+                            </center>
+                        </div>
+
+                        <div class="navbar-header hidden-lg hidden-md">
+                            <center>
+                                <a class="logo" href="techtix.html" title="TECHTIX"><img
+                                        src="{% static 'TECHTIX/wp-content/uploads/2016/03/LOGO_TECHTIX.png' %}" alt="TECHTIX_LOGO"/></a>
+                                <p class="header-description">The Techno-Management fest of KGEC</p>
+                            </center>
+                        </div>
+
+                        <div class="login-sub col-lg-3 col-md-3 hidden-sm hidden-xs">
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div id="body">
+            <div class="container">
+
+                <div id="slider" style="margin-left:-15px; margin-right:-15px;" class="slider-hero is-carousel"
+                     data-auto_timeout=3000 data-auto_duration=800 data-pagi='slider-paginator'>
+
+                    <div class="slider-hero-content">
+                        <div class="video-item">
+                            <div class="item-thumbnail">
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2017/01/img1.jpg' %}" width="1920" height="1080"
+                                     alt="TECHTIX 2017"/>
+                            </div>
+                        </div>
+
+                        <div class="video-item">
+                            <div class="item-thumbnail">
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2017/01/img2.jpg' %}" width="1920" height="1080"
+                                     alt="TECHTIX 2017">
+                            </div>
+                        </div>
+
+                        <div class="video-item">
+                            <div class="item-thumbnail">
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2017/01/img3.jpg' %}" width="1280" height="720"
+                                     alt="TECHTIX 2017"/>
+                            </div>
+                        </div>
+
+                        <div class="video-item">
+                            <div class="item-thumbnail">
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2017/01/img4.jpg' %}" width="2000" height="819" alt="Grow"
+                                     title="Grow"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="slider-paginator" class="tp-bullets hesperiden horizontal noSwipe"></div>
+                    <div class="clearfix"></div>
+                    <div class="prev tp-leftarrow tparrows hesperiden noSwipe"></div>
+                    <div class="next tp-rightarrow tparrows hesperiden noSwipe"></div>
+                </div>
+
+                <div class="sub-genres">
+                    <div class="header">
+                        <div class="genres-title" id="top_bar"> EVENTS</div>
+                    </div>
+                </div>
+
+                <div id="genres-filter" class="genres-filter is-carousel" data-auto_timeout=3000 data-auto_duration=800>
+                    <div class="genres-content">
+                        <div class="item-genres">
+                            <a href="#top_bar" id="robotics" onclick="sub_events_1()">
+                                <div class="img"
+                                     style="background-image:url(/static/TECHTIX/wp-content/uploads/2016/03/ICON_POSTHUMAN.svg);"></div>
+                                <div class="name"> ROBOTICS</div>
+                            </a>
+                        </div>
+                        <div class="item-genres">
+                            <a href="#top_bar" id="coding" onclick="sub_events_2()">
+                                <div class="img"
+                                     style="background-image:url(/static/TECHTIX/wp-content/uploads/2016/03/ICON_CODING.svg);"></div>
+                                <div class="name"> CODING</div>
+                            </a>
+                        </div>
+                        <div class="item-genres">
+                            <a href="#top_bar" id="gaming" onclick="sub_events_3()">
+                                <div class="img"
+                                     style="background-image:url(/static/TECHTIX/wp-content/uploads/2016/03/ICON_MILITARYSF.svg);"></div>
+                                <div class="name"> GAMING</div>
+                            </a>
+                        </div>
+                        <div class="item-genres">
+                            <a href="#top_bar" id="online" onclick="sub_events_4()">
+                                <div class="img"
+                                     style="background-image:url(/static/TECHTIX/wp-content/uploads/2016/03/ICON_ONLINE.png);"></div>
+                                <div class="name"> ONLINE</div>
+                            </a>
+                        </div>
+                        <div class="item-genres">
+                            <a href="#top_bar" id="quizzard" onclick="sub_events_5()">
+                                <div class="img"
+                                     style="background-image:url(/static/TECHTIX/wp-content/uploads/2016/03/ICON_QUIZZARD.png);"></div>
+                                <div class="name"> QUIZZARD</div>
+                            </a>
+                        </div>
+                        <div class="item-genres">
+                            <a href="#top_bar" id="business" onclick="sub_events_6()">
+                                <div class="img"
+                                     style="background-image:url(/static/TECHTIX/wp-content/uploads/2016/03/ICON_DYSTOPIANOIR.svg);"></div>
+                                <div class="name"> BUSINESS</div>
+                            </a>
+                        </div>
+                        <div class="item-genres">
+                            <a href="#top_bar" id="solve_it" onclick="sub_events_7()">
+                                <div class="img"
+                                     style="background-image:url(/static/TECHTIX/wp-content/uploads/2016/03/ICON_TIMETRAVEL.svg);"></div>
+                                <div class="name"> SOLVE IT</div>
+                            </a>
+                        </div>
+                        <div class="item-genres">
+                            <a href="#top_bar" id="misc" onclick="sub_events_8()">
+                                <div class="img"
+                                     style="background-image:url(/static/TECHTIX/wp-content/uploads/2016/03/ICON_MULTIVERSE.svg);"></div>
+                                <div class="name"> MISCELLANEOUS</div>
+                            </a>
+                        </div>
+                        <div class="item-genres">
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="prev tp-leftarrow tparrows hesperiden noSwipe"></div>
+                    <div class="next tp-rightarrow tparrows hesperiden noSwipe"></div>
+                </div>
+
+                <div class="sub-genres-mobile">
+                    <div class="select-sub-genres" style="border:0;">
+
+
+                        <div class="item-genres-sub col-sm-6 col-xs-6" style="padding:2px;">
+                            <a href="#top_bar" id="robotics">
+                                <center>
+                                    <div class="name-sub"
+                                         style="font-family :'BatmanForeverAlternate Regular'; font-size:16px; padding:5px; border: 2px rgb(94,224,227) solid;"
+                                         onclick="sub_events_1()"> ROBOTICS
+                                    </div>
+                                </center>
+                            </a>
+                        </div>
+                        <div class="item-genres-sub col-sm-6 col-xs-6" style="padding:2px;">
+                            <a href="#top_bar" id="coding" onclick="sub_events_2()">
+                                <center>
+                                    <div class="name-sub"
+                                         style="font-family :'BatmanForeverAlternate Regular'; font-size:16px; padding:5px; border: 2px rgb(94,224,227) solid;">
+                                        CODING
+                                    </div>
+                                </center>
+                            </a>
+                        </div>
+                        <div class="item-genres-sub col-sm-6 col-xs-6" style="padding:2px;">
+                            <a href="#top_bar" id="gaming" onclick="sub_events_3()">
+                                <div class="name-sub"
+                                     style="font-family :'BatmanForeverAlternate Regular'; font-size:16px; padding:5px; border: 2px rgb(94,224,227) solid;">
+                                    GAMING
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item-genres-sub col-sm-6 col-xs-6" style="padding:2px;">
+                            <a href="#top_bar" id="online" onclick="sub_events_4()">
+                                <div class="name-sub"
+                                     style="font-family :'BatmanForeverAlternate Regular'; font-size:16px; padding:5px; border: 2px rgb(94,224,227) solid;">
+                                    ONLINE
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item-genres-sub col-sm-6 col-xs-6" style="padding:2px;">
+                            <a href="#top_bar" id="quizzard" onclick="sub_events_5()">
+                                <div class="name-sub"
+                                     style="font-family :'BatmanForeverAlternate Regular'; font-size:16px; padding:5px; border: 2px rgb(94,224,227) solid;">
+                                    QUIZZARD
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item-genres-sub col-sm-6 col-xs-6" style="padding:2px;">
+                            <a href="#top_bar" id="business" onclick="sub_events_6()">
+                                <div class="name-sub"
+                                     style="font-family :'BatmanForeverAlternate Regular'; font-size:16px; padding:5px; border: 2px rgb(94,224,227) solid;">
+                                    BUSINESS
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item-genres-sub col-sm-6 col-xs-6" style="padding:2px;">
+                            <a href="#top_bar" id="solve_it" onclick="sub_events_7()">
+                                <div class="name-sub"
+                                     style="font-family :'BatmanForeverAlternate Regular'; font-size:16px; padding:5px; border: 2px rgb(94,224,227) solid;">
+                                    SOLVE IT
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item-genres-sub col-sm-6 col-xs-6" style="padding:2px;">
+                            <a href="#top_bar" id="misc" onclick="sub_events_8()">
+                                <div class="name-sub"
+                                     style="font-family :'BatmanForeverAlternate Regular'; font-size:16px; padding:5px; border: 2px rgb(94,224,227) solid;">
+                                    MISCELLANEOUS
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- SUB EVENTS DISPLAY SECTION STARTS-->
+        </div>
+    </div>
+
+    <div class="seo-footer">
+        <div class="header">
+            <div class="seo-title">
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="background-color:black;">
+
+        <!-- SUB EVENTS DISPLAY MAIN-->
+        <div class="events-description col-lg-12 col-md-12 col-sm-12 col-xs-12"
+             style="background-image: url(/static/TECHTIX/wp-content/uploads/2016/03/SCREEN_EDITED.png); background-position: center; background-repeat: no-repeat; background-size: 100% 100%;">
+
+            <div class="events-container col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:50px 8%;">
+
+                <div class="te-header col-lg-12 col-md-12 hidden-sm-12 col-xs-12">
+                    <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:50px;"
+                         id="sub_events_footer">
+                </div>
+
+                <div class="te-header hidden-lg hidden-md hidden-sm-12 col-xs-12">
+                    <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:100px;"
+                         id="sub_events_footer">
+                </div>
+
+                <div class="te-header-logo col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <center><img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/TECHTIX.png' %}" width="auto" height="50px" id="tse">
+                    </center>
+                </div>
+
+                <div class="te_body1 col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align:center;">
+                    <div class="col-lg-12 col-md-12 hidden-sm hidden-xs">
+
+                        <a>
+                            <span class="link tse-ele tse_1" id="tse_1"
+                                  style="color: rgba(94,225,227,1); padding:5px 7px; font-size:24px; border: 2px rgb(94,224,227) double; margin:10px; "
+                                  onclick="tse-sub-1()">
+                                2
+                            </span>
+                        </a>
+
+                        <a>
+                            <span class="link tse-ele tse_2" id="tse_2"
+                                  style="color: rgba(94,225,227,1); padding:5px 7px; font-size:24px; border: 2px rgb(94,224,227) double; margin:10px;"
+                                  onclick="tse-sub-2()">
+                                0
+                            </span>
+                        </a>
+
+                        <a>
+                            <span class="link tse-ele tse_3" id="tse_3"
+                                  style="color: rgba(94,225,227,1); padding:5px 7px; font-size:24px; border: 2px rgb(94,224,227) double; margin:10px;"
+                                  onclick="tse-sub-3()">
+                                1
+                            </span>
+                        </a>
+
+                        <a>
+                            <span class="link tse-ele tse_4" id="tse_4"
+                                  style="color: rgba(94,225,227,1); padding:5px 7px; font-size:24px; border: 2px rgb(94,224,227) double; margin:5px;"
+                                  onclick="tse-sub-4()">
+                                7
+                            </span>
+                        </a>
+                    </div>
+                    <div class="hidden-lg hidden-md col-sm-12 hidden-xs">
+                        <div class="hidden-lg hidden-md col-sm-12 hidden-xs">
+                            <div class="te-header col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:25px;"
+                                     id="sub_events_footer">
+                            </div>
+                            <a>
+                                    <span class="link tse-ele tse_1" id="tse_1c"
+                                          style="color: rgba(94,225,227,1); padding:5px 7px; font-size:24px; border: 2px rgb(94,224,227) double; margin:10px;"
+                                          onclick="tse-sub-1()">
+                                        2
+                                    </span>
+                            </a>
+
+                            <a>
+                                    <span class="link tse-ele tse_2" id="tse_2c"
+                                          style="color: rgba(94,225,227,1); padding:5px 7px; font-size:24px; border: 2px rgb(94,224,227) double; margin:10px;"
+                                          onclick="tse-sub-2()">
+                                        0
+                                    </span>
+                            </a>
+                        </div>
+                        <div class="te-header col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:25px;"
+                                 id="sub_events_footer">
+                        </div>
+                        <div class="hidden-lg hidden-md col-sm-12 hidden-xs">
+                            <a>
+                                    <span class="link tse-ele tse_3" id="tse_3c"
+                                          style="color: rgba(94,225,227,1); padding:5px 7px; font-size:24px; border: 2px rgb(94,224,227) double; margin:10px;"
+                                          onclick="tse-sub-3()">
+                                        1
+                                    </span>
+                            </a>
+
+                            <a>
+                                    <span class="link tse-ele tse_4" id="tse_4c"
+                                          style="color: rgba(94,225,227,1); padding:5px 7px; font-size:24px; border: 2px rgb(94,224,227) double; margin:5px;"
+                                          onclick="tse-sub-4()">
+                                        7
+                                    </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden-lg hidden-md hidden-sm col-xs-12">
+                        <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:20px;">
+                        <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:20px;">
+                        <div class="hidden-lg hidden-md hidden-sm col-xs-12">
+                            <a>
+                                    <span class="tse-ele tse_1" id="tse_1d"
+                                          style="color: rgba(94,225,227,1); padding:5px 7px; font-size:24px; border: 2px rgb(94,224,227) double; margin:10px;"
+                                          onclick="tse-sub-1()">
+                                        2
+                                    </span>
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:20px;">
+                            </a>
+                        </div>
+                        <div class="hidden-lg hidden-md hidden-sm col-xs-12">
+                            <a>
+                                    <span class="tse-ele tse_2" id="tse_2d"
+                                          style="color: rgba(94,225,227,1); padding:5px 7px; font-size:24px; border: 2px rgb(94,224,227) double; margin:10px;"
+                                          onclick="tse-sub-1()">
+                                        0
+                                    </span>
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:20px;">
+                            </a>
+                        </div>
+                        <div class="hidden-lg hidden-md hidden-sm col-xs-12">
+                            <a>
+                                    <span class="tse-ele tse_3" id="tse_3d"
+                                          style="color: rgba(94,225,227,1); padding:5px 7px; font-size:24px; border: 2px rgb(94,224,227) double; margin:10px;"
+                                          onclick="tse-sub-1()">
+                                        1
+                                    </span>
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:20px;">
+                            </a>
+                        </div>
+                        <div class="hidden-lg hidden-md hidden-sm col-xs-12">
+                            <a>
+                                    <span class="tse-ele tse_4" id="tse_4d"
+                                          style="color: rgba(94,225,227,1); padding:5px 7px; font-size:24px; border: 2px rgb(94,224,227) double; margin:5px;"
+                                          onclick="tse-sub-1()">
+                                        7
+                                    </span>
+                                <br><img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}"
+                                         style="width:auto; height:20px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="te-header col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:50px"
+                         id="sub_events_footer">
+                </div>
+
+                <div class="te_body2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-lg-1 col-md-1 hidden-sm hidden-xs">
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12"
+                         style="background-image: url(/static/TECHTIX/wp-content/uploads/2016/03/box.png); background-size:100% 100%; background-repeat: no-repeat; padding:30px; text-align:center; font-size:18px; color:rgb(97,224,227);">
+                        <p id="tse_rules" style="padding:10px 20px;">Welcome to TECHTIX 2017</p>
+                    </div>
+                    <div class="col-lg-1 col-md-1 hidden-sm hidden-xs">
+                    </div>
+                </div>
+
+
+                <!--
+                                    <div class="te-footer hidden-lg hidden-md hidden-sm-12 col-xs-12">
+                                        <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" width="auto" height="25px" id="sub_events_footer">
+                                    </div>
+                -->
+
+                <div class="te-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:100%; height:2px;"
+                         id="sub_events_footer">
+                </div>
+
+                <div class="buttons col-lg-12 col-md-12 col-sm-12 col-xs-12" id="buttons" style="visibility:hidden;">
+                    <div class="te-footer col-lg-12 col-md-12 hidden-sm hidden-xs">
+                        <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:25px;"
+                             id="sub_events_footer">
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <center>
+                                <form action="." method="post">
+                                                {% csrf_token %}
+                                    <a>
+                                        <button name="rules" types="submit" class="tbutton" id="tbutton1" value="0">
+                                            <span>Rules</span></button>
+
+                                    </a>
+
+                                    <a>
+                                        <button name="register" types="submit" class="tbutton" id="tbutton2" value="0">
+                                            <span>Register</span></button>
+
+                                    </a>
+                                </form>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="te-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:5px;"
+                         id="sub_events_footer">
+                </div>
+
+                <div class="cood col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix"
+                     style="margin-top:10px; visibility:hidden;" id="coordinators">
+                    <center>
+                        <span class="cood-header"
+                              style="border-width:4px 1px 4px 1px; border-color: rgb(94,224,227); border-style: solid; color: rgb(94,224,227); padding:5px; font-size:1.5em; margin-bottom: 15px; font-weight:bold;">CO-ORDINATORS</span>
+                    </center>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix"
+                         style="background-image: url(/static/TECHTIX/wp-content/uploads/2016/03/box.png); background-size:100% 100%; background-repeat: no-repeat; color: rgb(94,224,227); padding:30px;">
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <center>
+                                <div class="col-lg-6 col-mg-6 col-sm-6 col-xs-6">
+                                    <div class="cood_name" id="cood_name1">
+
+                                    </div>
+                                    <div class="cood_contact" id="cood_contact1">
+
+                                    </div>
+                                    <div class="cood_email" id="cood_email1">
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-mg-6 col-sm-6 col-xs-6">
+                                    <div class="cood_name" id="cood_name2">
+
+                                    </div>
+                                    <div class="cood_contact" id="cood_contact2">
+
+                                    </div>
+                                    <div class="cood_email" id="cood_email2">
+
+                                    </div>
+                                </div>
+                            </center>
+                            <div class="te-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:5px;"
+                                     id="sub_events_footer">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <center>
+                                <div class="col-lg-6 col-mg-6 col-sm-6 col-xs-6">
+                                    <div class="cood_name" id="cood_name3">
+
+                                    </div>
+                                    <div class="cood_contact" id="cood_contact3">
+
+                                    </div>
+                                    <div class="cood_email" id="cood_email3">
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-mg-6 col-sm-6 col-xs-6">
+                                    <div class="cood_name" id="cood_name4">
+
+                                    </div>
+                                    <div class="cood_contact" id="cood_contact4">
+
+                                    </div>
+                                    <div class="cood_email" id="cood_email4">
+
+                                    </div>
+                                </div>
+                            </center>
+                            <div class="te-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:5px;"
+                                     id="sub_events_footer">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <center>
+                                <div class="col-lg-6 col-mg-6 col-sm-6 col-xs-6">
+                                    <div class="cood_name" id="cood_name5">
+
+                                    </div>
+                                    <div class="cood_contact" id="cood_contact5">
+
+                                    </div>
+                                    <div class="cood_email" id="cood_email5">
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-mg-6 col-sm-6 col-xs-6">
+                                    <div class="cood_name" id="cood_name6">
+
+                                    </div>
+                                    <div class="cood_contact" id="cood_contact6">
+
+                                    </div>
+                                    <div class="cood_email" id="cood_email6">
+
+                                    </div>
+                                </div>
+                            </center>
+                            <div class="te-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:auto; height:5px;"
+                                     id="sub_events_footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="te-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" width="auto" height="25px"
+                         id="sub_events_footer">
+                </div>
+
+                <div class="te-footer hidden-lg hidden-md hidden-sm col-xs-12">
+                    <img src="{% static 'TECHTIX/wp-content/uploads/2016/HEADINGS/FOOTER.png' %}" style="width:100%; height:100px"
+                         id="sub_events_footer">
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="dark-div">
+        <div id="bottom-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="copyright col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <center>
+                            <span>&copy; 2017 ESPEKTRO, KGEC </span>
+                            <span class="delimiter-footer"></span>
+                            <span>
+                                    <a class="contact-desk" href=""></a>
+                                </span>
+                        </center>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <center>
+                            <a href="/home"
+                               style="border:2px rgb(94,225,227) solid; color:rgb(94,225,227); padding:10px; font-size:1.5em;"><span
+                                    style="color:rgb(94,225,227); font-weight:bold;">HOME</span></a>
+                            &nbsp;&nbsp;
+                            <a href="/events/exotica"
+                               style="border:2px rgb(94,225,227) solid; color:rgb(94,225,227); padding:10px; font-size:1.5em;"><span
+                                    style="color:rgb(94,225,227); font-weight:bold;">EXOTICA</span></a>
+                        </center>
+                    </div>
+                    <nav class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:right;">
+                        <div class="row">
+
+{#                            <div class="social-links col-lg-3 col-md-3 col-sm-12">#}
+{#                                <div>#}
+{#                                    <a class="social-icon maincolor1 bordercolor1hover bgcolor1hover icon-ft-fa-facebook"#}
+{#                                       id="hexagon" href="https://www.facebook.com/techtix.KGEC" target="_blank">#}
+{#                                        <i class="fa fa-facebook"></i>#}
+{#                                    </a>&nbsp;#}
+{#                                    <a class="social-icon maincolor1 bordercolor1hover bgcolor1hover icon-ft-fa-youtube"#}
+{#                                       id="hexagon" href="https://www.youtube.com/channel/UCdgWoKQQ9usyOkEMycOFQXA"#}
+{#                                       target="_blank">#}
+{#                                        <i class="fa fa-youtube"></i>#}
+{#                                    </a>#}
+{#                                    <a class="social-icon maincolor1 bordercolor1hover bgcolor1hover icon-ft-fa-instagram"#}
+{#                                       id="hexagon" href="https://www.instagram.com/espektro_kgec" target="_blank">#}
+{#                                        <i class="fa fa-instagram"></i>#}
+{#                                    </a>#}
+{#                                </div>#}
+{#                            </div>#}
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="wrap-overlay">
+    </div>
+
+</div>
+
+<script>off_canvas_enable = 1;</script>
+<div class="bg-ad">
+    <div class="container">
+        <div class="bg-ad-left"></div>
+        <div class="bg-ad-right"></div>
+    </div>
+</div>
+</div>
+<a href="#top" id="gototop" class="notshow" title="Go to top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/fonts.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/social-buttons.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/slider.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/tooltip.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/video-page.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/browse.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/sub-genres.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/about.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/contributor.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/shows-menu.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/news.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/news-details.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/shows-inside.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/banners.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/blog-listing.css' %}" type="text/css">
+
+<script type="text/javascript">(function () {
+    function addEventListener(element, event, handler) {
+        if (element.addEventListener) {
+            element.addEventListener(event, handler, false);
+        } else if (element.attachEvent) {
+            element.attachEvent('on' + event, handler);
+        }
+    }
+
+    function maybePrefixUrlField() {
+        if (this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
+            this.value = "http://" + this.value;
+        }
+    }
+
+    var urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]');
+    if (urlFields && urlFields.length > 0) {
+        for (var j = 0; j < urlFields.length; j++) {
+            addEventListener(urlFields[j], 'blur', maybePrefixUrlField);
+        }
+    }
+    /* test if browser supports date fields */
+    var testInput = document.createElement('input');
+    testInput.setAttribute('type', 'date');
+    if (testInput.type !== 'date') { /* add placeholder & pattern to all date fields */
+        var dateFields = document.querySelectorAll('.mc4wp-form input[type="date"]');
+        for (var i = 0; i < dateFields.length; i++) {
+            if (!dateFields[i].placeholder) {
+                dateFields[i].placeholder = 'YYYY-MM-DD';
+            }
+            if (!dateFields[i].pattern) {
+                dateFields[i].pattern = '[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])';
+            }
+        }
+    }
+})();
+</script>
+
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-includes/js/jquery/ui/core.mine899.js' %}?ver=1.11.4"></script>
+
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-includes/js/jquery/ui/widget.mine899.js' %}?ver=1.11.4"></script>
+
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-includes/js/jquery/ui/mouse.mine899.js' %}?ver=1.11.4"></script>
+
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-includes/js/jquery/ui/resizable.mine899.js' %}?ver=1.11.4"></script>
+
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-includes/js/jquery/ui/draggable.mine899.js' %}?ver=1.11.4"></script>
+
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-includes/js/jquery/ui/button.mine899.js' %}?ver=1.11.4"></script>
+
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-includes/js/jquery/ui/position.mine899.js' %}?ver=1.11.4"></script>
+
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-includes/js/jquery/ui/dialog.mine899.js' %}?ver=1.11.4"></script>
+
+<script type='text/javascript' src="{% static 'TECHTIX/wp-includes/js/wpdialog.min4698.js' %}?ver=4.6.3"></script>
+
+<script type='text/javascript'>/* <![CDATA[ */
+var pbd_alp = {
+    "startPage": "1",
+    "maxPages": "0",
+    "textLb1": "MORE",
+    "textLb2": "LOADING POSTS",
+    "ot_permali": "\/%postname%\/",
+    "nextLink": "http:\/\/www.recursor.tv\/page\/2\/",
+    "quick_view": "http:\/\/www.recursor.tv\/wp-content\/themes\/truemag\/js\/colorbox\/jquery.colorbox-min.js"
+};
+/* ]]> */
+</script>
+
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/plugins/truemag-movie/js/load-posts5152.js' %}?ver=1.0"></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/plugins/contact-form-7/includes/js/jquery.form.mind03d.js' %}?ver=3.51.0-2014.06.20 "></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var _wpcf7 = {
+        "loaderUrl": "http:\/\/www.recursor.tv\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif",
+        "recaptchaEmpty": "Please verify that you are not a robot.",
+        "sending": "Sending ...",
+        "cached": "1"
+    };
+    /* ]]> */
+</script>
+
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/themes/truemag/js/bootstrap.min4698.js' %}?ver=4.6.3"></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/themes/truemag/js/jquery.caroufredsel-6.2.1.min4698.js' %}?ver=4.6.3"></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/themes/truemag/js/helper-plugins/jquery.touchSwipe.min4698.js' %}?ver=4.6.3"></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/themes/truemag/js/jquery.hammer4698.js' %}?ver=4.6.3"></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/themes/truemag/js/template4698.js' %}?ver=4.6.3"></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/themes/truemag/js/colorbox/jquery.colorbox-min4698.js' %}?ver=4.6.3"></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/themes/truemag/js/jquery.tooltipster4698.js' %}?ver=4.6.3"></script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/themes/truemag/js/malihu-scroll/jquery.mCustomScrollbar.concat.min4698.js' %}?ver=4.6.3 "></script>
+
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var mashmenu = {
+        "ajax_url": "http:\/\/www.recursor.tv\/wp-admin\/admin-ajax.php",
+        "ajax_loader": "",
+        "ajax_enabled": "0"
+    };
+    /* ]]> */
+</script>
+
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/themes/truemag/inc/megamenu/js/mashmenuf24c.js' %}?ver=1.6"></script>
+
+<script type='text/javascript'>/* <![CDATA[ */
+var countVars = {"disqusShortname": "recursor-tv"};
+/* ]]> */</script>
+
+<script type='text/javascript'>/* <![CDATA[ */
+var mc4wp_forms_config = [];
+/* ]]> */</script>
+<script type='text/javascript'
+        src="{% static 'TECHTIX/wp-content/plugins/mailchimp-for-wp/assets/js/forms-api.min1678.js' %}?ver=4.0.7">
+</script>
+
+
+<link rel="stylesheet" href="{% static 'TECHTIX/wp-content/themes/truemag-child/traditional-skin.css' %}" type="text/css"/>
+<script type="text/javascript" src="{% static 'TECHTIX/wp-content/themes/truemag/js/jquery.preload.js' %}"></script>
+<script type="text/javascript" src="{% static 'TECHTIX/wp-content/themes/truemag/js/jquery-ui.js' %}"></script>
+
+
+</body>
+
+</html>

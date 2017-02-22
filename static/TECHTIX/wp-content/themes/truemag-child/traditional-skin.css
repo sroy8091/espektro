@@ -1,0 +1,536 @@
+.fields-container {
+  text-align: right;
+}
+
+.wq_questionTextCtr {
+  background-color: transparent !important;
+  padding: 12px 20px 12px 0 !important;
+}
+.wq_questionTextCtr h4 {
+  color:#26ddd9 !important;
+  text-transform: uppercase;
+}
+.wq_questionImage > span, .credits {
+  background: rgba(0, 0, 0, 0.65) !important;
+}
+.wq_quizCtr
+.wq_singleAnswerCtr {
+  background-color: #383838 !important;
+  color: #9b9f9e !important;
+}
+.wq_singleAnswerCtr:hover {
+  background: #a39e9e!important;
+  color: #000000 !important;
+}
+.wq_quizCtr
+.wq_singleAnswerCtr {
+  padding: 7px 7px 5px !important;
+}
+.wq_quizCtr
+.wq_singleAnswerCtr.wq_incorrectAnswer {
+  background: #fe0000!important;
+  color:#000000 !important;
+}
+.wq_quizCtr
+.wq_singleAnswerCtr.wq_correctAnswer {
+  background: #26ddd9!important;
+  color:#000000 !important;
+}
+.wq_singleAnswerCtr .wq_answerTxtCtr {
+  background-image: url('assets/images/checkbox.png') !important;
+}
+.chosen.wq_incorrectAnswer .wq_answerTxtCtr{
+  background-image: url('assets/images/wrong.png') !important;
+}
+.chosen.wq_correctAnswer .wq_answerTxtCtr{
+  background-image: url('assets/images/correct.png') !important;
+}
+.wq_triviaQuestionExplanation {
+  border: 0 !important;
+}
+.wq_triviaQuestionExplanation .wq_wrongExplanationHead {
+  border: 1px solid #fe0000 !important;
+  padding: 0 0 0 10px;
+  margin: -10px;
+}
+.wq_triviaQuestionExplanation .wq_correctExplanationHead {
+  border: 1px solid #26ddd9 !important;
+  padding: 0 0 0 10px;
+  margin: -10px;
+  color: #26ddd9 !important;
+}
+.wq_singleResultWrapper {
+  background: #4b4d4c !important;
+  border-radius: 0 !important;
+  color: #feffff;
+  margin-bottom: 30px;
+  border: 0 !important;
+}
+.wq_singleResultWrapper .wq_shareCtr {
+  text-align: center;
+}
+.wq_singleResultWrapper .wq_shareCtr button, .wq_quizForceShareCtr
+button {
+    /*  min-width: 20%;/*375px;*/
+    /*  height: 100px;
+      font-size: 60px;*/
+
+      min-width: 14%;
+      height: 75px;
+      font-size: 43px;
+
+}
+
+.top_share .wq_shareCtr button, .top_share
+button {
+      min-width: 120px;
+      height: 41px;
+      font-size: 20px;
+
+}
+
+.wq_singleResultWrapper .wq_shareCtr .wq_shareFB, .wq_quizForceShareCtr
+.wq_forceShareFB, .wq_singleResultWrapper .wq_shareCtr
+.wq_shareTwitter, .wq_singleResultWrapper .wq_shareCtr
+.wq_shareGP, .wq_singleResultWrapper .wq_shareCtr
+.wq_shareVK {
+  background: #3c8b8f !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  border: 1px solid #010000;
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+
+.top_share .wq_shareCtr .wq_shareFB, .wq_quizForceShareCtr
+.wq_forceShareFB {
+  background: #3c8b8f !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  border: 1px solid #010000;
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
+.top_share .wq_shareCtr
+.wq_shareTwitter, .top_share .wq_shareCtr
+.wq_shareGP, .top_share .wq_shareCtr
+.wq_shareVK {
+  background: #3c8b8f !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  border: 1px solid #010000;
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+.wq_singleResultWrapper .wq_shareCtr button > span, .wq_quizForceShareCtr button>span,
+.wq_singleResultWrapper .wq_shareCtr button > span, .wq_quizForceShareCtr button span i.fa,
+.top_share .wq_shareCtr button > span, .top_share button>span,
+.top_share .wq_shareCtr button > span, .top_share button span i.fa{
+  color:#2afffb!important;
+  border: 0 !important;
+  margin-top: 0;
+}
+.wq_singleResultWrapper .wq_shareCtr button:hover , .wq_quizForceShareCtr button:hover,
+.wq_singleResultWrapper .wq_shareCtr button:hover , .wq_quizForceShareCtr button:hover,
+.top_share .wq_shareCtr button:hover , .top_share button:hover,
+.top_share .wq_shareCtr button:hover , .top_share button:hover {
+    background: #07ffff !important;
+}
+
+.wq_singleResultWrapper .wq_shareCtr button:hover span > i, .wq_quizForceShareCtr button:hover span > i,
+.wq_singleResultWrapper .wq_shareCtr button:hover span > i, .wq_quizForceShareCtr button:hover span > i,
+.top_share .wq_shareCtr button:hover span > i, .top_share button:hover span > i,
+.top_share .wq_shareCtr button:hover span > i, .top_share button:hover span > i {
+    color: #010000 !important;
+}
+.wq_singleResultWrapper .wq_shareCtr button span > .fa:hover {
+  color:#010000!important;
+}
+.top_share .wq_shareCtr button span {
+    margin-top: -7px;
+}
+
+.wq_retakeQuizBtn {
+  background-color: #1e3f52;
+
+  color:#26ddd9;
+  width: 410px;
+  height: 115px;
+  border:1px solid #26ddd9;
+  font-size: 40px;
+}
+.wq_retakeQuizBtn:hover {
+  background: #07ffff !important;
+  color:#010000!important;
+}
+
+/****** Subscriber Style ******************/
+.container-subscriber {
+  display: none;
+}
+.subscribe, .subscribe-open {
+  color:#010000!important;
+  font-weight: bold;
+  background-color: #26ddd9 !important;
+  font-family: 'Metricweb-Bold' !important;
+}
+.subscribe:hover, .subscribe-open:hover {
+  background-color:  #07ffff !important;
+    color:#010000!important;
+}
+
+.container-btn-subscriber .subscribe-open {
+  font-size:15px;
+  width: 160px;
+  height: 30px;
+  border-radius: 0;
+  line-height: 1;
+  border:0;
+}
+.subscriber-container {
+  background-color: #122c39;
+  text-align: center;
+  margin-left: -31%;
+  margin-right: -31%;
+  padding-top: 20px;
+}
+body.home .subscriber-container {
+  padding-top: 0px !important;
+}
+.title-subscriber {
+  color:#0bb1b1;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 30px;
+}
+.container-btn-subscriber {
+  text-align: center;
+  padding: 5px 0 45px 0;
+  margin: 0px auto;/* 0 0 47.6%;*/
+  width: 4.7%;/*76%;*/
+  }
+  .container-subscriber {
+  text-align: center;
+  padding: 5px 0 30px 0;
+  margin: 0 0 0 42%;
+  width: 76%;
+}
+.subcriber-btn {
+  padding-left: 0;
+  width: 110px;
+  height: 27px;
+  text-align: left;
+}
+
+.home .subscribe, .home .subscribe-open {
+    height: 35px !important;
+}
+.subcriber-field {
+  padding-right: 10px;
+}
+#email {
+  border: 1px solid #0bb1b1;
+}
+#email.error {
+  border:1px solid red;
+}
+.mc4wp-response {
+  background-color: black;/*122c39;*/
+  text-align: center;
+  margin-left: -34%;
+  margin-right: -34%;
+
+}
+.mc4wp-alert p {
+  font-weight: bold;
+  font-size: 20px;
+  /*text-transform: uppercase;*/
+}
+.mc4wp-alert.mc4wp-success{
+  color:#fff; /*#0bb1b1;*/
+  padding: 60px 0 40px 0;
+}
+.home .mc4wp-alert.mc4wp-success {
+  padding: 2px 0 20px 0;
+}
+@media (max-width:767px) {
+  .wq_singleResultWrapper .wq_shareCtr button, .wq_quizForceShareCtr button {
+    min-width: 14%;
+    height: 54px;
+  }
+  .wq_singleResultWrapper .wq_shareCtr .wq_shareFB, .wq_quizForceShareCtr
+  .wq_forceShareFB, .wq_singleResultWrapper .wq_shareCtr
+  .wq_shareTwitter, .wq_singleResultWrapper .wq_shareCtr
+  .wq_shareGP, .wq_singleResultWrapper .wq_shareCtr
+  .wq_shareVK {
+    margin-left: 0;
+    margin-bottom: 0;
+    line-height: 0;
+  }
+  .wq_singleResultWrapper .wq_shareCtr button > span, .wq_quizForceShareCtr button>span {
+    padding-left: 12px;
+    padding-right: 12px;
+    min-width: 58px;
+  }
+
+  .wq_retakeQuizBtn {
+    width: 90%;
+    height: auto;
+  }
+  .wq_shareCtr button span i.fa {
+    font-size: 22px;
+  }
+}
+@media (max-width:320px) {
+  .subcriber-btn {
+    padding-left: 15px;
+    width: 100%;
+  }
+  .top_share .wq_shareCtr button, .top_share button {
+      min-width: 60px;
+      height: 55px;
+      font-size: 30px;
+  }
+
+  body.page  .subscriber-container {
+
+    margin: 0 -18%;
+    padding: 18px 12px;
+    width: 137%;
+  }
+  body.home .subscriber-container {
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 25px;
+    width: 100%;
+  }
+  .title-subscriber {
+    line-height: 25px;
+    padding: 0 10px 0;
+    display: inline-table;
+    margin-top: 0;
+  }
+  .container-btn-subscriber{
+      text-align: center;
+      padding: 20px 0;
+      margin: 0 auto;
+      width: 59%;
+
+  }
+  .container-subscriber {
+      text-align: center;
+      padding: 20px 0;
+      margin: 0 auto;
+      width: 75%;
+  }
+}
+
+@media (min-width:321px)  and (max-width:640px) {
+  .subcriber-btn {
+    padding-left: 15px;
+    width: 100%;
+  }
+  .top_share .wq_shareCtr button, .top_share button {
+    min-width: 23%;
+    height: 52px;
+    font-size: 30px;
+  }
+  body.page  .subscriber-container {
+      margin-left: 0;/*-14%;*/
+      margin-right: 0;/*-14%;*/
+      margin: 0 -11%;
+      padding: 18px 12px;
+      width: 124%;
+
+
+  }
+  body.home .subscriber-container {
+    margin-left: 0;/*-14%;*/
+    margin-right: 0;/*-14%;*/
+    margin: 0 auto;
+    width: 100%;
+  }
+  .title-subscriber {
+    line-height: 25px;
+    padding: 10px 76px 10px 76px;
+    display: inline-table;
+    margin-top: 0;
+  }
+  .container-btn-subscriber{
+      text-align: center;
+      padding: 4px 4px 38px;
+      margin: 0 auto;/*29%;*/
+      width: 56%;/*92%;*/
+  }
+  .container-subscriber {
+      text-align: center;
+      padding:2px 0px 40px;
+      margin: 0 auto;
+      width: 76%;
+  }
+  .banner .img-section {
+     padding-bottom: 45%;
+  }
+}
+@media (min-width:414px)  and (max-width:640px) {
+  .title-subscriber {
+    padding: 10px 76px 10px 76px;
+  }
+  .container-btn-subscriber {
+    width: 51%;
+  }
+}
+
+@media (min-width:640px) and (max-width:767px)  and (orientation:landscape) {
+  .top_share .wq_shareCtr button, .top_share button {
+    min-width: 140px;
+    height: 52px;
+    font-size: 34px;
+}
+.top_share .wq_shareCtr button .fa, .top_share button .fa{
+  font-size:30px;
+}
+  .subscriber-container {
+    margin-left:0;/*-14%;*/
+    margin-right:0;/* -14%;*/
+  }
+  .title-subscriber {
+      line-height: 25px;
+      padding: 10px 150px 0 150px;
+      width: 95%;
+      display: inline-table;
+      margin-top: 0;
+  }
+ .container-btn-subscriber{
+    text-align: center;
+    padding: 20px 0 40px;
+    margin: 0 auto;
+    width:28%;/* 19%;*/
+  }
+  .container-subscriber {
+      text-align: center;
+      padding: 20px 0 40px;
+      margin: 0 auto;
+      width: 77%;
+  }
+  .subcriber-btn {
+    width: 100%;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width:768px) and (orientation:portrait) {
+  .top_share .wq_shareCtr button, .top_share button {
+    min-width: 195px;
+    height: 52px;
+    font-size: 34px;
+}
+.subscribe, .subscribe-open {
+  height: 42px !important;
+}
+.home .subscribe, .home .subscribe-open {
+    height: 37px !important;
+}
+
+  .subscriber-container {
+    padding-top: 10px;
+    margin-left: -14%;
+    margin-right: -14%;
+  }
+  .title-subscriber {
+    line-height: 25px;
+    padding: 10px 60px;
+  }
+ .container-btn-subscriber{
+      text-align: center;
+      padding: 8px 0 36px;
+      margin: 0 41.6%;
+      width: 18%;
+
+   }
+   .container-subscriber {
+      text-align: center;
+      padding:8px 0 20px;
+      margin: 0 26%;
+      width: 75%;
+  }
+}
+@media (min-width:770px) and (max-width:880px)  {
+  .container-btn-subscriber {
+    width: 12%;
+  }
+  .container-subscriber {
+    margin: 0 34%;
+    width: 54%;
+
+  }
+}
+@media (min-width:1024px) and (max-width:1120px) {
+  .container-btn-subscriber {
+    width: 8.7%;
+  }
+}
+@media (min-width:1024px) and (max-width:1024px) and (orientation:landscape) {
+  .top_share .wq_shareCtr button, .top_share button {
+      min-width: 183px;
+      height: 46px;
+      line-height: 1.6;
+      font-size: 29px;
+  }
+  .home .subscribe, .home .subscribe-open {
+      height: 35px !important;
+      width: 110px;
+  }
+
+  .subscriber-container {
+    margin-left: -15%;
+    margin-right: -15%;
+    padding-top: 20px;
+  }
+  .title-subscriber {
+    line-height: 25px;
+    padding: 10px 60px;
+  }
+  .container-btn-subscriber{
+     text-align: center;
+     padding: 15px 0 50px 0;
+     margin: 0 auto;
+     width: 8%;
+
+  }
+  .container-subscriber {
+      text-align: center;
+      padding: 20px 0;
+      margin: 0 30.4%;
+      width: 80%;
+  }
+  .subscriber-btn {
+    width: 110px;
+  }
+}
+
+@media (min-width:1240px) and (max-width:1439px) {
+  .container-btn-subscriber {
+        margin: 0 auto;
+        width: 7%;
+  }
+  .container-subscriber {
+      margin: 0 31% 0 41%;
+
+  }
+  .subscriber-container {
+      padding-top: 20px;
+  }
+}
+@media (min-width:1440px) and (max-width:1900px){
+  .container-btn-subscriber {
+        margin: 0 auto;
+        width: 5.7%;
+  }
+  .container-subscriber {
+      margin: 0 31% 0 41%;
+  }
+  .subscriber-container {
+      padding-top: 20px;
+  }
+}

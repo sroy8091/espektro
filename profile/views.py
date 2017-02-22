@@ -16,26 +16,30 @@ from django.utils.crypto import get_random_string
 from espektro.settings import domain, protocol
 
 # Create your views here.
-class UserFormView(View):
+"""class UserFormView(View):
     form_class = UserForm
+
     template_name = 'profile/registration_form.html'
 
     # display blank form
     def get(self, request):
         form = self.form_class(None)
-        return render(request, self.template_name, {'form': form})
+        detailform = self.UserDetailEditForm(None)
+        return render(request, self.template_name, {'form': form,'detailform':detailform})
 
     #process form data
     def post(self, request):
         form = self.form_class(request.POST)
+        detailform = self.UserDetailEditForm(reqeust.POST)
 
-        if form.is_valid():
+        if form.is_valid() and detailform.is_valid():
             user = form.save(commit=False)
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
             user.set_password(password)
             user.save()
             userdetail = UserDetail.objects.create(user=user)
+            userdetail = detailform.save()
         
 
             # if credentials are correct
@@ -46,31 +50,43 @@ class UserFormView(View):
                     login(request, user)
                     return redirect('/profile/edit')
 
-        return render(request, self.template_name, {'form': form})
+        return render(request, self.template_name, {'form': form, 'detailform':detailform})"""
 
-'''
-This view has been replaced by the default django auth login view.
-def login_view(request):
-        if request.method == 'POST':
-            form = LoginForm(request.POST)
-            if form.is_valid():
-                username=form.cleaned_data['username']
-                password=form.cleaned_data['password']
-                user=authenticate(username=username, password=password)
-                if user is not None:
-                    if user.is_active:
-                        login(request,user)
-                        return redirect('profile:edit')
-                    else:
-                        print("account diabled")
-                else:
-                    return render(request, 'profile/login.html', {'form':form})
-        else:
-            form = LoginForm()
-            return render(request, 'profile/login.html', {'form':form})'''
+def UserFormView(request):
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+        detailform = UserDetailEditForm(request.POST)
+
+        if form.is_valid(): # and detailform.is_valid():
+            user = form.save(commit=False)
+            print "1234"
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            print "456"
+            user.set_password(password)
+            print "789"
+            user.save()
+            print "100"
+            userdetail = UserDetail.objects.create(user_id=user.id)
+            print "9898"
 
 
+            user = authenticate(username=username, password=password)
+            print "bbb"
+            if user is not None:
+                print "ccc"
+                if user.is_active:
+                    print "ddd"
+                    login(request, user)
+                    return redirect('/profile/edit')
 
+
+        return render(request, 'profile/registration_form.html', {'form': form})
+    else:
+        form = UserForm()
+        detailform = UserDetailEditForm()
+        print "1"
+        return render(request, 'profile/registration_form.html', {'form': form})
 
 @login_required
 def edit(request):
@@ -78,8 +94,9 @@ def edit(request):
     if request.method == 'POST':
         #update details
         user_form = UserEditForm(instance=request.user,data=request.POST)
-        user_detail_form = UserDetailEditForm(instance=p.userdetail,data=request.POST)
-
+        user_detail_form = UserDetailEditForm(instance=p.userdetail,data=request.POST, files=request.FILES)
+        print user_form
+        print user_detail_form
         if user_form.is_valid() and user_detail_form.is_valid():
             user_form.save()
             user_detail_form.save()
@@ -103,8 +120,11 @@ def team_create(request):
             new_team.leader = p
             new_team.secret_key = get_random_string(20)
             new_team.number_of_members = new_team.event.NumberParticipants
+            # new_team.save()
+            # new_team.members.add(p)
             new_team.save()
             created = True
+            return redirect('/profile/teams')
     else:
         form = team_create_form()
     return render(request, 'profile/teamcreate.html', { 'form' : form, 'created' : created})
@@ -122,7 +142,7 @@ def send_invite(request, id):
             cd = form.cleaned_data
             leader = request.user
             if not leader == get_team.leader:
-                messages.error("Sorry! You are not allowed to send this invite.")
+                messages.error(request, "Sorry! You are not allowed to send this invite.")
             else:
                 secret_key = get_team.secret_key
                 subject = "Invitation to join team for Espektro"
@@ -156,3 +176,36 @@ def accept_invite(request, id, secret_key):
 class TeamDetail(generic.DetailView):
     model = Team
     template_name = 'profile/team_detail.html'
+
+@login_required
+def my_teams(request):
+    usr = request.user
+    usrteams = usr.team_set.all()
+    evnt = usr.events_registered
+    usrevents = evnt.all()
+    return render(request, 'profile/my_teams.html', {'usrteams':usrteams, 'usrevents':usrevents})
+
+# @login_required
+# def user_info(request):
+#     usr = request.user
+#     events = Events.ob
+
+
+"""            print user
+            userdetail.user = user
+            print userdetail.user.id
+            #userdetail = UserDetail.objects.create(user=user)
+            userdetail.user_id = user.id
+            userdetail = detailform.save(commit=False)
+            userdetail.save()
+            print "aaa"
+
+            # if credentials are correct
+            user = authenticate(username=username, password=password)
+            print "bbb"
+            if user is not None:
+                print "ccc"
+                if user.is_active:
+                    print "ddd"
+                    login(request, user)
+                    return redirect('/profile/edit')"""

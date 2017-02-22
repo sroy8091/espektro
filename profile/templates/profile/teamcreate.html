@@ -1,13 +1,17 @@
 {% extends 'profile/base.html' %}
 {% block title%} Create a Team {% endblock %}
 
+{% block styles %}
+    {% load staticfiles %}
+    <link href="{% static 'css/edit_profile.css' %}" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
 
-<div class="container-fluid">
-    <div class="col-sm-12 col-md-7">
-        <div class="panel-body">
+<div class="edit_profile_bg">
+    <div class="reg_form-container">
 
-            <form class="form-horizontal" action="." method="post" enctype="multipart/form-data">
+            <form class="InviteForm" action="." method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% include 'profile/form-template.html' %}
                 <div class="form-group">
@@ -19,5 +23,36 @@
 
         </div>
     </div>
-</div>
+{% endblock %}
+
+{% block body %}            
+            <div class="edit_profile_bg">
+
+              <div class="reg_form-container">
+                <!-- <a id="esp_logo" href="#"><img src="esp_logo.png"></a> -->
+              <center>
+              <br><h2 class="reg_form_heading">LOGIN</h2>
+
+                <form name="InviteForm" id="form_contents" action="." method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                  <label for='{{ form.username }}'>Username</label>
+                  {{ form.email }}
+                {{ form.email.errors }}
+                {{ form.non_field_errors }}
+                  <br>
+                  {% if messages %}
+                    {% for message in messages %}
+                        {{ message | safe }}
+                        <a href="#" class="close">✖</a>
+                    {% endfor %}
+                  {% endif %}
+
+                  <input type="hidden" name="next" value="{{ next }}" />
+                    <input class="reg_button" type="submit" value="submit" name="submit" />
+                 </form>
+                <br><br>
+                  <a href="{% url 'profile:register' %}"> <p>Don't Have Account? Sign Up</p></a>
+                  </center>
+                </div>
+                </div>
 {% endblock %}

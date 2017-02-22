@@ -1,0 +1,173 @@
+/* Animation properties */
+
+.esp_doodle {
+  animation: move-world_of_novels 10s ease-out infinite;
+}
+.esp_book {
+  animation: esp_book 10s ease-out infinite;
+}
+.world_of_novels span {
+  animation: spin-letters 10s linear infinite;
+}
+.world_of_novels {
+  animation: move-world_of_novels 10s linear infinite;
+}
+
+
+@keyframes esp_book {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(0.5em);
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+  }
+}
+
+
+@keyframes move-world_of_novels {
+  0% {
+    transform: translateZ(5em);
+  }
+  25%{
+    transform: translateZ(2.5em);
+  }
+  50%{
+    transform: translateZ(0em);
+  }
+  100% {
+    transform: translateZ(5em);
+  }
+}
+
+/* Make the 3D work on the container */
+.home_animation {
+  perspective: 800px;
+  transform-style: preserve3d;
+}
+
+/* General styles and layout */
+
+.home_animation {
+  height: 17em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 34em;
+}
+
+
+.esp_doodle, .esp_book, .world_of_novels {
+  position: absolute;
+}
+
+.esp_doodle {
+    top: -5em;
+    height: 20em;
+    width: 20em;
+    left: 5em
+}
+
+.esp_book {
+    width: 17em;
+    height: 17em;
+    left: 6em;
+    top: 5em;
+}
+
+.world_of_novels {
+      top: 4em;
+      width: 30em;
+      height: 30em;}
+
+/*** Media queries for adjusting to different screen sizes ***/
+
+@media only screen and (min-width:320px) and (max-width: 479px) {
+  .home_animation {
+    font-size: 10px;
+    top: 42em !important;
+  }
+
+  .esp_doodle {
+      top: -15em;
+      height: 15em;
+      width: 15em;
+      left: 9em;
+  }
+
+  .esp_book {
+      width: 13em;
+      height: 13em;
+      left: 10.2em;
+      top: -7em;;
+  }
+
+  .world_of_novels {
+      top: -5em;
+      width: 20em;
+      height: 20em;
+      left: 7em;
+      }
+
+  }
+
+@media only screen and (min-width:480px) and (max-width: 768px) {
+  .home_animation {
+    font-size: 12px;
+  }
+  .esp_doodle {
+      top: -5em;
+      height: 20em;
+      width: 20em;
+      left: 5em
+  }
+
+  .esp_book {
+      width: 17em;
+      height: 17em;
+      left: 6em;
+      top: 5em;
+  }
+
+  .world_of_novels {
+        top: 5em;
+        width: 30em;
+        height: 30em;
+      }
+
+}
+@media only screen and (min-width:769px) and (max-width: 1020px) {
+  .home_animation {
+    font-size: 7px;
+  }
+
+  .esp_doodle {
+      top: -5em;
+      height: 20em;
+      width: 20em;
+      left: 5em
+  }
+
+  .esp_book {
+      width: 17em;
+      height: 17em;
+      left: 6em;
+      top: 5em;
+  }
+
+  .world_of_novels {
+        top: 4em;
+        width: 30em;
+        height: 30em;
+      }
+
+}

@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>{% block title %}Sponsors{% endblock %} | Espektro'17</title>
+{% load staticfiles %}
+{% block styles %}
+        <!-- Latest compiled and minified CSS -->
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+{% endblock %}
+
+    <!--     HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+      {% block body %}
+          <style>
+                @font-face{
+                    font-family:channel; src: url('css/Channel.ttf');
+                }
+                #sponsor h2{
+                    font-size: 2.5vw;
+                    font-family: channel;
+                    padding: 0px;
+                    line-height: 10vw;
+                    font-family:channel;
+                    font-weight:bold;
+                    text-shadow: 0px 10px 10px black;
+                }
+                #sponsor img{
+                    width:auto;
+                    max-height:10vw;
+                    margin:5vw auto;
+                    text-shadow: 0px 10px 10px black;
+                }
+                #sponsor{
+                    color: white;
+                }
+                 @media (max-width:768px){
+                     #sponsor img{
+                         max-height: 15vw;
+                     }
+                     #sponsor h2{
+                        font-size: 3vw;
+                     }
+                 }
+                 @media (max-width:425px){
+                     #sponsor img{
+                         max-height: 20vw;
+                     }
+                     #sponsor h2{
+                        font-size: 4vw;
+                     }
+                 }
+
+                </style>
+                <br>
+                <div class="container text-center" id="sponsor">
+                    <div class="row" >
+                        <br>
+                        <h2 >Previous Years' Sponsors</h2>
+                        <h4>_________________</h4>
+                        <br>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-6 col-xs-12 ">
+                            <img src="{% static 'sponsor/img/itc.png' %}" class="img-responsive">
+                        </div>
+                        <div class="col-lg-4 col-sm-6 col-xs-12 ">
+                            <img src="{% static 'sponsor/img/emall.png' %}" class="img-responsive">
+                        </div>
+                        <div class="col-lg-4 col-sm-6 col-xs-12 ">
+                            <img src="{% static 'sponsor/img/fm.png' %}" class="img-responsive">
+                        </div>
+<!--
+                    </div>
+                    <div class="row">
+-->
+                        <div class="col-lg-4 col-sm-6 col-xs-12 ">
+                            <img src="{% static 'sponsor/img/ae.png' %}" class="img-responsive">
+                        </div>
+                        <div class="col-lg-4 col-sm-6 col-xs-12 ">
+                            <img src="{% static 'sponsor/img/tcs.png' %}" class="img-responsive">
+                        </div>
+                        <div class="col-lg-4 col-sm-6 col-xs-12 ">
+                            <img src="{% static 'sponsor/img/micro.png' %}" class="img-responsive">
+                        </div>
+<!--
+                    </div>
+                    <div class="row">
+-->
+                        <div class="col-lg-4 col-sm-6 col-xs-12 ">
+                            <img src="{% static 'sponsor/img/mywbut.png' %}" class="img-responsive" >
+                        </div>
+                        <div class="col-lg-4 col-sm-6 col-xs-12 ">
+                            <img src="{% static 'sponsor/img/sound.png' %}" class="img-responsive">
+                        </div>
+                        <div class="col-lg-4 col-sm-6 col-xs-12 ">
+                            <img src="{% static 'sponsor/img/music.png' %}" class="img-responsive">
+                        </div>
+                    </div>
+                    <div class="row" >
+                        <br><br>
+                        <h2 >Sponsors</h2>
+                        <h4>_________________</h4>
+                        <br>
+                        <h2>Coming Soon...</h2>
+                    </div>
+                </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+          <!-- Latest compiled and minified JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+       {% endblock %}

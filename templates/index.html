@@ -1,1 +1,535 @@
-<h1> This is our Homepage</h1>
+{% load staticfiles %}
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'landing/aos/dist/aos.css' %}">
+    <script type="text/javascript" src="{% static 'AudioFade-master/AudioFade.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'landing/aos/dist/aos.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'landing/main.css' %}"/>
+
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+
+    <!-- <script type="text/javascript" src="script.js"></script> -->
+
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <!-- <script src="aos/dist/aos.js"> --><!-- </script> -->
+
+
+</head>
+<body>
+
+<div class="overlay "></div>
+<div class="overlay "></div>
+<div id="svg_container">
+    <img class="img-responsive mySlides" src="{% static 'landing/img/lp_startimg.jpg' %}">
+    <img class="img-responsive mySlides" src="{% static 'landing/img/lp1.png' %}">
+    <img class="img-responsive mySlides" src="{% static 'landing/img/lp2.png' %}">
+    <img class="img-responsive mySlides" src="{% static 'landing/img/lp3.png' %}">
+    <img class="img-responsive mySlides" src="{% static 'landing/img/lp4.png' %}">
+    <img class="img-responsive mySlides" src="{% static 'landing/img/lp5.png' %}">
+
+    <!-- <img class="main_svg img-responsive shadow " src="img/1.png" alt="Sorry!Image not found"/> -->
+
+    <a href="#story7" class="bottom_down">
+        <div id="mouse-scroll">
+            <div class="mouse">
+                <div class="mouse-in"></div>
+                <div class="mouse-in"></div>
+                <div class="mouse-in"></div>
+            </div>
+            <div class="arrow_start">
+                <!-- <span class="down-arrow-1"></span> -->
+                <span class="down-arrow-2"></span>
+                <span class="down-arrow-3"></span>
+            </div>
+        </div>
+    </a>
+
+
+    <!-- <a href="#story6" class="bottom_down btn btn-primary"><b><span class="glyphicon glyphicon-chevron-down"></span></b></a> -->
+
+    <h2 class="lines intro_text" id="intro_text1">It all started with a windy day. </h2>
+    <h2 class="lines intro_text" id="intro_text2">The weather forecasts had predicted the storm</h2>​
+    <h2 class="lines intro_text" id="intro_text3">but what everyone had failed to see,<br/> was a different kind of
+        storm, coming.</h2>​
+
+    <h2 class="lines intro_text" id="scroll_text">Scroll Down </h2>
+
+</div>
+
+
+<div id="story_container">
+    <div id="characters" data-aos="fade-down" ata-aos-offset="200" data-aos-duration="1000"
+         data-aos-easing="ease-out-cubic" style="background:white;">
+        <img class="img-responsive" src="{% static 'landing/img/characters.png' %}" style="min-height:100%">
+        <center>
+            <section class="character_lines1 story_lines">
+                <p id="story_text" data-aos="fade">Out came all the heroes from their respective sagas,
+                    <br/>some surprised by a sudden jerk,
+                    <br/>some pumped with a certain impulse.</p>
+
+            </section>
+        </center>
+
+        <center>
+            <section class="character_lines2 story_lines">
+                <p id="story_text" data-aos="fade">Chaos and noise ensued as voices reverberated
+                    <br/>with interjections, slowly spilling in the air.</p>
+
+            </section>
+        </center>
+    </div>
+
+    <audio loop autoplay  src="{% static 'landing/wind1.mp3' %}" preload="auto"></audio>
+
+
+    <!-- <div class="overlay"></div> -->
+    <!-- <div><strike><p style="text-align: right;" class="heading-right">Action</p></strike></div> -->
+
+    <div id="story1" data-aos="fade-down" data-aos-offset="200" data-aos-duration="1500"
+         data-aos-easing="ease-out-cubic"
+         style="background:url('/static/landing/img/bg_story1.png') fixed;
+		background-repeat:no-repeat;background-size:cover; font-weight:bold">
+
+        <h2 style="font-family:BRUSHSTRIKE" class="story_heading"><span style="text-align:left">Action</span><span
+                style="float:right">Adventure</span></h2>
+        <center>
+            <section class="story_lines">
+                <p id="story_text" data-aos="fade">The wind had knocked-out(and in) in some of the weirdest
+                    fashions.</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="250">It all came to light when suddenly Edmond
+                    Dantès and Robinson Crusoe
+                    <br/> found themselves in The Nautilus!</p>
+
+
+            </section>
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+                <img class="img-responsive story_strip" src="{% static 'landing/img/1(1).jpg' %}">
+            </div>
+
+            <section class="story_lines">
+                <p id="story_text" data-aos="fade">"Messieurs, a sudden turn of events has changed the course of The
+                    Nautilus.<br/>
+                    We are now moving north-west, in the Bay of Bengal, at a speed of 35 knots.",<br/>
+                    announced Captain Nemo.</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="250">"But who are they?" cried the Canadian.
+                    "The storm, it knocked us in here!" explained Edmond Dantès.</p>
+
+            </section>
+
+
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+                <img class="img-responsive story_strip" src="{% static 'landing/img/1(2).jpg' %}">
+            </div>
+            <section class="story_lines">
+        <p  id="story_text" data-aos="fade">"Is this The Nautilus? The masterpiece containing masterpieces?!" asked<br>
+Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
+        <p  id="story_text" data-aos="fade" data-aos-offset="250">"The storm?" I asked Captain Nemo.<br>
+"The storm." He affirmed.</p>
+         </section>
+        </center>
+    </div>
+
+
+    <div id="story2" data-aos="fade-down" data-aos-offset="200" data-aos-duration="1200"
+         data-aos-easing="ease-out-cubic"
+         style="color:white;font:bold; background:url('/static/landing/img/bg_story21.jpg') fixed; background-repeat:no-repeat;background-size:cover">
+
+        <h2 style=" font-family:SFDistantGalaxyAlternate;font-size:4vw;" class="story_heading"><span
+                style="text-align:left">Fantasy</span><span style="float:right">Science Fiction</span></h2>
+        <center>
+            <section class="story_lines">
+                <p id="story_text" data-aos="fade">While the world of Fantasy and Science-fiction was open to all things
+                    queer,</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="250">it was most unusual to suddenly find Yoda with
+                    Frodo, </p>
+                <p id="story_text" data-aos="fade" data-aos-offset="300">(of all people! ) right in the middle of
+                    Jurassic Park!</p>
+            </section>
+
+            <div data-aos="zoom-in" data-aos-offset="200" data-aos-offset="200" data-aos-duration="1000"
+                 data-aos-easing="ease-out-cubic">
+                <img class="img-responsive story_strip" src="{% static 'landing/img/2(1).jpg' %}">
+            </div>
+
+            <section class="story_lines">
+                <p id="story_text" data-aos="fade">"Which place is this? Why, I had only ever reached Rivendell!" cried
+                    Frodo.</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="250">"You will know when you are calm, at
+                    peace.<br/> Passive. Young velociraptors, I see. Hmmm a Jedi must use the Force <br/>for knowledge
+                    and defense, not for attack said Yoda, trying to judge the situation around.</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="300">"Oh,my God,who are you guys?" Grant asked,
+                    noticing the two new creatures, bewildered.</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="320">"Oh,we were in our respective books when
+                    suddenly this happened!" said Frodo, puzzled.</p>
+            </section>
+            <div data-aos="zoom-in" data-aos-offset="200" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+                <img class="img-responsive story_strip" src="{% static 'landing/img/2(2).jpg' %}">
+            </div>
+            <section class="story_lines">
+                <p id="story_text" data-aos="fade">"Something more is happening, Grant! Why are the raptors suddenly
+                    leaving the nest?</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="250">What has brought the entire colony to the
+                    beach? I don't get it, "
+                    Gennaro wondered.</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="300">"I don't,either," Grant said. "Follow them!"
+                    commanded Yoda.</p>
+            </section>
+        </center>
+    </div>
+
+
+    <div id="story3 " data-aos="" data-aos-offset="200" data-aos-duration="1600" data-aos-easing="ease-in"
+         style="background:url('/static/landing/img/bg_story3.png') fixed; background-size:cover; background-repeat:no-repeat">
+
+
+        <h2 style=" font-family:ARDECODE" class="story_heading"><span style="text-align:left">Romance</span><span
+                style="float:right">Poetry</span></h2>
+        <center>
+            <section class="story_lines">
+                <p id="story_text" data-aos="fade">All is fair in love and war, so you must excuse the small
+                    mischief </p>
+                <p id="story_text" data-aos="fade" data-aos-offset="250">that was caused when Heer-Ranjha were
+                    transported to Scotland,</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="300">standing now in the middle of a vast field,</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="320">where a solitary highland lass was reaping and
+                    singing by herself.</p>
+            </section>
+            <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <img class="img-responsive story_strip" src="{% static 'landing/img/3(1).jpg' %}">
+            </div>
+            <section class="story_lines">
+                <p id="story_text" data-aos="fade">Even the solitary reaper who had registered a change in the
+                    surroundings, </p>
+                <p id="story_text" data-aos="fade" data-aos-offset="250"> paused to sing, and looked up to see.</p>
+            </section>
+            <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <img class="img-responsive story_strip" src="{% static 'landing/img/3(2).jpg' %}">
+            </div>
+            <section class="story_lines">
+                <p id="story_text" data-aos="fade">The three now heard, in silent rapture, a melancholy strain that was
+                    coming
+                    from far away.</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="250">Due to the lack of the common tongue, they
+                    couldn't communicate, </p>
+                <p id="story_text" data-aos="fade" data-aos-offset="300">but they knew that they were all in this
+                    together.</p>
+            </section>
+        </center>
+    </div>
+
+
+    <div id="story4 " data-aos="fade-down" data-aos-offset="200" data-aos-duration="1500"
+         data-aos-easing="ease-out-cubic" class="img-responsive"
+         style="color:white;background:url('/static/landing/img/bg_story4.png') fixed; background-repeat:no-repeat;background-size:cover;background-position:center ">
+
+        <h2 style="font-family: 'Sagas Montalban'" class="story_heading"><span
+                style="text-align:left">SCIENCE</span><span style="float:right">Spirituality</span></h2>
+        <center>
+            <section class="story_lines">
+                <p id="story_text" data-aos="fade">Elizabeth Gilbert was only trying to meditate, sitting on a cool
+                    marble floor
+                </p>
+                <p id="story_text" data-aos="fade" data-aos-offset="250">when she sensed a hand on her shoulder; someone
+                    was calling for her.</p>
+
+            </section>
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="600">
+                <img class="img-responsive story_strip" src="{% static 'landing/img/4(1).jpg' %}">
+            </div>
+            <section class="story_lines">
+                <p id="story_text" data-aos="fade">"We are from The Poisoner's Handbook, can you tell us what place is
+                    this?
+                    <br/>We were decoding murder mysteries when this happened!" said Norris,
+                    exasperated.</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="250">"Jeez! Murders! How awful!" exclaimed
+                    Elizabeth.</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="300">"Murders aren't the only toxic threat, my
+                    friend.<br/>
+                    Modern life has created a kind of poison playground, <br/>
+                    and danger lurks around every corner." said
+                    Gettler, cautiously.</p>
+            </section>
+            <section class="story_lines">
+                <p id="story_text" data-aos="fade">"You should try spending some time here in the Ashram I think.
+                    <br/> You'll have a different perspective, all together!
+                    <br/>Oh how beautiful would the world be if people could just Eat, Pray, Love!" Elizabeth wondered.
+                </p>
+                <p id="story_text" data-aos="fade" data-aos-offset="250">"Yes yes that is all very true I'm sure, but
+                    <br/>then what puts us in here, together?" Gettler wondered as well.</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="300">"Are we here to serve a purpose?" asked
+                    Elizabeth. </p>
+
+                <p id="story_text" data-aos="fade" data-aos-offset="300">"I have no clue!" answered Norris.</p>
+            </section>
+
+            <div data-aos="fade-up" ata-aos-offset="200" data-aos-duration="600">
+                <img class="img-responsive story_strip" src="{% static 'landing/img/4(2).jpg' %}">
+            </div>
+        </center>
+    </div>
+
+
+    <div id="story5" data-aos="fade-down" data-aos-offset="200" data-aos-duration="1500"
+         data-aos-easing="ease-out-cubic"
+         style="color:white ;background:url('/static/landing/img/bg_story5.png') fixed; background-repeat:no-repeat;background-size:cover;">
+
+        <h2 style=" font-family:fixedsys" class="story_heading"><span style="text-align:left">Mystery</span><span
+                style="float:right">Thriller</span></h2>
+        <center>
+            <section class="story_lines">
+                <p id="story_text" data-aos="fade">Feluda was still thinking, and with no logic or reasoning<br/>
+                    could he come up with a plausible explanation for what was happening.</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="250">He was standing at the entrance of The Overlook
+                    Hotel.</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="300">Dick Hallorann, who was on his way out suddenly
+                    noticed this foreign figure.</p>
+            </section>
+            <div data-aos="zoom-in" ata-aos-offset="200" data-aos-duration="600">
+                <img class="img-responsive story_strip" src="{% static 'landing/img/5(1).jpg' %}">
+            </div>
+            <section class="story_lines">
+                <p id="story_text" data-aos="fade">"There are certain things here that only people who shine can
+                    see.</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="250">Now get out of here before something bad
+                    happens.
+                    <br/> No, there's no room for a private investigator here, Mr. Mitter" said Hallorann.</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="300">"Well I don't think that scares me, sir. I need
+                    to see this."
+                    <br/>said Feluda - startled, but determined all the same.</p>
+            </section>
+            <div data-aos="zoom-in" ata-aos-offset="200" data-aos-duration="600">
+                <img class="img-responsive story_strip" src="{% static 'landing/img/5(2).jpg' %}">
+            </div>
+
+            <section class="story_lines">
+                <p id="story_text" data-aos="fade">Feluda entered the lobby of The Overlook, he was now standing face to
+                    face with Jack Torrance.</p>
+                <p id="story_text" data-aos="fade">"Hello, I'm the care-taker for the season. I'm sorry but we are
+                    closing up for the tourists."</p>
+            </section>
+            <section class="story_lines">
+                <p id="story_text" data-aos="fade">"Yes I'm aware of that, Mr. Torrance. You see I'm also a writer,
+                    <br/>by profession and I just recently heard about your arrangement.</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="250">Will it be alright if I stayed back here for
+                    the winters, with you and your family?
+                    <br/>We can shoulder all care-taking responsibilities." offered Feluda.</p>
+            </section>
+            <section class="story_lines">
+                <p id="story_text" data-aos="fade">"I believe that'll be quite alright. Welcome to The Overlook, Mr.
+                    Mitter.
+                    <br/>We'll get along quite well." said Jack, smiling.</p>
+
+            </section>
+
+
+        </center>
+    </div>
+
+
+    <div id="story6" data-aos="fade-down" data-aos-offset="200" data-aos-duration="1500"
+         data-aos-easing="ease-out-cubic"
+         style="font-weight:bold;background:url('/static/landing/img/bg_story6.png') fixed; background-repeat:no-repeat;background-size:cover;background-position:center">
+
+        <h2 style=" font-family:its_beginning_to_look_a_lot_like_christmas" class="story_heading"><span
+                style="text-align:left">Comics</span><span style="float:right">Manga</span></h2>
+        <center>
+            <section class="story_lines">
+                <p id="story_text" data-aos="fade">After a night of snow and storm, the morning had spread around like
+                    an
+                    infinite sheet of white.</p>
+                <p id="story_text" data-aos="fade" data-aos-offset="250">When Calvin and Hobbes found him, Goku with his
+                    flammable ki was standing in extraordinary contrast,<br/> utterly baffled.</p>
+            </section>
+
+            <div data-aos="flip-up" data-aos-offset="200" data-aos-duration="600">
+                <img class="img-responsive story_strip6" src="{% static 'landing/img/6(1).png' %}">
+            </div>
+            <!-- <section class="story_lines">
+        <p  id="story_text" data-aos="fade">After a night of snow and storm, the morning had spread around like an
+        infinite sheet of white.</p>
+        <p  id="story_text" data-aos="fade" data-aos-offset="250">When Calvin and Hobbes found him, Goku with his
+        flammable ki was standing in extraordinary contrast, utterly baffled.</p>
+         </section> -->
+
+
+            <div data-aos="flip-up" data-aos-offset="200" data-aos-duration="600">
+                <img class="img-responsive story_strip6" src="{% static 'landing/img/6(2).png' %}">
+            </div>
+        </center>
+    </div>
+    <div id="story7" data-aos="fade-down" data-aos-offset="200" data-aos-duration="1500"
+         data-aos-easing="ease-out-cubic"
+         style="font-weight:bold;background:url('/static/landing/img/final.png') fixed;
+         background-repeat:no-repeat;background-size:cover;background-position:center">
+<center>
+    <section class="story_lines">
+            <div data-aos="flip-up" data-aos-offset="200" data-aos-duration="600">
+                 <section class="story_lines">
+        <p data-aos="flip-down">And then there was one strong gust of wind that set everything alright.</p>
+                     <br>
+
+                <img class="img-responsive story_strip7" style="width: 50vw;" src="{% static 'landing/img/espektro_logo.gif' %}">
+                     <br>
+                     <br>
+                     <a href="/home" style="z-index: 100000"><p data-aos="fade" data-aos-offset="250" style="color: #ffffff;text-shadow: 0px 0px 15px black;">
+                         See you soon at the confluence of it all. Have you registered yet?</p></a>
+                     <br>
+
+                 </section>
+            </div>
+         </section>
+
+        </center>
+    </div>
+</div>
+
+    <!-- </center>
+     -->
+    <script type="text/javascript">
+        //Page top at Reload
+        $(window).on('beforeunload', function () {
+            $(window).scrollTop(0);
+        });
+        //Js for Intro_text
+
+        var lines = $(".lines");
+        var lineIndex = -1;
+
+        function showNextLine() {
+            ++lineIndex;
+            if (lineIndex == 0) {
+                lines.eq(lineIndex)
+                    .delay(3000)
+                    .fadeIn(2000)
+                    .delay(1000)
+                    .fadeOut(2000, showNextLine);
+            }
+            else if (lineIndex != (lines.length - 1)) {
+                lines.eq(lineIndex)
+                    .fadeIn(2000)
+                    .delay(1000)
+                    .fadeOut(2000, showNextLine);
+            }
+            else {
+                lines.eq(lineIndex)
+                    .fadeIn(2000)
+            }
+        }
+
+
+        showNextLine();
+
+        //Delay of Wind Effect
+        function show() {
+
+
+            AB = document.getElementsByClassName('overlay');
+
+            AB[0].style.display = 'inline';
+        }
+
+        $(function () {
+
+            setTimeout(show, 5000);
+        });
+        //Initializing AOS Plugin
+        AOS.init({
+            offset: 200,
+            duration: 600,
+            easing: 'ease-in-out',
+            delay: 400,
+        });
+
+
+        //Leaf Falling Effect
+        TweenLite.set("#story2", {perspective: 600})
+        TweenLite.set("leaveimg", {xPercent: "-50%", yPercent: "-50%"})
+
+        var total = 30;
+        var warp = document.getElementById("story2"), w = window.innerWidth, h = window.innerHeight;
+
+        for (i = 0; i < total; i++) {
+            var Div = document.createElement('div');
+            TweenLite.set(Div, {attr: {class: 'dot'}, x: R(0, w), y: R(-200, -150), z: R(-200, 200)});
+            warp.appendChild(Div);
+            animm(Div);
+        }
+
+        function animm(elm) {
+            TweenMax.to(elm, R(6, 15), {y: h + 100, ease: Linear.easeNone, repeat: -1, delay: -15});
+            TweenMax.to(elm, R(4, 8), {x: '+=100', rotationZ: R(0, 180), repeat: -1, yoyo: true, ease: Sine.easeInOut});
+            TweenMax.to(elm, R(2, 8), {
+                rotationX: R(0, 360),
+                rotationY: R(0, 360),
+                repeat: -1,
+                yoyo: true,
+                ease: Sine.easeInOut,
+                delay: -5
+            });
+        }
+        ;
+
+        function R(min, max) {
+            return min + Math.random() * (max - min)
+        }
+        ;
+
+        //Front_slider
+
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex == 1) {
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 3000); // Change image every 3 seconds
+            }
+            else if (myIndex == x.length) {
+                x[myIndex - 1].style.display = "block";
+            }
+
+            else {
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 5000); // Change image every 5 seconds
+            }
+        }
+
+
+
+        //Scroll Down Animation for delay
+        $(".bottom_down").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#story7").offset().top
+            }, 4000);
+        });
+
+        //Restricting scroll for 2s
+
+{#         $('body').addClass('stop-scrolling');#}
+{#         $('body').bind('touchmove', function(e){e.preventDefault()});#}
+{#         setTimeout(function(){#}
+{#           $('body').removeClass('stop-scrolling');#}
+{#           $('body').unbind('touchmove')#}
+{#         },20000);#}
+
+
+    </script>
+
+
+</body>
+</html>
