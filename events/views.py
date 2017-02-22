@@ -77,12 +77,20 @@ def exotica(request):
             if evnt.NumberParticipants == 1:
                 if usr in evnt.Participants.all():
                     message = "You are already registered for the event " + evnt.EventName + '.'
-                if not usr.UserDetail.college:
-                    message = "Please update your profile details in order to register."
+                    print message
                 else:
-                    evnt.Participants.add(usr)
-                    evnt.save()
-                    message = "You have been registered for " + evnt.EventName + '.'
+                    try:
+                        print usr
+                        x=usr.UserDetail
+                        print "22"
+                        evnt.Participants.add(usr)
+                        evnt.save()
+                        message = "You have been registered for " + evnt.EventName + '.'
+                        print message
+                    except:
+                        message = "Update your profile in order to register."
+                        print message
+                    print message
             else:
                 usrteams = usr.team_set.all()
                 list_events = []
