@@ -231,18 +231,25 @@
 
                         <ul class="dropdown-menu profile-dropdown" role="menu">
 
-                            <li>
+                            <li class="bg-master-lighter">
                                 <a href="#">
-                                    <span class="pull-left">Feedback</span>
-                                    <i class="pg-outdent"></i></span> </a>
+                                    <span class="pull-left"><i class="pg-outdent"></i> &nbsp;Feedback</span>
+                                    </span> </a>
                             </li>
 
                             <li class="bg-master-lighter">
                                 <a href="/profile/logout" class="clearfix">
-                                    <span class="pull-left">Logout</span>
-                                    <span class="pull-right"><i class="pg-power"></i></span>
+                                    <span class="pull-left"><i class="pg-power"></i> &nbsp;Logout</span>
+                                </a>
+                            
+
+                            <li>
+                                <a href="/profile/edit" class="clearfix">
+                                    <span class="pull-left"><i class="pg-indent"></i> &nbsp;Edit Profile</span>
                                 </a>
                             </li>
+
+
 
                         </ul>
                     </div>
@@ -255,7 +262,7 @@
                 <div class="visible-lg visible-md m-t-10">
                     <div class="pull-left p-r-10 p-t-10 fs-16 font-heading">
 {#                        <span class="semi-bold" style="font-size:20px; color:red;">{% if request.user.first_name %}{{request.user.first_name}}{% elif request.user.username %}{{ request.user.username}} {% else %}Login{% endif %}</span> #}
-                        <span class="text-master" style="font-size:20px; color:rgba(255,255,255,1);">LOGIN</span>
+                        <span class="text-master" style="font-size:20px; color:rgba(255,255,255,1);"><a href="{% url 'profile:login' %}">LOGIN</a></span>
                     </div>
 
                     <div class="dropdown pull-right">

@@ -9,7 +9,7 @@ app_name='profile'
 urlpatterns = [
 
     # /data/register/
-    url(r'^register/$', views.UserFormView.as_view(), name='register'),
+    url(r'^register/$', views.UserFormView, name='register'),
 
     # /profile/login
     url(r'^login/$', authviews.login, {'template_name':'profile/login.html'}, name='login'),

@@ -1,6 +1,6 @@
 
 {% extends 'profile/base.html' %}
-{% block title%} Invite {% endblock %}
+{% block title%} Login {% endblock %}
 {% block styles %}
     {% load staticfiles %}
     <link href="{% static 'css/edit_profile.css' %}" rel="stylesheet" type="text/css">
@@ -15,7 +15,7 @@
 
                 <form name="InviteForm" id="form_contents" action="." method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                  <label for='{{ form.username }}'>Email</label>
+                  <label for='{{ form.username }}'>Username</label>
                   {{ form.username }}
                 {{ form.username.errors }}
                   <label for='{{ form.password }}'>Password</label>
@@ -32,8 +32,8 @@
                   <input type="hidden" name="next" value="{{ next }}" />
                     <input class="reg_button" type="submit" value="submit" name="submit" />
                  </form>
-                  </form>
-                  <a href=""> <p>Don't Have Account? Sign Up</p></a>
+                <br><br>
+                  <a href="{% url 'profile:register' %}"> <p>Don't Have Account? Sign Up</p></a>
                   </center>
                 </div>
                 </div>

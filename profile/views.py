@@ -16,26 +16,30 @@ from django.utils.crypto import get_random_string
 from espektro.settings import domain, protocol
 
 # Create your views here.
-class UserFormView(View):
+"""class UserFormView(View):
     form_class = UserForm
+
     template_name = 'profile/registration_form.html'
 
     # display blank form
     def get(self, request):
         form = self.form_class(None)
-        return render(request, self.template_name, {'form': form})
+        detailform = self.UserDetailEditForm(None)
+        return render(request, self.template_name, {'form': form,'detailform':detailform})
 
     #process form data
     def post(self, request):
         form = self.form_class(request.POST)
+        detailform = self.UserDetailEditForm(reqeust.POST)
 
-        if form.is_valid():
+        if form.is_valid() and detailform.is_valid():
             user = form.save(commit=False)
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
             user.set_password(password)
             user.save()
             userdetail = UserDetail.objects.create(user=user)
+            userdetail = detailform.save()
         
 
             # if credentials are correct
@@ -46,31 +50,35 @@ class UserFormView(View):
                     login(request, user)
                     return redirect('/profile/edit')
 
-        return render(request, self.template_name, {'form': form})
+        return render(request, self.template_name, {'form': form, 'detailform':detailform})"""
 
-'''
-This view has been replaced by the default django auth login view.
-def login_view(request):
-        if request.method == 'POST':
-            form = LoginForm(request.POST)
-            if form.is_valid():
-                username=form.cleaned_data['username']
-                password=form.cleaned_data['password']
-                user=authenticate(username=username, password=password)
-                if user is not None:
-                    if user.is_active:
-                        login(request,user)
-                        return redirect('profile:edit')
-                    else:
-                        print("account diabled")
-                else:
-                    return render(request, 'profile/login.html', {'form':form})
-        else:
-            form = LoginForm()
-            return render(request, 'profile/login.html', {'form':form})'''
+def UserFormView(request):
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+        detailform = UserDetailEditForm(request.POST)
 
+        if form.is_valid() and detailform.is_valid():
+            user = form.save(commit=False)
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user.set_password(password)
+            user.save()
+            userdetail = UserDetail.objects.create(user=user)
+            userdetail = detailform.save()
+        
 
+            # if credentials are correct
+            user = authenticate(username=username, password=password)
 
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return redirect('/profile/edit')
+        return render(request, 'profile/registration_form.html', {'form': form, 'detailform':detailform})
+    else:
+        form = UserForm()
+        detailform = UserDetailEditForm()
+        return render(request, 'profile/registration_form.html', {'form': form, 'detailform':detailform})
 
 @login_required
 def edit(request):
