@@ -33,8 +33,7 @@ def techtix(request):
         message = ''
         if form['register'] > '0':
             key = form['register']
-            evnt = get_object_or_404(Event, key=key)
-            # print evnt
+            evnt = get_object_or_404(Event, key=key, EventType='Techtix')
             if evnt.NumberParticipants == 1:
                 if usr in evnt.Participants.all():
                     message = "You are already registered for the event " + evnt.EventName + '.'
@@ -72,7 +71,7 @@ def exotica(request):
         message = ''
         if form['register'] > '0':
             key = form['register']
-            evnt = get_object_or_404(Event, key=key)
+            evnt = get_object_or_404(Event, key=key, EventType='Exotica')
             # print evnt
             if evnt.NumberParticipants == 1:
                 if usr in evnt.Participants.all():
@@ -82,14 +81,11 @@ def exotica(request):
                     try:
                         print usr
                         x=usr.UserDetail
-                        print "22"
                         evnt.Participants.add(usr)
                         evnt.save()
                         message = "You have been registered for " + evnt.EventName + '.'
-                        print message
                     except:
                         message = "Update your profile in order to register."
-                        print message
                     print message
             else:
                 usrteams = usr.team_set.all()
@@ -98,9 +94,12 @@ def exotica(request):
                     list_events.append(team.event)
                 if evnt in list_events:
                     message = "You already have a team for " + evnt.EventName + "."
-                elif not usr.UserDetail.college:
-                    message = "Please update your profile details in order to register."
                 else:
+                    try:
+                        print usr
+                        x=usr.UserDetail
+                    except:
+                        message = "Please update your profile details in order to register."
                     return redirect('profile:team_create')
         return render(request, 'events/exotica.html', {'message': message})
     else:
