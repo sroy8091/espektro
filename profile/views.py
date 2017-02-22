@@ -57,28 +57,36 @@ def UserFormView(request):
         form = UserForm(request.POST)
         detailform = UserDetailEditForm(request.POST)
 
-        if form.is_valid() and detailform.is_valid():
+        if form.is_valid(): # and detailform.is_valid():
             user = form.save(commit=False)
+            print "1234"
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
+            print "456"
             user.set_password(password)
+            print "789"
             user.save()
-            userdetail = UserDetail.objects.create(user=user)
-            userdetail = detailform.save()
-        
+            print "100"
+            userdetail = UserDetail.objects.create(user_id=user.id)
+            print "9898"
 
-            # if credentials are correct
+
             user = authenticate(username=username, password=password)
-
+            print "bbb"
             if user is not None:
+                print "ccc"
                 if user.is_active:
+                    print "ddd"
                     login(request, user)
                     return redirect('/profile/edit')
-        return render(request, 'profile/registration_form.html', {'form': form, 'detailform':detailform})
+
+
+        return render(request, 'profile/registration_form.html', {'form': form})
     else:
         form = UserForm()
         detailform = UserDetailEditForm()
-        return render(request, 'profile/registration_form.html', {'form': form, 'detailform':detailform})
+        print "1"
+        return render(request, 'profile/registration_form.html', {'form': form})
 
 @login_required
 def edit(request):
@@ -87,7 +95,8 @@ def edit(request):
         #update details
         user_form = UserEditForm(instance=request.user,data=request.POST)
         user_detail_form = UserDetailEditForm(instance=p.userdetail,data=request.POST, files=request.FILES)
-
+        print user_form
+        print user_detail_form
         if user_form.is_valid() and user_detail_form.is_valid():
             user_form.save()
             user_detail_form.save()
@@ -180,3 +189,23 @@ def my_teams(request):
 # def user_info(request):
 #     usr = request.user
 #     events = Events.ob
+
+
+"""            print user
+            userdetail.user = user
+            print userdetail.user.id
+            #userdetail = UserDetail.objects.create(user=user)
+            userdetail.user_id = user.id
+            userdetail = detailform.save(commit=False)
+            userdetail.save()
+            print "aaa"
+
+            # if credentials are correct
+            user = authenticate(username=username, password=password)
+            print "bbb"
+            if user is not None:
+                print "ccc"
+                if user.is_active:
+                    print "ddd"
+                    login(request, user)
+                    return redirect('/profile/edit')"""

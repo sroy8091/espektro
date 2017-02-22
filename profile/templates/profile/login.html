@@ -21,6 +21,7 @@
                   <label for='{{ form.password }}'>Password</label>
                   {{ form.password }}
                 {{ form.password.errors }}
+                {{ form.non_field_errors }}
                   <br>
                   {% if messages %}
                     {% for message in messages %}

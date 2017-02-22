@@ -131,7 +131,7 @@ class UserDetail(models.Model):
 		('5','5th'),
 		)
 
-
+	#id = models.DecimalField(max_digits=9999, decimal_places=0, primary_key=True)
 	user = models.OneToOneField(settings.AUTH_USER_MODEL)
 	college = models.CharField(max_length=100,  default='Kalyani Goverment Engineering College')
 	city = models.CharField(max_length=20)

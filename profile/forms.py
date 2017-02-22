@@ -17,6 +17,19 @@ class UserForm(forms.ModelForm):
             raise forms.ValidationError("Passwords do not match.")
         return cd['password2']
 
+    def clean_first_name(self):
+        if self.cleaned_data["first_name"].strip() == '':
+            raise forms.ValidationError("First name is required.")
+        if not self.cleaned_data["first_name"].strip().isalpha():
+            raise forms.ValidationError("Enter a valid First Name.")
+        return self.cleaned_data["first_name"]
+
+    def clean_last_name(self):
+        if self.cleaned_data["last_name"].strip() == '':
+            raise forms.ValidationError("Last name is required.")
+        if not self.cleaned_data["last_name"].strip().isalpha():
+            raise forms.ValidationError("Enter a valid Last Name.")
+        return self.cleaned_data["last_name"]
 
 class LoginForm(forms.Form):
     username = forms.CharField(label='User Name', max_length=64)
@@ -27,6 +40,21 @@ class UserEditForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'email')
+
+    def clean_first_name(self):
+        if self.cleaned_data["first_name"].strip() == '':
+            raise forms.ValidationError("First name is required.")
+        if not self.cleaned_data["first_name"].strip().isalpha():
+            raise forms.ValidationError("Enter a valid First Name.")
+        return self.cleaned_data["first_name"]
+
+    def clean_last_name(self):
+        if self.cleaned_data["last_name"].strip() == '':
+            raise forms.ValidationError("Last name is required.")
+        if not self.cleaned_data["last_name"].strip().isalpha():
+            raise forms.ValidationError("Enter a valid Last Name.")
+        return self.cleaned_data["last_name"]
+
 
 
 class UserDetailEditForm(forms.ModelForm):

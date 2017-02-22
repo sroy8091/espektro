@@ -38,8 +38,8 @@
                   {{ form.password2 }}
                 {{ form.passsword2.errors }}
                 {{ form.errors.password2 }}
-
-                <label for='{{ detailform.college }}'>College*</label>
+                {{ form.non_field_errors }}
+<!--                <label for='{{ detailform.college }}'>College*</label>
                   {{ detailform.college }}
                 {{ detailform.college.errors }}
 
@@ -47,10 +47,14 @@
                   {{ detailform.city }}
                 {{ detailform.city.errors }}
 
+                <label for='{{ detailform.phone_no }}'> Phone No*</label>
+                  {{ detailform.phone_no }}
+                {{ detailform.phone_no.errors }}
+
                 <label for='{{ detailform.accomodation }}'>Accomodation Required?*</label>
                   {{ detailform.accomodation }}
                 {{ detailform.accomodation.errors }}
-
+-->
                   <br>
                   {% if messages %}
                     {% for message in messages %}

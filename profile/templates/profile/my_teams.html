@@ -17,8 +17,21 @@
                     <a href="{% url 'profile:invite' id=team.id %}">{{ team.name }}</a> -- {{ team.event }}
                     <br>
                 {% endfor %}
-        </center>
-    </div>
+                
+            </center>
+        </div>
+        <div class="reg_form-container">
+            <!-- <a id="esp_logo" href="#"><img src="esp_logo.png"></a> -->
+            <center>
+                <br>
+                <h2 class="reg_form_heading">My Teams</h2>
+
+                {% for evnt is usrevents %}
+                    {{ evnt }}
+                    <br>
+                {% endfor %}
+            </center>
+        </div>
     </div>
 {% endblock %}
 

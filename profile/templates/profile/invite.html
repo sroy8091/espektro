@@ -16,6 +16,8 @@
                 {% csrf_token %}
                   <label for='{{ form.email }}'>Email</label>
                   {{ form.email }}
+                  {{ form.email.errors }}
+                  {{ form.non_field_errors }}
                   <br>
                   {% if sent %}
                   <span class='sent'>You have succesfully sent an invite to {{ form.email.value }}. Please ask them to check their mail (and spam folder) to have the accept your invitation.</span>

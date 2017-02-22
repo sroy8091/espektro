@@ -38,6 +38,8 @@ def techtix(request):
             if evnt.NumberParticipants == 1:
                 if usr in evnt.Participants.all():
                     message = "You are already registered for the event " + evnt.EventName + '.'
+                if not usr.UserDetail.college:
+                    message = "Please update your profile details in order to register."
                 else:
                     evnt.Participants.add(usr)
                     evnt.save()
@@ -49,6 +51,8 @@ def techtix(request):
                     list_events.append(team.event)
                 if evnt in list_events:
                     message = "You already have a team for " + evnt.EventName + "."
+                elif not usr.UserDetail.college:
+                    message = "Please update your profile details in order to register."
                 else:
                     return redirect('profile:team_create')
         return render(request, 'events/techtix.html', {'message': message})
