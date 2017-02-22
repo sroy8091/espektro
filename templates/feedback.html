@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 
+{% load staticfiles %}
+{% block title %}
+    Feedback
+{% endblock %}
+{% block styles %}
+<link href="{% static 'feedback/feedback.css' %}" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
 <div class="content">
 	<style>@import url('https://fonts.googleapis.com/css?family=Courgette');
@@ -7,7 +15,8 @@
 	<h1 style="font-family:'Courgette', cursive;">Website Feedback Form</h1>
     <div class="main">
 
-		<form>
+		<form method="post">
+            {% csrf_token %}
 			<h5>Your Name</h5>
 				<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
 			<h5>Email</h5>
