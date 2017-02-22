@@ -12,10 +12,10 @@ urlpatterns = [
     url(r'^techtix/$', views.techtix, name='techtix'),
     
     # /exotica/
-    #url(r'^exotica/$', views.exotica, name='exotica'),
+    url(r'^exotica/$', views.exotica, name='exotica'),
 
     #exotica iframe
-    url(r'^testgame/', TemplateView.as_view(template_name="events/exotica_frame.html"),
+    url(r'^canvas/', TemplateView.as_view(template_name="events/exotica_frame.html"),
                    name='iframess'),
    
 ]

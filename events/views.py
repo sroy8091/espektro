@@ -59,3 +59,42 @@ def techtix(request):
     else:
         pass
     return render(request, 'events/techtix.html')
+
+def exotica(request):
+    if request.method == 'POST':
+        usr = request.user
+        if not usr.username:
+            return redirect('profile:login')
+        form = request.POST
+        # print usr
+        # print form
+        # print form['register']
+        message = ''
+        if form['register'] > '0':
+            key = form['register']
+            evnt = get_object_or_404(Event, key=key)
+            # print evnt
+            if evnt.NumberParticipants == 1:
+                if usr in evnt.Participants.all():
+                    message = "You are already registered for the event " + evnt.EventName + '.'
+                if not usr.UserDetail.college:
+                    message = "Please update your profile details in order to register."
+                else:
+                    evnt.Participants.add(usr)
+                    evnt.save()
+                    message = "You have been registered for " + evnt.EventName + '.'
+            else:
+                usrteams = usr.team_set.all()
+                list_events = []
+                for team in usrteams:
+                    list_events.append(team.event)
+                if evnt in list_events:
+                    message = "You already have a team for " + evnt.EventName + "."
+                elif not usr.UserDetail.college:
+                    message = "Please update your profile details in order to register."
+                else:
+                    return redirect('profile:team_create')
+        return render(request, 'events/exotica.html', {'message': message})
+    else:
+        pass
+    return render(request, 'events/exotica.html')
