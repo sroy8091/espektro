@@ -336,7 +336,7 @@ position: absolute;
 
 
 .overlay {
-    position: fixed;
+    position: relative;
     background: url("/static/landing/img/wind_general.png");
     background-repeat: repeat-x;
     -webkit-animation: 2s scroll infinite linear;
