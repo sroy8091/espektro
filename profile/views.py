@@ -111,10 +111,11 @@ def team_create(request):
             new_team.leader = p
             new_team.secret_key = get_random_string(20)
             new_team.number_of_members = new_team.event.NumberParticipants
-            new_team.save()
-            new_team.members.add(p)
+            # new_team.save()
+            # new_team.members.add(p)
             new_team.save()
             created = True
+            return redirect('/profile/teams')
     else:
         form = team_create_form()
     return render(request, 'profile/teamcreate.html', { 'form' : form, 'created' : created})
@@ -172,3 +173,8 @@ def my_teams(request):
     usr = request.user
     usrteams = usr.team_set.all()
     return render(request, 'profile/my_teams.html', {'usrteams':usrteams})
+
+# @login_required
+# def user_info(request):
+#     usr = request.user
+#     events = Events.ob
