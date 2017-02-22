@@ -172,7 +172,9 @@ class TeamDetail(generic.DetailView):
 def my_teams(request):
     usr = request.user
     usrteams = usr.team_set.all()
-    return render(request, 'profile/my_teams.html', {'usrteams':usrteams})
+    evnt = usr.events_registered
+    usrevents = evnt.all()
+    return render(request, 'profile/my_teams.html', {'usrteams':usrteams, 'usrevents':usrevents})
 
 # @login_required
 # def user_info(request):
