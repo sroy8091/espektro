@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'landing/aos/dist/aos.css' %}">
-    <script type="text/javascript" src="{% static 'AudioFade-master/js/AudioFade.js' %}"></script>
+    <script type="text/javascript" src="{% static 'AudioFade-master/AudioFade.js' %}"></script>
 
     <script type="text/javascript" src="{% static 'landing/aos/dist/aos.js' %}"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'landing/main.css' %}"/>
@@ -88,7 +88,7 @@
         </center>
     </div>
 
-    <audio loop src="wind.mp3" preload="auto"></audio>
+    <audio loop autoplay  src="{% static 'landing/wind1.mp3' %}" preload="auto"></audio>
 
 
     <!-- <div class="overlay"></div> -->
@@ -129,6 +129,12 @@
             <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
                 <img class="img-responsive story_strip" src="{% static 'landing/img/1(2).jpg' %}">
             </div>
+            <section class="story_lines">
+        <p  id="story_text" data-aos="fade">"Is this The Nautilus? The masterpiece containing masterpieces?!" asked<br>
+Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
+        <p  id="story_text" data-aos="fade" data-aos-offset="250">"The storm?" I asked Captain Nemo.<br>
+"The storm." He affirmed.</p>
+         </section>
         </center>
     </div>
 
@@ -225,7 +231,7 @@
          data-aos-easing="ease-out-cubic" class="img-responsive"
          style="color:white;background:url('/static/landing/img/bg_story4.png') fixed; background-repeat:no-repeat;background-size:cover;background-position:center ">
 
-        <h2 style="font-family: 'Sagas Montalban'" story_heading"><span
+        <h2 style="font-family: 'Sagas Montalban'" class="story_heading"><span
                 style="text-align:left">SCIENCE</span><span style="float:right">Spirituality</span></h2>
         <center>
             <section class="story_lines">
@@ -360,26 +366,31 @@
             </div>
         </center>
     </div>
-    <div id="story6" data-aos="fade-down" data-aos-offset="200" data-aos-duration="1500"
+    <div id="story7" data-aos="fade-down" data-aos-offset="200" data-aos-duration="1500"
          data-aos-easing="ease-out-cubic"
          style="font-weight:bold;background:url('/static/landing/img/final.png') fixed;
          background-repeat:no-repeat;background-size:cover;background-position:center">
 <center>
     <section class="story_lines">
-        <p  id="story_text" data-aos="fade">After a night of snow and storm, the morning had spread around like an
-        infinite sheet of white.</p>
-        <p  id="story_text" data-aos="fade" data-aos-offset="250">When Calvin and Hobbes found him, Goku with his
-        flammable ki was standing in extraordinary contrast, utterly baffled.</p>
+            <div data-aos="flip-up" data-aos-offset="200" data-aos-duration="600">
+                 <section class="story_lines">
+        <p data-aos="flip-down">And then there was one strong gust of wind that set everything alright.</p>
+                     <br>
+
+                <img class="img-responsive story_strip7" style="width: 50vw;" src="{% static 'landing/img/espektro_logo.gif' %}">
+                     <br>
+                     <br>
+                     <a href="/home" style="z-index: 100000"><p data-aos="fade" data-aos-offset="250" style="color: #ffffff;text-shadow: 0px 0px 15px black;">
+                         See you soon at the confluence of it all. Have you registered yet?</p></a>
+                     <br>
+
+                 </section>
+            </div>
          </section>
 
-
-            <div data-aos="flip-up" data-aos-offset="200" data-aos-duration="600">
-                <img class="img-responsive story_strip7" style="width: 50vw;" src="{% static 'landing/img/espektro_logo.gif' %}">
-                <a href="/home"><button type="submit">Submit</button> </a>
-            </div>
         </center>
     </div>
-
+</div>
 
     <!-- </center>
      -->
@@ -509,14 +520,16 @@
 
         //Restricting scroll for 2s
 
-         $('body').addClass('stop-scrolling');
-         $('body').bind('touchmove', function(e){e.preventDefault()});
-         setTimeout(function(){
-           $('body').removeClass('stop-scrolling');
-           $('body').unbind('touchmove')
-         },20000);
+{#         $('body').addClass('stop-scrolling');#}
+{#         $('body').bind('touchmove', function(e){e.preventDefault()});#}
+{#         setTimeout(function(){#}
+{#           $('body').removeClass('stop-scrolling');#}
+{#           $('body').unbind('touchmove')#}
+{#         },20000);#}
 
 
     </script>
+
+
 </body>
 </html>
