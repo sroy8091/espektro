@@ -1185,6 +1185,36 @@
             document.getElementById("cood").style.display = "block";
         }
 
+
+        function reset_style() {
+                document.getElementById("se_1_2").style.backgroundColor = "transparent";
+                document.getElementById("se_1_1").style.backgroundColor = "transparent";
+                document.getElementById("se_2_2").style.backgroundColor = "transparent";
+                document.getElementById("se_2_1").style.backgroundColor = "transparent";
+                document.getElementById("se_3_2").style.backgroundColor = "transparent";
+                document.getElementById("se_3_1").style.backgroundColor = "transparent";
+                document.getElementById("se_4_2").style.backgroundColor = "transparent";
+                document.getElementById("se_4_1").style.backgroundColor = "transparent";
+
+                document.getElementById("se_1_2").style.color = "rgb(255,180,0)";
+                document.getElementById("se_1_1").style.color = "rgb(255,180,0)";
+                document.getElementById("se_2_2").style.color = "rgb(255,180,0)";
+                document.getElementById("se_2_1").style.color = "rgb(255,180,0)";
+                document.getElementById("se_3_2").style.color = "rgb(255,180,0)";
+                document.getElementById("se_3_1").style.color = "rgb(255,180,0)";
+                document.getElementById("se_4_2").style.color = "rgb(255,180,0)";
+                document.getElementById("se_4_1").style.color = "rgb(255,180,0)";
+            }
+
+            function color_style(x) {
+                var y = "se_" + x + "_2";
+                var z = "se_" + x + "_1";
+
+                document.getElementById(y).style.backgroundColor = "rgb(255,180,0)";
+                document.getElementById(z).style.backgroundColor = "rgb(255,180,0)";
+                document.getElementById(y).style.color = "rgb(255,255,255)";
+                document.getElementById(z).style.color = "rgb(255,255,255)";
+            }
     </script>
 
     <style>
@@ -1931,6 +1961,13 @@
                         <span class="delimiter-footer"></span>
                         <span>
                                     <a class="contact-desk" href=""></a>
+                                </span>
+                    </div>
+                    <div class="copyright col-lg-6 col-md-5 col-sm-12">
+                        <span><a href="/home">Home</a> </span>
+                        <span class="delimiter-footer"></span>
+                        <span>
+                                    <a class="contact-desk" href="/events/exotica"></a>
                                 </span>
                     </div>
                     <nav class="col-lg-6 col-md-7 col-sm-12">

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="content">
+	<style>@import url('https://fonts.googleapis.com/css?family=Courgette');
+    </style>
+	<h1 style="font-family:'Courgette', cursive;">Website Feedback Form</h1>
+    <div class="main">
+
+		<form>
+			<h5>Your Name</h5>
+				<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
+			<h5>Email</h5>
+				<input type="text" value="yourid@mail.com" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'yourid@mail.com';}" required="">
+
+		      <h5>Rate our </h5>
+			<span class="starRating">
+				<input id="rating5" type="radio" name="rating" value="1">
+				<label for="rating5">1</label>
+				<input id="rating4" type="radio" name="rating" value="2">
+				<label for="rating4">2</label>
+				<input id="rating3" type="radio" name="rating" value="3" >
+				<label for="rating3">3</label>
+				<input id="rating2" type="radio" name="rating" value="4" checked>
+				<label for="rating2">4</label>
+				<input id="rating1" type="radio" name="rating" value="5">
+				<label for="rating1">5</label>
+			</span>
+            <h5>Your Review </h5>
+				<textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">Type here</textarea>
+
+				<input type="submit" value="Send Feedback">
+		</form>
+	</div>
+</div>
+
+{% endblock %}

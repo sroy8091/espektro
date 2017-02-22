@@ -273,7 +273,7 @@ position: absolute;
     display: none;
 }
 
-​
+
 .story_heading {
     padding: 18vw 10vw 0px 10vw;
     font-size: 3vw;
@@ -333,6 +333,8 @@ position: absolute;
     position: relative;
 }
 
+
+
 .overlay {
     position: fixed;
     background: url("/static/landing/img/wind_general.png");
@@ -346,6 +348,10 @@ position: absolute;
     height: 120%;
     z-index: 10;
     display: none;
+}
+
+.lpend{
+    height:10%;
 }
 
 @-webkit-keyframes scroll {

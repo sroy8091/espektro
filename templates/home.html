@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 
-{% block title %}<title>Home</title>{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block styles %}
     {% load staticfiles %}
@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block body %}
-<div class="home_animation">
+<div class="home_animation" style="margin-top: -6%">
     <img src="{% static 'images/doodle_logo.png' %}" alt="Espektro Doodle" class="esp_doodle">
     <img src="{% static 'images/text_logo.png' %}" alt="Espektro Book" class="esp_book">
     <img src="{% static 'images/world_of_novels.png' %}" alt="World of Novels" class="world_of_novels" id="world_of_novels">

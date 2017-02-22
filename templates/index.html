@@ -2,7 +2,6 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'landing/aos/dist/aos.css' %}">
@@ -39,7 +38,7 @@
 
     <!-- <img class="main_svg img-responsive shadow " src="img/1.png" alt="Sorry!Image not found"/> -->
 
-    <a href="#lpend" class="bottom_down">
+    <a href="#story7" class="bottom_down">
         <div id="mouse-scroll">
             <div class="mouse">
                 <div class="mouse-in"></div>
@@ -361,11 +360,25 @@
             </div>
         </center>
     </div>
-    <div id="lpend" data-aos="fade-down" data-aos-offset="200" data-aos-duration="1500" data-aos-easing="ease-out-cubic"
-         style="font-weight:bold;background:url('/static/landing/img/espektro_logo.gif') fixed; background-repeat:no-repeat;background-size:cover;
-	 background-position:center">
-{#        <img src="img/book_enter.png">#}
+    <div id="story6" data-aos="fade-down" data-aos-offset="200" data-aos-duration="1500"
+         data-aos-easing="ease-out-cubic"
+         style="font-weight:bold;background:url('/static/landing/img/final.png') fixed;
+         background-repeat:no-repeat;background-size:cover;background-position:center">
+<center>            <!-- <section class="story_lines">
+        <p  id="story_text" data-aos="fade">After a night of snow and storm, the morning had spread around like an
+        infinite sheet of white.</p>
+        <p  id="story_text" data-aos="fade" data-aos-offset="250">When Calvin and Hobbes found him, Goku with his
+        flammable ki was standing in extraordinary contrast, utterly baffled.</p>
+         </section> -->
+
+
+            <div data-aos="flip-up" data-aos-offset="200" data-aos-duration="600">
+                <img class="img-responsive story_strip7" style="width: 50vw;" src="{% static 'landing/img/espektro_logo.gif' %}">
+                <a href="/home"><button type="submit">Submit</button> </a>
+            </div>
+        </center>
     </div>
+
 
     <!-- </center>
      -->
@@ -485,22 +498,24 @@
         }
 
 
-        //Restricting scroll for 20s
+
+        //Scroll Down Animation for delay
+        $(".bottom_down").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#story7").offset().top
+            }, 4000);
+        });
+
+        //Restricting scroll for 2s
 
          $('body').addClass('stop-scrolling');
          $('body').bind('touchmove', function(e){e.preventDefault()});
          setTimeout(function(){
            $('body').removeClass('stop-scrolling');
            $('body').unbind('touchmove')
-         },2000);
+         },20000);
 
 
-        //Scroll Down Animation for delay
-        $(".bottom_down").click(function () {
-            $('html, body').animate({
-                scrollTop: $("#lpend").offset().top
-            }, 4000);
-        });
     </script>
 </body>
 </html>
