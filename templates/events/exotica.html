@@ -1,0 +1,1324 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>EXOTICA | 2017</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <style>
+            .center {
+                position: absolute;
+                left: 33%;
+                top: 25%;
+                width: 100%;
+                text-align: center;
+                font-size: 18px;
+            }
+
+            .center1 {
+                position: absolute;
+                left: 43%;
+                top: 2%;
+                width: 100%;
+                text-align: center;
+                font-size: 18px;
+            }
+
+            .ori-body {
+/*                background-image: url("exotica_backdrop2.png"), linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));*/
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+/*
+            .events {
+                border: 2px rgb(255,198,0) solid;
+                padding: 10px 20px;
+                margin: 10px 20px;
+                font-size: 14px;
+                text-align: center;
+                color: rgb(255,198,0);
+                width: 500px;
+            }
+
+            * {
+                margin: 10px;
+            }
+*/
+            body {
+                overflow-x: hidden;
+                width: 100%;
+                height: auto;
+            }
+
+            html {
+                overflow-x: hidden;
+                width: 100%;
+                height: auto;
+            }
+
+            .events {
+                background-color: rgba(255,180,0,1);
+/*                width: 75%;*/
+                color:white;
+                border: 0.5px rgb(255,198,0) solid;
+                margin:15px 0px;
+                padding:10px;
+                border-radius:10px;
+            }
+
+            .events:hover {
+                background-color: rgba(255,180,0,0.7);
+                font-weight: bolder;
+                font-size: 1.1em;
+                box-shadow: 0px 0px 5px 5px rgba(255,180,0,0.2);
+            }
+
+            .events1 {
+                background-color: rgba(255,180,0,1);
+                width: 100%;
+                color:white;
+                border: 0.5px rgb(255,198,0) solid;
+                margin:15px 0px;
+                padding:5px;
+                border-radius:10px;
+            }
+
+            .events1:hover {
+                background-color: rgba(255,180,0,0.7);
+                font-weight: bolder;
+                font-size: 1.1em;
+                box-shadow: 0px 0px 5px 5px rgba(255,180,0,0.2);
+            }
+
+            .tbutton {
+              background-color: rgba(255, 180, 0, 0.5);
+              border-radius: 4px;
+              border: none;
+              color: #FFFFFF;
+              text-align: center;
+              font-size: 28px;
+              padding: 10px;
+              width: 200px;
+              transition: all 0.5s;
+              cursor: pointer;
+              margin: 5px;
+
+            }
+
+            .tbutton span {
+              cursor: pointer;
+              display: inline-block;
+              position: relative;
+              transition: 0.5s;
+            }
+
+            #tbutton1 span:before {
+              content: '\00ab';
+              position: absolute;
+              opacity: 0;
+              top: 0;
+              left: -20px;
+              transition: 0.5s;
+            }
+
+            #tbutton2 span:after {
+              content: '\00bb';
+              position: absolute;
+              opacity: 0;
+              top: 0;
+              right: -20px;
+              transition: 0.5s;
+            }
+
+            #tbutton2:hover span {
+              padding-right: 25px;
+            }
+
+            #tbutton1:hover span {
+              padding-left: 25px;
+            }
+
+            #tbutton1:hover span:before {
+              opacity: 1;
+              left: 0;
+            }
+
+            #tbutton2:hover span:after {
+              opacity: 1;
+              right: 0;
+            }
+
+            .tbutton:hover{
+              background-color: rgba(255, 180, 0, 1);
+              box-shadow: 0px 0px 5px 5px rgba(255, 180, 0, 0.4);
+            }
+
+            .cood_name, .cood_contact {
+                font-size: 16px;
+                font-family:font_2;
+            }
+
+            #glowing {
+                -webkit-animation-name: box_glow; /* Safari 4.0 - 8.0 */
+                -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+                -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+                animation-name: box_glow;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+            }
+
+            @-webkit-keyframes box_glow {
+                0%   {text-shadow: 0px 0px 15px rgba(255,180,0,0.2); }
+                25%  {text-shadow: 0px 0px 15px rgba(255,180,0,0.5);}
+                50%  {text-shadow: 0px 0px 15px rgba(255,180,0,0.7);}
+                75%  {text-shadow: 0px 0px 15px rgba(255,180,0,0.9);}
+                100% {text-shadow: 0px 0px 15px rgba(255,180,0,1);}
+            }
+
+            /* Standard syntax */
+            @keyframes box_glow {
+
+                0%   {text-shadow: 0px 0px 15px rgba(255,180,0,0.2); }
+                25%  {text-shadow: 0px 0px 15px rgba(255,180,0,0.5);}
+                50%  {text-shadow: 0px 0px 15px rgba(255,180,0,0.7);}
+                75%  {text-shadow: 0px 0px 15px rgba(255,180,0,0.9);}
+                100% {text-shadow: 0px 0px 15px rgba(255,180,0,1);}
+            }
+
+            @font-face {
+                font-family: font_1;
+                src: url(fonts/ADAMCGPRO.otf);
+            }
+
+            @font-face {
+                font-family: font_2;
+                src: url(fonts/AgencyFBBold.ttf);
+            }
+
+            .ee_ele {
+                font-family: font_1;
+            }
+
+            #event_head1 , #event_head2 {
+                font-family: font_2;
+                letter-spacing: 0.2em;
+            }
+
+            #ee_desc , #cood {
+                color: wheat;
+            }
+
+            #se_1, #se_2 {
+                color: wheat;
+            }
+
+            @import url('https://fonts.googleapis.com/css?family=Bree+Serif|Courgette');
+
+            font-family: 'Bree Serif', serif;
+            font-family: 'Courgette', cursive;
+        </style>
+
+
+
+        <script>
+
+            function run() {
+                document.getElementById("ee_section").style.display = "block";
+            }
+
+            function func_1() {
+                document.getElementById("event_head1").textContent = "PRONITES";
+                document.getElementById("event_head2").textContent = "PRONITES";
+                document.getElementById("ee_desc").innerHTML = "Hello <br> i am Souvik Nandi";
+                document.getElementById("cood").style.visibility = "hidden";
+                document.getElementById("ee_buttons").style.visibility = "hidden";
+            }
+
+            function func_2() {
+                document.getElementById("event_head1").textContent = "MUSIC";
+                document.getElementById("event_head2").textContent = "MUSIC";
+//                document.getElementById("ee_desc").innerHTML = "Let's enjoy music<br>";
+//                document.getElementById("cood").style.visibility = "hidden";
+//                document.getElementById("ee_buttons").style.visibility = "hidden";
+
+                document.getElementById("se_1_1").textContent = "Band Slam";
+                document.getElementById("se_2_1").textContent = "";
+                document.getElementById("se_3_1").textContent = "";
+                document.getElementById("se_4_1").textContent = "";
+
+                document.getElementById("se_1_2").textContent = "Band Slam";
+                document.getElementById("se_2_2").textContent = "";
+                document.getElementById("se_3_2").textContent = "";
+                document.getElementById("se_4_2").textContent = "";
+
+                document.getElementById("se_1_1").style.display = "inline";
+                document.getElementById("se_2_1").style.display = "none";
+                document.getElementById("se_3_1").style.display = "none";
+                document.getElementById("se_4_1").style.display = "none";
+
+                document.getElementById("se_1_2").style.visibility = "visible";
+                document.getElementById("se_2_2").style.display = "none";
+                document.getElementById("se_3_2").style.visibility = "hidden";
+                document.getElementById("se_4_2").style.display = "none";
+
+
+
+                document.getElementById("se_1_2").onclick = func_2_1;
+                document.getElementById("se_1_1").onclick = func_2_1;
+                document.getElementById("se_2_2").onclick = func_2_2;
+                document.getElementById("se_2_1").onclick = func_2_2;
+                document.getElementById("se_3_2").onclick = func_2_3;
+                document.getElementById("se_3_1").onclick = func_2_3;
+                document.getElementById("se_4_2").onclick = func_2_4;
+                document.getElementById("se_4_1").onclick = func_2_4;
+
+                func_2_1();
+            }
+
+            function func_3() {
+                document.getElementById("event_head1").textContent = "DANCE";
+                document.getElementById("event_head2").textContent = "DANCE";
+                document.getElementById("ee_desc").innerHTML = "You will get to see some beautiful presentations by our dance club ELYSIUM";
+                document.getElementById("cood").style.visibility = "hidden";
+                document.getElementById("ee_buttons").style.visibility = "hidden";
+
+                document.getElementById("se_1_1").textContent = "";
+                document.getElementById("se_2_1").textContent = "";
+                document.getElementById("se_3_1").textContent = "";
+                document.getElementById("se_4_1").textContent = "";
+
+                document.getElementById("se_1_2").textContent = "";
+                document.getElementById("se_2_2").textContent = "";
+                document.getElementById("se_3_2").textContent = "";
+                document.getElementById("se_4_2").textContent = "";
+
+                document.getElementById("se_1_1").style.display = "none";
+                document.getElementById("se_2_1").style.display = "none";
+                document.getElementById("se_3_1").style.display = "none";
+                document.getElementById("se_4_1").style.display = "none";
+
+                document.getElementById("se_1_2").style.visibility = "hidden";
+                document.getElementById("se_2_2").style.display = "none";
+                document.getElementById("se_3_2").style.visibility = "hidden";
+                document.getElementById("se_4_2").style.display = "none";
+
+
+
+                document.getElementById("se_1_2").onclick = func_3_1;
+                document.getElementById("se_1_1").onclick = func_3_1;
+                document.getElementById("se_2_2").onclick = func_3_2;
+                document.getElementById("se_2_1").onclick = func_3_2;
+                document.getElementById("se_3_2").onclick = func_3_3;
+                document.getElementById("se_3_1").onclick = func_3_3;
+                document.getElementById("se_4_2").onclick = func_3_4;
+                document.getElementById("se_4_1").onclick = func_3_4;
+
+//                func_3_1();
+            }
+
+            function func_4() {
+                document.getElementById("event_head1").textContent = "FILM MAKING";
+                document.getElementById("event_head2").textContent = "FILM MAKING";
+//                document.getElementById("ee_desc").innerHTML = "Let's enjoy music<br>";
+//                document.getElementById("cood").style.visibility = "hidden";
+//                document.getElementById("ee_buttons").style.visibility = "hidden";
+
+                document.getElementById("se_1_1").textContent = "Director's Cut";
+                document.getElementById("se_2_1").textContent = "";
+                document.getElementById("se_3_1").textContent = "";
+                document.getElementById("se_4_1").textContent = "";
+
+                document.getElementById("se_1_2").textContent = "Director's Cut";
+                document.getElementById("se_2_2").textContent = "";
+                document.getElementById("se_3_2").textContent = "";
+                document.getElementById("se_4_2").textContent = "";
+
+                document.getElementById("se_1_1").style.display = "inline";
+                document.getElementById("se_2_1").style.display = "none";
+                document.getElementById("se_3_1").style.display = "none";
+                document.getElementById("se_4_1").style.display = "none";
+
+                document.getElementById("se_1_2").style.visibility = "visible";
+                document.getElementById("se_2_2").style.display = "none";
+                document.getElementById("se_3_2").style.visibility = "hidden";
+                document.getElementById("se_4_2").style.display = "none";
+
+
+
+                document.getElementById("se_1_2").onclick = func_4_1;
+                document.getElementById("se_1_1").onclick = func_4_1;
+                document.getElementById("se_2_2").onclick = func_4_2;
+                document.getElementById("se_2_1").onclick = func_4_2;
+                document.getElementById("se_3_2").onclick = func_4_3;
+                document.getElementById("se_3_1").onclick = func_4_3;
+                document.getElementById("se_4_2").onclick = func_4_4;
+                document.getElementById("se_4_1").onclick = func_4_4;
+
+                func_4_1();
+            }
+
+            function func_5() {
+                document.getElementById("event_head1").textContent = "PHOTOGRAPHY";
+                document.getElementById("event_head2").textContent = "PHOTOGRAPHY";
+//                document.getElementById("ee_desc").innerHTML = "pICTURES";
+//                document.getElementById("cood").style.visibility = "hidden";
+//                document.getElementById("ee_buttons").style.visibility = "hidden";
+
+                document.getElementById("se_1_1").textContent = "Pratibimb";
+                document.getElementById("se_2_1").textContent = "Drishti";
+                document.getElementById("se_3_1").textContent = "Pic-Asso";
+                document.getElementById("se_4_1").textContent = "";
+
+                document.getElementById("se_1_2").textContent = "Pratibimb";
+                document.getElementById("se_2_2").textContent = "Drishti";
+                document.getElementById("se_3_2").textContent = "Pic-Asso";
+                document.getElementById("se_4_2").textContent = "";
+
+                document.getElementById("se_1_1").style.display = "inline";
+                document.getElementById("se_2_1").style.display = "inline";
+                document.getElementById("se_3_1").style.display = "inline";
+                document.getElementById("se_4_1").style.display = "none";
+
+                document.getElementById("se_1_2").style.visibility = "visible";
+                document.getElementById("se_2_2").style.display = "inline";
+                document.getElementById("se_3_2").style.visibility = "visible";
+                document.getElementById("se_4_2").style.display = "none";
+
+                document.getElementById("se_1_2").onclick = func_5_1;
+                document.getElementById("se_1_1").onclick = func_5_1;
+                document.getElementById("se_2_2").onclick = func_5_2;
+                document.getElementById("se_2_1").onclick = func_5_2;
+                document.getElementById("se_3_2").onclick = func_5_3;
+                document.getElementById("se_3_1").onclick = func_5_3;
+                document.getElementById("se_4_2").onclick = func_5_4;
+                document.getElementById("se_4_1").onclick = func_5_4;
+
+                func_5_1();
+            }
+
+            function func_6() {
+                document.getElementById("event_head1").textContent = "INFORMAL";
+                document.getElementById("event_head2").textContent = "INFORMAL";
+//                document.getElementById("ee_desc").innerHTML = "pICTURES";
+//                document.getElementById("cood").style.visibility = "hidden";
+//                document.getElementById("ee_buttons").style.visibility = "hidden";
+
+                document.getElementById("se_1_1").textContent = "La Moda";
+                document.getElementById("se_2_1").textContent = "Brevity Brews";
+                document.getElementById("se_3_1").textContent = "Dumb Sharad";
+                document.getElementById("se_4_1").textContent = "Treasure Hunt";
+
+                document.getElementById("se_1_2").textContent = "La Moda";
+                document.getElementById("se_2_2").textContent = "Brevity Brews";
+                document.getElementById("se_3_2").textContent = "Dumb Sharad";
+                document.getElementById("se_4_2").textContent = "Treasure Hunt";
+
+                document.getElementById("se_1_1").style.display = "inline";
+                document.getElementById("se_2_1").style.display = "inline";
+                document.getElementById("se_3_1").style.display = "inline";
+                document.getElementById("se_4_1").style.display = "inline";
+
+                document.getElementById("se_1_2").style.visibility = "visible";
+                document.getElementById("se_2_2").style.display = "inline";
+                document.getElementById("se_3_2").style.visibility = "visible";
+                document.getElementById("se_4_2").style.display = "inline";
+
+                document.getElementById("se_1_2").onclick = func_6_1;
+                document.getElementById("se_1_1").onclick = func_6_1;
+                document.getElementById("se_2_2").onclick = func_6_2;
+                document.getElementById("se_2_1").onclick = func_6_2;
+                document.getElementById("se_3_2").onclick = func_6_3;
+                document.getElementById("se_3_1").onclick = func_6_3;
+                document.getElementById("se_4_2").onclick = func_6_4;
+                document.getElementById("se_4_1").onclick = func_6_4;
+
+                func_6_1();
+            }
+
+
+
+//            func_x_x() begins
+
+            function func_2_1() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "band Slam";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "21";
+                document.getElementById("tbutton2").value = "21";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("1");
+            }
+
+            function func_2_2() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "0";
+                document.getElementById("tbutton2").value = "0";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("2");
+            }
+
+            function func_2_3() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "0";
+                document.getElementById("tbutton2").value = "0";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("3");
+            }
+
+            function func_2_4() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "0";
+                document.getElementById("tbutton2").value = "0";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("4");
+            }
+
+            function func_3_1() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "0";
+                document.getElementById("tbutton2").value = "0";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("1");
+            }
+
+            function func_3_2() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "0";
+                document.getElementById("tbutton2").value = "0";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("2");
+            }
+
+            function func_3_3() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "0";
+                document.getElementById("tbutton2").value = "0";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("3");
+            }
+
+            function func_3_4() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "0";
+                document.getElementById("tbutton2").value = "0";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("4");
+            }
+
+            function func_4_1() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "41";
+                document.getElementById("tbutton2").value = "41";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("1");
+            }
+
+            function func_4_2() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "0";
+                document.getElementById("tbutton2").value = "0";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("2");
+            }
+
+            function func_4_3() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "0";
+                document.getElementById("tbutton2").value = "0";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("3");
+            }
+
+            function func_4_4() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "0";
+                document.getElementById("tbutton2").value = "0";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("4");
+            }
+
+            function func_5_1() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "51";
+                document.getElementById("tbutton2").value = "51";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("1");
+            }
+
+            function func_5_2() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "0";
+                document.getElementById("tbutton2").value = "0";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("2");
+            }
+
+            function func_5_3() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "0";
+                document.getElementById("tbutton2").value = "0";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("3");
+            }
+
+            function func_5_4() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "0";
+                document.getElementById("tbutton2").value = "0";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("4");
+            }
+
+            function func_6_1() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "61";
+                document.getElementById("tbutton2").value = "61";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("1");
+            }
+
+            function func_6_2() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "62";
+                document.getElementById("tbutton2").value = "62";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("2");
+            }
+
+            function func_6_3() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "63";
+                document.getElementById("tbutton2").value = "63";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("3");
+            }
+
+            function func_6_4() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "0";
+                document.getElementById("tbutton2").value = "0";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("4");
+            }
+
+            function func_7_1() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "71";
+                document.getElementById("tbutton2").value = "71";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("1");
+            }
+
+            function func_7_2() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "72";
+                document.getElementById("tbutton2").value = "72";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("2");
+            }
+
+            function func_7_3() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "73";
+                document.getElementById("tbutton2").value = "73";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("3");
+            }
+
+            function func_7_4() {
+                reset_style();
+
+                document.getElementById("ee_desc").innerHTML = "";
+                document.getElementById("cood_name1").textContent = "";
+                document.getElementById("cood_contact1").textContent = "";
+                document.getElementById("cood_name2").textContent = "";
+                document.getElementById("cood_contact2").textContent = "";
+                document.getElementById("cood_name3").textContent = "";
+                document.getElementById("cood_contact3").textContent = "";
+                document.getElementById("cood_name4").textContent = "";
+                document.getElementById("cood_contact4").textContent = "";
+                document.getElementById("cood_name5").textContent = "";
+                document.getElementById("cood_contact5").textContent = "";
+                document.getElementById("cood_name6").textContent = "";
+                document.getElementById("cood_contact6").textContent = "";
+                document.getElementById("tbutton1").value = "74";
+                document.getElementById("tbutton2").value = "74";
+                document.getElementById("cood").style.visibility = "visible";
+                document.getElementById("ee_buttons").style.visibility = "visible";
+
+                color_style("4");
+            }
+
+
+            function reset_style() {
+                document.getElementById("se_1_2").style.backgroundColor = "transparent";
+                document.getElementById("se_1_1").style.backgroundColor = "transparent";
+                document.getElementById("se_2_2").style.backgroundColor = "transparent";
+                document.getElementById("se_2_1").style.backgroundColor = "transparent";
+                document.getElementById("se_3_2").style.backgroundColor = "transparent";
+                document.getElementById("se_3_1").style.backgroundColor = "transparent";
+                document.getElementById("se_4_2").style.backgroundColor = "transparent";
+                document.getElementById("se_4_1").style.backgroundColor = "transparent";
+
+                document.getElementById("se_1_2").style.color = "rgb(255,180,0)";
+                document.getElementById("se_1_1").style.color = "rgb(255,180,0)";
+                document.getElementById("se_2_2").style.color = "rgb(255,180,0)";
+                document.getElementById("se_2_1").style.color = "rgb(255,180,0)";
+                document.getElementById("se_3_2").style.color = "rgb(255,180,0)";
+                document.getElementById("se_3_1").style.color = "rgb(255,180,0)";
+                document.getElementById("se_4_2").style.color = "rgb(255,180,0)";
+                document.getElementById("se_4_1").style.color = "rgb(255,180,0)";
+            }
+
+            function color_style(x) {
+                var y = "se_" + x + "_2";
+                var z = "se_" + x + "_1";
+
+                document.getElementById(y).style.backgroundColor = "rgb(255,180,0)";
+                document.getElementById(z).style.backgroundColor = "rgb(255,180,0)";
+                document.getElementById(y).style.color = "rgb(255,255,255)";
+                document.getElementById(z).style.color = "rgb(255,255,255)";
+            }
+
+        </script>
+
+
+    </head>
+    <body style="padding:0; margin:0; overflow-x:hidden; background-color:#121212;">
+        <div class="emain" style="position:relative; border:0px; padding:0; margin:0px; overflow-x:hidden; overflow-y:hidden; width:100%;">
+            <iframe src="{% url 'events:iframess' %}" style="width:100%; height:100vh; margin:0; padding:0; border:0px; overflow-x:hidden; overflow-y:hidden; z-index:1">
+                <p>Your browser does not support high quality frames.</p>
+            </iframe>
+            <center>
+                <img src="{% static 'EXOTICA/img/logo.png' %}" class="center1" style="z-index:2; width:15%;">
+                <img src="{% static 'EXOTICA/img/Exotica.png' %}" class="center" style="z-index:2; width:35%;"></center>
+        </div>
+
+        <div class="ori-body">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <img src="{% static 'EXOTICA/img/FOOTER.png' %}" id="top_bar" style="width:auto; height:25px;">
+                </div>
+                <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"  style=" font-size:20px;" onclick="run()">
+                    <center><span style="background-image: url('/static/EXOTICA/img/button.png'); background-size: 100% 100%; background-repeat: no-repeat; padding:30px 60px 30px 80px; color:rgb(255,198,0); letter-spacing: 0.3em; cursor: pointer; font-family: 'Bree Serif', serif;" id="glowing">EVENTS</span></center>
+                </div>
+                <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <img src="{% static 'EXOTICA/img/FOOTER.png' %}" style="width:auto; height:50px;">
+                </div>
+            </div>
+        </div>
+
+         <div class="row" id="ee_section" style="border:0px rgb(255,198,0) solid; display:none; font-size:1.3em;">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                <div class="col-lg-3 col-md-3 hidden-sm hidden-xs" style="padding:0px 20px; border-right:2px rgb(255,180,0) double;">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top:10px; margin-bottom:20px;">
+                        <center>
+                            <span style="visibility:hidden;">DUMMY</span>
+                        </center>
+                    </div>
+                    <div class="col-lg-12 col-md-12 hidden-sm hidden-xs">
+                        <div class="events col-lg-12 col-md-12 col-sm-12 col-xs-12" onclick="func_1()">
+                            <center>
+                            <span class="ee_ele">PRONITES</span>
+                            </center>
+                        </div>
+                        <div class="events col-lg-12 col-md-12 col-sm-12 col-xs-12" onclick="func_2()">
+                            <center>
+                            <span class="ee_ele">MUSIC</span>
+                            </center>
+                        </div>
+                        <div class="events col-lg-12 col-md-12 col-sm-12 col-xs-12" onclick="func_3()">
+                            <center>
+                            <span class="ee_ele">DANCE</span>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 hidden-sm hidden-xs">
+                        <div class="events col-lg-12 col-md-12 col-sm-12 col-xs-12" onclick="func_4()">
+                            <center>
+                            <span class="ee_ele">FILM-MAKING</span>
+                            </center>
+                        </div>
+                        <div class="events col-lg-12 col-md-12 col-sm-12 col-xs-12" onclick="func_5()">
+                            <center>
+                            <span class="ee_ele">PHOTOGRAPHY</span>
+                            </center>
+                        </div>
+                        <div class="events col-lg-12 col-md-12 col-sm-12 col-xs-12" onclick="func_6()">
+                            <center>
+                            <span class="ee_ele">INFORMALS</span>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden-lg hidden-md col-sm-12 col-xs-12" style="padding:0px 10px;">
+                    <div class="hidden-lg hidden-md col-sm-6 col-xs-6">
+                        <div class="events1 col-lg-12 col-md-12 col-sm-12 col-xs-12" onclick="func_1()">
+                            <center>
+                            <span class="ee_ele">PRONITES</span>
+                            </center>
+                        </div>
+                        <div class="events1 col-lg-12 col-md-12 col-sm-12 col-xs-12" onclick="func_2()">
+                            <center>
+                            <span class="ee_ele">MUSIC</span>
+                            </center>
+                        </div>
+                        <div class="events1 col-lg-12 col-md-12 col-sm-12 col-xs-12" onclick="func_3()">
+                            <center>
+                            <span class="ee_ele">DANCE</span>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="hidden-lg hidden-md col-sm-6 col-xs-6">
+                        <div class="events1 col-lg-12 col-md-12 col-sm-12 col-xs-12" onclick="func_4()">
+                            <center>
+                            <span class="ee_ele">FILM-MAKING</span>
+                            </center>
+                        </div>
+                        <div class="events1 col-lg-12 col-md-12 col-sm-12 col-xs-12" onclick="func_5()">
+                            <center>
+                            <span class="ee_ele">PHOTOGRAPHY</span>
+                            </center>
+                        </div>
+                        <div class="events1 col-lg-12 col-md-12 col-sm-12 col-xs-12" onclick="func_6()">
+                            <center>
+                            <span class="ee_ele">INFORMALS</span>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" >
+                    <div class="col-lg-12 col-md-12 hidden-sm hidden-xs">
+                        <span id="event_head1" style="margin:10px 30px; color:white; font-size:1.5em;">EXOTICA</span>
+                    </div>
+                    <div class="hidden-lg hidden-md col-sm-12 col-xs-12" style="text-align: center; border: 4px rgb(255,180,0) solid; margin:20px 10px 20px 0px">
+                        <span id="event_head2" style="margin:40px 10px 20px 10px; color:white; font-size:1.5em;">EXOTICA</span>
+                    </div>
+                    <div class="hidden-lg hidden-md col-sm-12 col-xs-12" style="padding:0px;" id="se_1">
+                        <div class="hidden-lg hidden-md col-sm-12 col-xs-12" style="text-align: center; margin:20px 10px 20px 0px">
+                            <span id="se_1_1" style="margin:40px 10px 20px 10px; color:white; border: 1px rgb(255,180,0) solid; padding:10px;" onclick="func-se-1-1()">2</span>
+                        </div>
+                        <br>
+                        <div class="hidden-lg hidden-md col-sm-12 col-xs-12" style="text-align: center; margin:20px 10px 20px 0px">
+                            <span id="se_2_1" style="margin:40px 10px 20px 10px; color:white; border: 1px rgb(255,180,0) solid; padding:10px;" onclick="func-1-2()">0</span>
+                        </div>
+                        <br>
+                        <div class="hidden-lg hidden-md col-sm-12 col-xs-12" style="text-align: center; margin:20px 10px 20px 0px">
+                            <span id="se_3_1" style="margin:40px 10px 20px 10px; color:white; border: 1px rgb(255,180,0) solid; padding:10px;" onclick="func-1-3()">1</span>
+                        </div>
+                        <br>
+                        <div class="hidden-lg hidden-md col-sm-12 col-xs-12" style="text-align: center; margin:20px 10px 20px 0px">
+                            <span id="se_4_1" style="margin:40px 10px 20px 10px; color:white; border: 1px rgb(255,180,0) solid; padding:10px;" onclick="func-1-4()">7</span>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 hidden-sm hidden-xs" style="padding:20px 0px; margin:20px 0px; text-align:center;" id="se_2">
+
+
+                        <span id="se_1_2" style="margin:40px 20px; padding:10px; border: 3px rgb(255,180,0) solid;" onclick="func-1-1()">2</span>
+                        <span id="se_2_2" style="margin:40px 20px; padding:10px; border: 3px rgb(255,180,0) solid;" onclick="func-1-2()">0</span>
+                        <br><br><br>
+                        <span id="se_3_2" style="margin:40px 20px; padding:10px; border: 3px rgb(255,180,0) solid;" onclick="func-1-3()">1</span>
+                        <span id="se_4_2" style="margin:40px 20px; padding:10px; border: 3px rgb(255,180,0) solid;" onclick="func-1-4()">7</span>
+
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="ee_desc" style="text-align:center; font-size:1.2em;">
+                        THIS IS THE DESCRIPTION
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="ee_buttons">
+                        <center>
+                            <form action="/action_page.php" method="post">
+
+                            <a>
+                                <button name="rules" types="submit" class="tbutton" id="tbutton1" value="0"><span>Rules</span></button>
+                            </a>
+
+                            <a>
+                                <button name="register" types="submit" class="tbutton" id="tbutton2" value="0"><span>Register</span></button>
+                            </a>
+                            </form>
+                        </center>
+                    </div>
+
+                    <div class="cood col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix" id="cood" style="margin-top:10px;">
+                        <center>
+                            <br>
+                            <br>
+                            <span class="cood-header" style="border-width:4px 1px 4px 1px; border-color: rgb(225,180,0); border-style: solid; color: rgb(225,180,0); padding:5px; font-size:1em; font-family:font_2; letter-spacing:0.15em; margin-bottom: 15px; font-weight:bold;"\>
+                                CO-ORDINATORS
+                            </span>
+                            <br>
+                            <br>
+                        </center>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <center>
+                                <div class="col-lg-6 col-mg-6 col-sm-6 col-xs-6">
+                                    <div class="cood_name" id="cood_name1">
+                                        name
+                                    </div>
+                                    <div class="cood_contact" id="cood_contact1">
+                                        contact
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-6 col-mg-6 col-sm-6 col-xs-6">
+                                    <div class="cood_name" id="cood_name2">
+                                        name
+                                    </div>
+                                    <div class="cood_contact" id="cood_contact2">
+
+                                    </div>
+
+                                </div>
+                                </center>
+
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <center>
+                                <div class="col-lg-6 col-mg-6 col-sm-6 col-xs-6">
+                                    <div class="cood_name" id="cood_name3">
+                                        name
+                                    </div>
+                                    <div class="cood_contact" id="cood_contact3">
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-6 col-mg-6 col-sm-6 col-xs-6">
+                                    <div class="cood_name" id="cood_name4">
+                                        name
+                                    </div>
+                                    <div class="cood_contact" id="cood_contact4">
+
+                                    </div>
+
+                                </div>
+                                </center>
+
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <center>
+                                <div class="col-lg-6 col-mg-6 col-sm-6 col-xs-6">
+                                    <div class="cood_name" id="cood_name5">
+                                        name
+                                    </div>
+                                    <div class="cood_contact" id="cood_contact5">
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-6 col-mg-6 col-sm-6 col-xs-6">
+                                    <div class="cood_name" id="cood_name6">
+                                        name
+                                    </div>
+                                    <div class="cood_contact" id="cood_contact6">
+
+                                    </div>
+
+                                </div>
+                                </center>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <center></center>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+        </div>
+            <br>
+        </div>
+    </body>
+</html>

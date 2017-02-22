@@ -102,12 +102,12 @@
 
                 <ul class="sub-menu">
                     <li class="">
-                        <a href="/techtix" target="_blank">Techtix</a>
+                        <a href="/events/techtix">Techtix</a>
                         <span class="icon-thumbnail">Tx</span>
                     </li>
 
                     <li class="">
-                        <a href="/exotica" target="_blank">Exotica</a>
+                        <a href="/events/exotica">Exotica</a>
                         <span class="icon-thumbnail">Ex</span>
                     </li>
                 </ul>
@@ -205,7 +205,7 @@
 
                 <div class="inline pull-left" style="width:70vw;">
                     <img src="{% static 'assets/img/logo_e.png' %}" alt="logo" width=auto height="50"
-                         style="margin-left: 8%; margin-top:-1%">
+                         style="margin-left: 5%; margin-top:-1%">
                 </div>
             </div>
         </div>
@@ -222,9 +222,9 @@
                         <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                             <span class="thumbnail-wrapper d32 circular inline m-t-5">
-                                <img src="{{ request.user_details.image.thumbnail.url }}" alt=""
-                                     data-src="url({{ request.user_details.image.thumbnail.url }})"
-                                     data-src-retina="url({{ request.user_details.image.thumbnail.url }})" width="32"
+                                <img src="{{ request.user.userdetail.image.thumbnail.url }}" alt=""
+                                     data-src="url({{ request.user.userdetail.image.thumbnail.url }})"
+                                     data-src-retina="url({{ request.user.userdetail.image.thumbnail.url }})" width="32"
                                      height="32">
                             </span>
                         </button>
@@ -232,7 +232,7 @@
                         <ul class="dropdown-menu profile-dropdown" role="menu">
 
                             <li>
-                                <a href="#"><i class="pg-outdent"></i> Feedback</a>
+                                <a href="/profile/edit"><i class="pg-outdent"></i> Edit Profile</a>
                             </li>
 
                             <li class="bg-master-lighter">
@@ -242,6 +242,13 @@
                                 </a>
                             </li>
 
+                             <li>
+                                <a href="/profile/teams"><i class="pg-outdent"></i> My Teams</a>
+                            </li>
+
+                            <li>
+                                <a href="/feedback">Feedback</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -280,12 +287,12 @@
                         <ul class="dropdown-menu profile-dropdown" role="menu">
 
                             <li>
-                                <a href="#"><i class="pg-outdent"></i> Feedback</a>
+                                <a href="/profile/register"><i class="pg-outdent"></i> Register</a>
                             </li>
 
                             <li class="bg-master-lighter">
-                                <a href="/profile/logout" class="clearfix">
-                                    <span class="pull-left">Logout</span>
+                                <a href="/profile/login" class="clearfix">
+                                    <span class="pull-left">Login</span>
                                     <span class="pull-right"><i class="pg-power"></i></span>
                                 </a>
                             </li>

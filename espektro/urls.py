@@ -31,6 +31,7 @@ urlpatterns = [
     url(r'^ca/','campusambassador.views.get_name',name="ambassador"),
     url(r'^profile/', include('profile.urls')),
     url(r'^changedp/', include('changedp.urls')),
-    url(r'^techtix/', include('events.urls')),
+    url(r'^events/', include('events.urls')),
     url(r'^about/', TemplateView.as_view(template_name='about.html'), name='about'),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
