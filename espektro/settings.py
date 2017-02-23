@@ -100,7 +100,7 @@ DATABASES = {
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'NAME': 'espektro',
         'USER':  'root',
-        'PASSWORD':  'root',
+        'PASSWORD':  '713331',
         'HOST': 'localhost',
         'PORT': '3306',
     }
