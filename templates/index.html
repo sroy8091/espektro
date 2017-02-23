@@ -28,7 +28,7 @@
 
 <div id="pageloader">
     <div class="loader-item">
-        <img class="img-responsive mySlides" src="{% static 'landing/img/lp_startimg.jpg' %}">
+        <img class="img-responsive" src="{% static 'landing/img/lp_startimg.jpg' %}">
     </div>
 </div>
 
@@ -404,6 +404,11 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
     <!-- </center>
      -->
     <script type="text/javascript">
+
+// site preloader -- also uncomment the div in the header and the css style for #preloader
+$(window).load(function(){
+	$('#pageloader').fadeOut('99999999',function(){$(this).remove();});
+});
         //Page top at Reload
         $(window).on('beforeunload', function () {
             $(window).scrollTop(0);
@@ -535,6 +540,7 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
 {#           $('body').removeClass('stop-scrolling');#}
 {#           $('body').unbind('touchmove')#}
 {#         },20000);#}
+
 
 
     </script>
