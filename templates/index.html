@@ -73,7 +73,7 @@
 
 
 <div id="story_container">
-    <div id="characters" data-aos="fade-down" ata-aos-offset="200" data-aos-duration="1000"
+    <div id="characters" data-aos="fade-down" data-aos-offset="200" data-aos-duration="1000"
          data-aos-easing="ease-out-cubic" style="background:white;">
         <img class="img-responsive" src="{% static 'landing/img/characters.png' %}" style="min-height:100%">
         <center>
@@ -161,7 +161,7 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
                     Jurassic Park!</p>
             </section>
 
-            <div data-aos="zoom-in" data-aos-offset="200" data-aos-offset="200" data-aos-duration="1000"
+            <div data-aos="zoom-in" data-aos-offset="200" data-aos-duration="1000"
                  data-aos-easing="ease-out-cubic">
                 <img class="img-responsive story_strip" src="{% static 'landing/img/2(1).jpg' %}">
             </div>
@@ -277,7 +277,7 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
                 <p id="story_text" data-aos="fade" data-aos-offset="300">"I have no clue!" answered Norris.</p>
             </section>
 
-            <div data-aos="fade-up" ata-aos-offset="200" data-aos-duration="600">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="600">
                 <img class="img-responsive story_strip" src="{% static 'landing/img/4(2).jpg' %}">
             </div>
         </center>
@@ -299,7 +299,7 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
                 <p id="story_text" data-aos="fade" data-aos-offset="300">Dick Hallorann, who was on his way out suddenly
                     noticed this foreign figure.</p>
             </section>
-            <div data-aos="zoom-in" ata-aos-offset="200" data-aos-duration="600">
+            <div data-aos="zoom-in" data-aos-offset="200" data-aos-duration="600">
                 <img class="img-responsive story_strip" src="{% static 'landing/img/5(1).jpg' %}">
             </div>
             <section class="story_lines">
@@ -312,7 +312,7 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
                     to see this."
                     <br/>said Feluda - startled, but determined all the same.</p>
             </section>
-            <div data-aos="zoom-in" ata-aos-offset="200" data-aos-duration="600">
+            <div data-aos="zoom-in" data-aos-offset="200" data-aos-duration="600">
                 <img class="img-responsive story_strip" src="{% static 'landing/img/5(2).jpg' %}">
             </div>
 
@@ -422,7 +422,7 @@ $(window).load(function(){
             ++lineIndex;
             if (lineIndex == 0) {
                 lines.eq(lineIndex)
-                    .delay(3000)
+                    .delay(4000)
                     .fadeIn(2000)
                     .delay(1000)
                     .fadeOut(2000, showNextLine);
@@ -460,7 +460,7 @@ $(window).load(function(){
             offset: 200,
             duration: 600,
             easing: 'ease-in-out',
-            delay: 400,
+            delay: 400
         });
 
 
