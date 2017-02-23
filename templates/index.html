@@ -28,7 +28,7 @@
 
 <div id="pageloader">
     <div class="loader-item">
-        <img class="img-responsive mySlides" src="{% static 'landing/img/lp_startimg.jpg' %}">
+        <img class="img-responsive" src="{% static 'landing/img/lp_startimg.jpg' %}">
     </div>
 </div>
 
@@ -73,7 +73,7 @@
 
 
 <div id="story_container">
-    <div id="characters" data-aos="fade-down" ata-aos-offset="200" data-aos-duration="1000"
+    <div id="characters" data-aos="fade-down" data-aos-offset="200" data-aos-duration="1000"
          data-aos-easing="ease-out-cubic" style="background:white;">
         <img class="img-responsive" src="{% static 'landing/img/characters.png' %}" style="min-height:100%">
         <center>
@@ -161,7 +161,7 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
                     Jurassic Park!</p>
             </section>
 
-            <div data-aos="zoom-in" data-aos-offset="200" data-aos-offset="200" data-aos-duration="1000"
+            <div data-aos="zoom-in" data-aos-offset="200" data-aos-duration="1000"
                  data-aos-easing="ease-out-cubic">
                 <img class="img-responsive story_strip" src="{% static 'landing/img/2(1).jpg' %}">
             </div>
@@ -277,7 +277,7 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
                 <p id="story_text" data-aos="fade" data-aos-offset="300">"I have no clue!" answered Norris.</p>
             </section>
 
-            <div data-aos="fade-up" ata-aos-offset="200" data-aos-duration="600">
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="600">
                 <img class="img-responsive story_strip" src="{% static 'landing/img/4(2).jpg' %}">
             </div>
         </center>
@@ -299,7 +299,7 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
                 <p id="story_text" data-aos="fade" data-aos-offset="300">Dick Hallorann, who was on his way out suddenly
                     noticed this foreign figure.</p>
             </section>
-            <div data-aos="zoom-in" ata-aos-offset="200" data-aos-duration="600">
+            <div data-aos="zoom-in" data-aos-offset="200" data-aos-duration="600">
                 <img class="img-responsive story_strip" src="{% static 'landing/img/5(1).jpg' %}">
             </div>
             <section class="story_lines">
@@ -312,7 +312,7 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
                     to see this."
                     <br/>said Feluda - startled, but determined all the same.</p>
             </section>
-            <div data-aos="zoom-in" ata-aos-offset="200" data-aos-duration="600">
+            <div data-aos="zoom-in" data-aos-offset="200" data-aos-duration="600">
                 <img class="img-responsive story_strip" src="{% static 'landing/img/5(2).jpg' %}">
             </div>
 
@@ -379,14 +379,14 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
 <center>
     <section class="story_lines">
             <div data-aos="flip-up" data-aos-offset="200" data-aos-duration="600">
-                 <section class="story_lines">
+                 <section>
         <p data-aos="flip-down">And then there was one strong gust of wind that set everything alright.</p>
                      <br>
 
-                <img class="img-responsive story_strip7" style="width: 50vw;" src="{% static 'landing/img/espektro_logo.gif' %}">
+                <img class="story_strip7" style="width: 30vw;" src="{% static 'landing/img/espektro_logo.gif' %}">
                      <br>
                      <br>
-                     <p data-aos="flip-up" data-aos-offset="250" style="color: #ffffff;text-shadow: 0px 0px 15px black;">
+                     <p data-aos-offset="250" style="color: #ffffff;text-shadow: 0px 0px 20px black;">
                          See you soon at the confluence of it all. Have you registered yet?</p>
                      <br>
 
@@ -404,6 +404,11 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
     <!-- </center>
      -->
     <script type="text/javascript">
+
+// site preloader -- also uncomment the div in the header and the css style for #preloader
+$(window).load(function(){
+	$('#pageloader').fadeOut('99999999',function(){$(this).remove();});
+});
         //Page top at Reload
         $(window).on('beforeunload', function () {
             $(window).scrollTop(0);
@@ -417,7 +422,7 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
             ++lineIndex;
             if (lineIndex == 0) {
                 lines.eq(lineIndex)
-                    .delay(3000)
+                    .delay(4000)
                     .fadeIn(2000)
                     .delay(1000)
                     .fadeOut(2000, showNextLine);
@@ -455,7 +460,7 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
             offset: 200,
             duration: 600,
             easing: 'ease-in-out',
-            delay: 400,
+            delay: 400
         });
 
 
@@ -535,6 +540,7 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
 {#           $('body').removeClass('stop-scrolling');#}
 {#           $('body').unbind('touchmove')#}
 {#         },20000);#}
+
 
 
     </script>

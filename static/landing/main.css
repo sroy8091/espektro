@@ -368,7 +368,7 @@ position: absolute;
   text-transform: uppercase;
   vertical-align: middle;
   width: 100%;
-    margin-left: 44vw;
+    /*margin-left: 44vw;*/
 }
 
 #pageloader {
