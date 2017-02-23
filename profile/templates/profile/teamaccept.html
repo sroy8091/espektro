@@ -1,34 +1,24 @@
-{% extends 'profile/base.html' %}
-{% block title%} Accept Team Invitaion {% endblock %}
-
-{% block styles %}
-    {% load staticfiles %}
-    <link href="{% static 'css/edit_profile.css' %}" rel="stylesheet">
-{% endblock %}
-
-{% block body %}
-
+{% extends '../templates/base.html' %}{% block title%} Accept Team Invitaion {% endblock %} {% block styles %} {% load staticfiles %}
+<link href="{% static 'css/edit_profile.css' %}" rel="stylesheet"> {% endblock %} {% block body %}
 <div class="edit_profile_bg">
     <div class="reg_form-container">
-                <!-- <a id="esp_logo" href="#"><img src="esp_logo.png"></a> -->
-              <center>
-              <br><h2 class="reg_form_heading">Accept Team Invitation</h2>
-<br>
+        <!-- <a id="esp_logo" href="#"><img src="esp_logo.png"></a> -->
+        <center>
+            <br>
+            <h2 class="reg_form_heading">Accept Team Invitation</h2>
+            <br>
             <form class="InviteForm" action="." method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                    {% if not accepted %}
+                        {% if not accepted %}
                         <button type="submit" class="btn btn-success">Accept invitation</button>
-                    {% else %}
+                        {% else %}
                         <button type="submit" class="btn btn-block">You have accepted this invitation. </button>
-                    {% endif %}
-
+                        {% endif %}
                     </div>
                 </div>
             </form>
-
-        </div>
     </div>
+</div>
 {% endblock %}

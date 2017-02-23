@@ -39,9 +39,9 @@
                     <a href="/home" class="detailed">
                         <span class="title">Home</span>
                     </a>
-                    <span class="icon-thumbnail"><i class="fa fa-home"></i></span>
+                    <span class="bg-success icon-thumbnail"><i class="fa fa-home"></i></span>
                 </li>
-                <li class="">
+                <li class="m-t-30 ">
                     <a href="/about" class="detailed">
                         <span class="title">About Us</span>
                     </a>
@@ -86,16 +86,12 @@
                     <span class="icon-thumbnail"><i class="pg pg-ui"></i></span>
                 </li>
                 <li>
-                    <a href="/maps"><span class="title">Locate Us</span></a>
+                    <a href="/maps"><span class="title">Maps</span></a>
                     <span class="icon-thumbnail"><i class="pg-map"></i></span>
                 </li>
                 <li>
                     <a href="/"><span class="title">Story</span> </a>
                     <span class="icon-thumbnail">S</span>
-                </li>
-                <li>
-                    <a href="/"><span class="title">Campus Ambassador</span> </a>
-                    <span class="icon-thumbnail">Ca</span>
                 </li>
             </ul>
             <div class="clearfix"></div>
@@ -109,7 +105,8 @@
                 <div class="pull-left full-height visible-sm visible-xs">
                     <div class="header-inner">
                         <a href="#" class="btn-link toggle-sidebar visible-sm-inline-block visible-xs-inline-block padding-5" data-toggle="sidebar">
-                            <span class="icon-set menu-hambuger"><img src="{% static 'assets/img/menu_icon.png' %}" width="25px" height="25px;"/></span>
+                            <span class="icon-set menu-hambuger"><img src="{% static 'assets/img/menu_icon.png' %}"
+                                                                  width="25px" height="25px;"/></span>
                         </a>
                     </div>
                 </div>
@@ -133,11 +130,11 @@
             {% if user.is_authenticated %}
             <div class=" pull-right">
                 <div class="visible-lg visible-md m-t-10">
-                    <div class="dropdown pull-right">
-                        <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="pull-left p-r-10 p-t-10 fs-16 font-heading">
+                    <div class="pull-left p-r-10 p-t-10 fs-16 font-heading">
                         <span class="semi-bold" style="font-size:20px; color:red;">{% if request.user.first_name %}{{ request.user.first_name }}{% else %} {{ request.user.username }}{% endif %}</span> <span class="text-master" style="font-size:20px; color:rgba(255,255,255,1);">{{ request.user.last_name }}</span>
                     </div>
+                    <div class="dropdown pull-right">
+                        <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="thumbnail-wrapper d32 circular inline m-t-5">
                                 {% if request.user.UserDetail.image %}
                                 <img src="{{ request.user.UserDetail.image.url }}" alt=""
@@ -188,11 +185,12 @@
         </script>#} {% else %}
         <div class=" pull-right">
             <div class="visible-lg visible-md m-t-10">
+                <div class="pull-left p-r-10 p-t-10 fs-16 font-heading">
+                    {# <span class="semi-bold" style="font-size:20px; color:red; opacity:0;">SOUVIK</span> #}
+                    <span class="text-master" style="font-size:20px; color:rgba(255,255,255,1);">LOGIN</span>
+                </div>
                 <div class="dropdown pull-right">
                     <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <div class="pull-left p-r-10 p-t-10 fs-16 font-heading">
-                            <span class="text-master" style="font-size:20px; color:rgba(255,255,255,1);">LOGIN</span>
-                        </div>
                         <span class="thumbnail-wrapper d32 circular inline m-t-5">
                                 <img src="https://www.helptobuyese.org.uk/Sitefinity/WebsiteTemplates/BPHA-HTB/App_Themes/BPHA-HTB/Images/user-avatar.png" alt=""
                                      data-src="url({{ request.user_details.image.thumbnail.url }})"
@@ -218,23 +216,17 @@
     {% endif %}
     <div class="page-content-wrapper">
         {% block body %} {% endblock %}
-        <!-- ---------------Footer-------------- -->
+        <!----------------Footer------------------->
     </div>
     <br>
     <br>
     <div class="container-fluid footer">
         <div style="color:grey">
-        <style>
-        @font-face{
-            font-family:Harrington;
-            src:"{% static 'fonts/HARRINGT.TTF' %}";
-        }
-        </style>
             <center>
                 <p id="base_footer">
-                    <b>Made by <a href="/team" style="color:white;">Espektro Web Team</a> | &copy; 2017
-                        <a href="/"><span
-                                style="font-family:Harrington; color:white">ESPEKTRO</span></a>.</b>
+                    <b>Made with<span style="color:red"> &#10084;</span> | &copy; 2017
+                        <a href="http://www.espektro.in"><span
+                                style="font-family:Harrington; color:grey">ESPEKTRO</span></a>.</b>
                 </p>
             </center>
         </div>
@@ -244,7 +236,6 @@
     <script src="{% static 'assets/plugins/bootstrapv3/js/bootstrap.min.js' %}" type="text/javascript"></script>
     <script src="{% static 'assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js' %}"></script>
     <script src="{% static 'pages/js/pages.min.js' %}"></script>
-    {% block scripts%} {% endblock %}
 </body>
 
 </html>
