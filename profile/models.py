@@ -140,7 +140,7 @@ class UserDetail(models.Model):
 
 	#id = models.DecimalField(max_digits=9999, decimal_places=0, primary_key=True)
 	user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name = 'UserDetail')
-	college = models.CharField(max_length=100, default='Kalyani Goverment Engineering College')
+	college = models.CharField(max_length=100, default='Kalyani Government Engineering College')
 	city = models.CharField(max_length=20)
 	accomodation = models.BooleanField(default=False)
 	phone_no = models.CharField(max_length=10, validators=[RegexValidator(regex='^[789]\d{9}$', message='Please enter a valid phone number WITHOUT any PREFIX', code='invalid_phonenumber'),])
