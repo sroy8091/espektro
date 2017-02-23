@@ -336,7 +336,7 @@ position: absolute;
 
 
 .overlay {
-    position: relative;
+    position: absolute;
     background: url("/static/landing/img/wind_general.png");
     background-repeat: repeat-x;
     -webkit-animation: 2s scroll infinite linear;
@@ -345,13 +345,86 @@ position: absolute;
     -ms-animation: 2s scroll infinite linear;
     animation: 2s scroll infinite linear;
     width: 100%;
-    height: 120%;
+    height: 100%;
     z-index: 10;
     display: none;
 }
 
 .lpend{
     height:10%;
+}
+
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,900);
+.btnfos {
+  color: #fff !important;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+    font-family:Harrington;
+  line-height: 45px;
+  max-width: 160px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100%;
+    margin-left: 44vw;
+}
+
+#pageloader {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	/*background-color: #131313;*/
+	z-index: 999999;
+}
+#pageloader.done{
+
+	opacity:0;
+	visibility:hidden;
+	transition: opacity .8s ease, visibility 0s ease 1s;
+	-moz-transition: opacity .8s ease, visibility 0s ease 1s;
+}
+
+
+.btnfos-5 {
+  border: 0 solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 0px;
+  text-shadow: none;
+  -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+          transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  outline-color: rgba(255, 255, 255, 0.5);
+  outline-offset: 0px;
+}
+
+.btnfos-5:hover {
+  border: 1px solid;
+    font-weight: 700;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+  outline-offset: 15px;
+  outline-color: rgba(255, 255, 255, 0);
+  text-shadow: 1px 1px 2px #828888;
+}
+
+@media (min-width: 400px) {
+  .btnfos {
+    display: inline-block;
+    margin-right: 2.5em;
+  }
+  .btnfos:nth-of-type(even) {
+    margin-right: 0;
+  }
+}
+@media (min-width: 600px) {
+  .btnfos:nth-of-type(even) {
+    margin-right: 2.5em;
+  }
+  .btnfos:nth-of-type(5) {
+    margin-right: 0;
+  }
 }
 
 @-webkit-keyframes scroll {
@@ -438,6 +511,10 @@ position: absolute;
     .story_lines {
         font-size: 3.4vw;
     }
+
+    .btnfos{
+         margin-left: 24vw;
+    }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 480px) {
@@ -497,6 +574,10 @@ position: absolute;
     .story_lines {
         font-size: 2.5vw;
     }
+
+    .btnfos{
+        margin-left: -10vw;
+    }
 }
 
 @media only screen and (max-width: 1366px) and (min-width: 769px) {
@@ -514,6 +595,9 @@ position: absolute;
         padding: 20px 30px 0px 30px;
     }
 
+    .btnfos{
+        margin-left: -9vw;
+    }
     /*
     .story_lines{
         font-size: 2.5vw;
