@@ -35,7 +35,7 @@
 <div class="overlay "></div>
 <div class="overlay navbar-fixed"></div>
 <div id="svg_container">
-{#    <img class="img-responsive mySlides" src="{% static 'landing/img/lp_startimg.jpg' %}">#}
+    <img class="img-responsive mySlides" src="{% static 'landing/img/lp_startimg.jpg' %}">
     <img class="img-responsive mySlides" src="{% static 'landing/img/lp1.png' %}">
     <img class="img-responsive mySlides" src="{% static 'landing/img/lp2.png' %}">
     <img class="img-responsive mySlides" src="{% static 'landing/img/lp3.png' %}">
@@ -409,6 +409,17 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
 $(window).load(function(){
 	$('#pageloader').fadeOut('99999999',function(){$(this).remove();});
 });
+
+AOS.init({
+            offset: 200,
+            duration: 600,
+            easing: 'ease-in-out',
+            delay: 400
+        });
+
+{#$(window).load(function () {#}
+
+
         //Page top at Reload
         $(window).on('beforeunload', function () {
             $(window).scrollTop(0);
@@ -456,12 +467,7 @@ $(window).load(function(){
             setTimeout(show, 5000);
         });
         //Initializing AOS Plugin
-        AOS.init({
-            offset: 200,
-            duration: 600,
-            easing: 'ease-in-out',
-            delay: 400
-        });
+
 
 
         //Leaf Falling Effect
@@ -531,6 +537,8 @@ $(window).load(function(){
                 scrollTop: $("#story7").offset().top
             }, 4000);
         });
+
+{#        });#}
 
         //Restricting scroll for 2s
 
