@@ -25,7 +25,7 @@ def techtix(request):
     if request.method == 'POST':
         usr = request.user
         if not usr.username:
-            return redirect('profile:login')
+            return redirect('profile/login')
         form = request.POST
         # print usr
         # print form
@@ -61,7 +61,7 @@ def techtix(request):
                         x=usr.UserDetail
                     except:
                         message = "Please update your profile details in order to register."
-                    return redirect('profile:team_create')
+                    return redirect('profile/team/create')
     else:
         pass
     return render(request, 'events/techtix.html')
@@ -70,7 +70,7 @@ def exotica(request):
     if request.method == 'POST':
         usr = request.user
         if not usr.username:
-            return redirect('profile:login')
+            return redirect('profile/login')
         form = request.POST
         # print usr
         # print form
@@ -107,7 +107,7 @@ def exotica(request):
                         x=usr.UserDetail
                     except:
                         message = "Please update your profile details in order to register."
-                    return redirect('profile:team_create')
+                    return redirect('profile/team/create')
         return render(request, 'events/exotica.html', {'message': message})
     else:
         pass
