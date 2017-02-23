@@ -1,346 +1,160 @@
 {% extends 'base.html' %}
-
-
 <title>{% block title %}Gallery{% endblock %} | Espektro 17</title>
-{% load staticfiles %}
+{% load staticfiles %} {% block styles %}
+<link rel='stylesheet' href="{% static 'gallery/unitegallery/css/gallery.css' %}" type='text/css' /> {% endblock %}
+{%block body%}
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+	#gall h2{
+		font-family: 'Great Vibes', cursive;
+		font-weight: bold;
+		font-size: 4vw;
+		color: white;
+		text-align: center;
+	}
+	#gall h3{
+		font-size: 3vw;
+		color: white;
+		text-align: center;
+	}
+</style>
+<div class="container" id="gall">
+<h2>Gallery</h2>
+<h3>______________</h3>
+<br><br>
+<div id="gallery" style="display:none;">
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/1.jpg' %}" data-image="{% static 'gallery/images/thumbs/1.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/2.jpg' %}" data-image="{% static 'gallery/images/thumbs/2.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/3.jpg' %}" data-image="{% static 'gallery/images/thumbs/3.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/4.jpg' %}" data-image="{% static 'gallery/images/thumbs/4.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/5.jpg' %}" data-image="{% static 'gallery/images/thumbs/5.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/6.jpg' %}" data-image="{% static 'gallery/images/thumbs/6.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/7.jpg' %}" data-image="{% static 'gallery/images/thumbs/7.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/8.jpg' %}" data-image="{% static 'gallery/images/thumbs/8.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/9.jpg' %}" data-image="{% static 'gallery/images/thumbs/9.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/10.jpg' %}" data-image="{% static 'gallery/images/thumbs/10.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/11.jpg' %}" data-image="{% static 'gallery/images/thumbs/11.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/12.jpg' %}" data-image="{% static 'gallery/images/thumbs/12.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/13.jpg' %}" data-image="{% static 'gallery/images/thumbs/13.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/14.jpg' %}" data-image="{% static 'gallery/images/thumbs/14.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/15.jpg' %}" data-image="{% static 'gallery/images/thumbs/15.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/16.jpg' %}" data-image="{% static 'gallery/images/thumbs/16.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/17.jpg' %}" data-image="{% static 'gallery/images/thumbs/17.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/18.jpg' %}" data-image="{% static 'gallery/images/thumbs/18.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/19.jpg' %}" data-image="{% static 'gallery/images/thumbs/19.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/20.jpg' %}" data-image="{% static 'gallery/images/thumbs/20.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/21.jpg' %}" data-image="{% static 'gallery/images/thumbs/21.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/22.jpg' %}" data-image="{% static 'gallery/images/thumbs/22.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/23.jpg' %}" data-image="{% static 'gallery/images/thumbs/23.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/24.jpg' %}" data-image="{% static 'gallery/images/thumbs/24.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/25.jpg' %}" data-image="{% static 'gallery/images/thumbs/25.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/26.jpg' %}" data-image="{% static 'gallery/images/thumbs/26.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/27.jpg' %}" data-image="{% static 'gallery/images/thumbs/27.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/28.jpg' %}" data-image="{% static 'gallery/images/thumbs/28.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/29.jpg' %}" data-image="{% static 'gallery/images/thumbs/29.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/30.jpg' %}" data-image="{% static 'gallery/images/thumbs/30.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/31.jpg' %}" data-image="{% static 'gallery/images/thumbs/31.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/32.jpg' %}" data-image="{% static 'gallery/images/thumbs/32.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/33.jpg' %}" data-image="{% static 'gallery/images/thumbs/33.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/34.jpg' %}" data-image="{% static 'gallery/images/thumbs/34.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/35.jpg' %}" data-image="{% static 'gallery/images/thumbs/35.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/36.jpg' %}" data-image="{% static 'gallery/images/thumbs/36.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/37.jpg' %}" data-image="{% static 'gallery/images/thumbs/37.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/38.jpg' %}" data-image="{% static 'gallery/images/thumbs/38.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    <a href="http://unitegallery.net">
+        <img alt="Espektro" src="{% static 'gallery/images/thumbs/39.jpg' %}" data-image="{% static 'gallery/images/thumbs/39.jpg' %}" data-description="Awesome Espektro" style="display:none">
+    </a>
+    </div>
+</div>
+{%endblock%}
+{% block scripts %}
+<script type='text/javascript' src="{%  static 'gallery/unitegallery/themes/tiles/ug-theme-tiles.js' %}"></script>
+<script type='text/javascript' src="{% static 'gallery/unitegallery/js/jquery-11.0.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'gallery/unitegallery/js/unitegallery.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'gallery/unitegallery/themes/tiles/ug-theme-tiles.js' %}"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
 
-{% block styles %}
+    jQuery("#gallery").unitegallery({
+        tiles_type: "nested"
+    });
 
-
-
-	<link rel='stylesheet' href="{% static '/gallery/unitegallery/css/gallery.css' %}" type='text/css' />
-	
-
-
+});
+</script>
 {% endblock %}
-
-
-	<div id="gallery" style="display:none;">
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="{% static 'images/thumbs/1.jpg' %}"
-		     data-image="images/thumbs/1.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/2.jpg"
-		     data-image="images/thumbs/2.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/3.jpg"
-		     data-image="images/thumbs/3.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/4.jpg"
-		     data-image="images/thumbs/4.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/5.jpg"
-		     data-image="images/thumbs/5.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/6.jpg"
-		     data-image="images/thumbs/6.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/7.jpg"
-		     data-image="images/thumbs/7.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/8.jpg"
-		     data-image="images/thumbs/8.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/9.jpg"
-		     data-image="images/thumbs/9.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/10.jpg"
-		     data-image="images/thumbs/10.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/11.jpg"
-		     data-image="images/thumbs/11.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/12.jpg"
-		     data-image="images/thumbs/12.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/13.jpg"
-		     data-image="images/thumbs/13.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/14.jpg"
-		     data-image="images/thumbs/14.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/15.jpg"
-		     data-image="images/thumbs/15.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/16.jpg"
-		     data-image="images/thumbs/16.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/17.jpg"
-		     data-image="images/thumbs/17.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/18.jpg"
-		     data-image="images/thumbs/18.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/19.jpg"
-		     data-image="images/thumbs/19.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/20.jpg"
-		     data-image="images/thumbs/20.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/21.jpg"
-		     data-image="images/thumbs/21.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/22.jpg"
-		     data-image="images/thumbs/22.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/23.jpg"
-		     data-image="images/thumbs/23.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/24.jpg"
-		     data-image="images/thumbs/24.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/25.jpg"
-		     data-image="images/thumbs/25.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/26.jpg"
-		     data-image="images/thumbs/26.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/27.jpg"
-		     data-image="images/thumbs/27.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/28.jpg"
-		     data-image="images/thumbs/28.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/29.jpg"
-		     data-image="images/thumbs/29.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/30.jpg"
-		     data-image="images/thumbs/30.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/31.jpg"
-		     data-image="images/thumbs/31.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/32.jpg"
-		     data-image="images/thumbs/32.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/33.jpg"
-		     data-image="images/thumbs/33.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/34.jpg"
-		     data-image="images/thumbs/34.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/35.jpg"
-		     data-image="images/thumbs/35.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/36.jpg"
-		     data-image="images/thumbs/36.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/37.jpg"
-		     data-image="images/thumbs/37.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-		<a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/38.jpg"
-		     data-image="images/thumbs/38.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-        <a href="http://unitegallery.net">
-		<img alt="Espektro"
-		     src="images/thumbs/39.jpg"
-		     data-image="images/thumbs/39.jpg"
-		     data-description="Awesome Espektro"
-		     style="display:none">
-		</a>
-
-
-	</div>
-
-    {% block scrips %}
-<script type='text/javascript' src="{%  static '/gallery/unitegallery/themes/tiles/ug-theme-tiles.js' %}"></script>
-        <script type='text/javascript' src="{% static '/gallery/unitegallery/js/jquery-11.0.min.js' %}"></script>
-	<script type='text/javascript' src="{% static '/gallery/unitegallery/js/unitegallery.min.js' %}"></script>
-
-<script type='text/javascript' src="{% static '/gallery/unitegallery/themes/tiles/ug-theme-tiles.js' %}"></script>
-
-
-	<script type="text/javascript">
-
-		jQuery(document).ready(function(){
-
-			jQuery("#hgjgallery").unitegallery({
-				tiles_type:"nested"
-			});
-
-		});
-		
-	</script>
-{% endblock %}
-
