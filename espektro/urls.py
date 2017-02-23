@@ -34,6 +34,6 @@ urlpatterns = [
     url(r'^changedp/', include('changedp.urls')),
     url(r'^events/', include('events.urls')),
     url(r'^about/', TemplateView.as_view(template_name='about.html'), name='about'),
-    url(r'^webteam/$', TemplateView.as_view(template_name=''))
+    url(r'^webteam/$', TemplateView.as_view(template_name='webteam.html'), name='webteam')
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
