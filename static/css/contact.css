@@ -2,13 +2,14 @@ body {
     overflow-x: hidden;
     font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 
-.text-muted {
+.text-muted1 {
     color: #777777;
 }
 
 .text-primary {
-    color: #fed136;
+    color: #777777;
 }
 
 p {
@@ -169,8 +170,8 @@ section {
 }
 
 section h2.section-heading {
-    font-size: 20px;
-    font-family: Channel;
+    font-size: 40px;
+    font-family: 'Pacifico',cursive;
     margin-top: 0;
     margin-bottom: 0px;
 }
@@ -204,10 +205,6 @@ section h3.section-subheading {
 
 .team-member p {
     margin-top: 0;
-}
-
-aside.clients img {
-    margin: 50px auto;
 }
 
 ::-moz-selection {

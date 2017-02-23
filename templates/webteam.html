@@ -1,0 +1,291 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+    <title>{% block title %}Web Team{% endblock %} | Espektro 17</title>
+
+    <!-- Bootstrap Core CSS -->
+    <!-- Latest compiled and minified CSS -->
+{% block styles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+{% endblock %}
+
+{% block body %}
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Courgette');
+        @import url('https://fonts.googleapis.com/css?family=Bree+Serif');
+
+        .ch-grid {
+            margin: 20px 0 0 0;
+            padding: 0;
+            list-style: none;
+            display: block;
+            text-align: center;
+            width: 100%;
+/*            color: white;*/
+        }
+        .ch-grid .row{
+            margin-top: 3vw;
+        }
+
+        .ch-grid:after,
+        .ch-item:before {
+            content: '';
+            display: table;
+        }
+
+        .ch-grid:after {
+            clear: both;
+        }
+
+        .ch-grid li {
+            width: 220px;
+            height: 220px;
+            display: inline-block;
+            margin: 20px;
+        }
+        .ch-grid li p{
+            font-family: 'Bree Serif', serif;
+            font-size: 1.5vw;
+        }
+           
+        .ch-grid h4{
+            font-family:'Courgette', cursive;
+            font-size: 2vw;
+            text-decoration: underline;
+        }
+
+        .ch-item {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            cursor: default;
+            box-shadow: 
+                inset 0 0 0 16px rgba(255,255,255,0.6),
+                0 1px 2px rgba(0,0,0,0.1);
+            transition: all 0.4s ease-in-out;
+        }
+        .ch-info {
+            position: absolute;
+            background: rgba(63,147,147, 0.8);
+            width: inherit;
+            height: inherit;
+            border-radius: 50%;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.4s ease-in-out;
+            transform: scale(0);
+        }
+
+        .ch-info h3 {
+            color: #fff;
+/*            text-transform: uppercase;*/
+            letter-spacing: 2px;
+            font-size: 22px;
+            margin: 0 30px;
+            padding: 90px 0 0 0;
+            height: 140px;
+            font-family: 'Courgette', cursive;
+            text-shadow: 
+                0 0 1px #fff, 
+                0 1px 2px rgba(0,0,0,0.3);
+        }
+        .ch-info p {
+            color: #fff;
+            font-family: 'Bree Serif', serif;
+
+
+        }
+
+        .ch-item:hover {
+            box-shadow: 
+                inset 0 0 0 1px rgba(255,255,255,0.1),
+                0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .ch-item:hover .ch-info {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .ch-item:hover {
+            opacity: 1;
+        }
+        
+        .ch-img-1{
+            background: url('/static/images/soham.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+         .ch-img-2{
+            background: url('/static/images/ritu.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+         .ch-img-3{
+            background: url('/static/images/sumit.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+         .ch-img-4{
+            background: url('/static/images/saurab.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+         .ch-img-5{
+            background: url('/static/images/souvik.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+         .ch-img-6{
+            background: url('/static/images/krishna.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+         .ch-img-7{
+            background: url('/static/images/ritesh.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+         .ch-img-8{
+            background: url('/static/images/biswajit.jpg');
+            background-position: center;
+            background-size: cover;
+        }        
+        @media(max-width:768px){
+            .ch-grid li p{
+                font-size: 2.5vw;
+            }
+
+            .ch-grid h4{
+                font-size: 4vw;
+            }
+        }
+         @media(max-width:553px){
+            .ch-grid li p{
+                font-size: 4vw;
+            }
+
+            .ch-grid h4{
+                font-size: 6vw;
+            }
+        }
+        @media(max-width:320px){
+            .ch-grid li p{
+                font-size: 6vw;
+            }
+
+            .ch-grid h4{
+                font-size: 8vw;
+            }
+        }
+    </style>
+    
+    
+ <div class="container" style="color:white">
+    <ul class="ch-grid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h4>Graphics Design &amp; Story</h4>
+                <li>
+                    <div class="ch-item ch-img-1">
+                        <div class="ch-info">
+                            <h3>Soham Mitra</h3>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ch-item ch-img-2">
+                        <div class="ch-info">
+                            <h3>Rituparna Dey</h3>
+                        </div>
+                    </div>
+                </li>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h4>Backend Developer</h4>
+                <li>
+                    <div class="ch-item ch-img-3">
+                        <div class="ch-info">
+                            <h3>Sumit Roy</h3>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ch-item ch-img-4">
+                        <div class="ch-info">
+                            <h3>Saurab Jha</h3>
+                        </div>
+                    </div>
+                </li>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h4>Frontend Developer</h4>
+                <li>
+                    <div class="ch-item ch-img-5">
+                        <div class="ch-info">
+                            <h3>Souvik Nandi</h3>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ch-item ch-img-6">
+                        <div class="ch-info">
+                            <h3>Krishna Agarwal</h3>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ch-item ch-img-7">
+                        <div class="ch-info">
+                            <h3>Ritesh Mukim</h3>
+                        </div>
+                    </div>
+                </li>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>Special Contribution</h4>
+                    <li>
+                        <div class="ch-item ch-img-8">
+                            <div class="ch-info">
+                                <h3>Biswajit Pain</h3>
+                                <p>- KGEC Alumni -</p>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>Special Thanks</h4>
+                    <li>
+                        <p>Budhaditya Rano</p>
+                        <p>Jayanta Mondal</p>
+                        <p>Arunava Mondal</p>
+                        <p>Nilanjana Debnath</p>
+                        <p>Shirsendu Adak</p>
+                        <p>Anindya Chatterjee</p>
+                        <p>Tanujit Paul</p>
+                        <p>Suryavo Pal</p>
+                        <p>Soumya Das</p>
+                        <p>Agnimitra Ghosh</p>
+                        <p>Mayank Kr. Das</p>
+                        <br>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </ul>
+</div>
+{% endblock %}
+{% block scripts%}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+{% endblock %}
