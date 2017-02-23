@@ -61,7 +61,7 @@ def techtix(request):
                         x=usr.UserDetail
                     except:
                         message = "Please update your profile details in order to register."
-                    return redirect('profile/team/create')
+                    return redirect('/profile/team/create')
     else:
         pass
     return render(request, 'events/techtix.html')
@@ -107,7 +107,7 @@ def exotica(request):
                         x=usr.UserDetail
                     except:
                         message = "Please update your profile details in order to register."
-                    return redirect('profile/team/create')
+                    return redirect('/profile/team/create')
         return render(request, 'events/exotica.html', {'message': message})
     else:
         pass
