@@ -29,13 +29,14 @@
 <div id="pageloader">
     <div class="loader-item">
         <img class="img-responsive" src="{% static 'landing/img/lp_startimg.jpg' %}">
+{#        <h1>Loadin...</h1>#}
     </div>
 </div>
 
 <div class="overlay "></div>
 <div class="overlay navbar-fixed"></div>
 <div id="svg_container">
-    <img class="img-responsive mySlides" src="{% static 'landing/img/lp_startimg.jpg' %}">
+{#    <img class="img-responsive mySlides" src="{% static 'landing/img/lp_startimg.jpg' %}">#}
     <img class="img-responsive mySlides" src="{% static 'landing/img/lp1.png' %}">
     <img class="img-responsive mySlides" src="{% static 'landing/img/lp2.png' %}">
     <img class="img-responsive mySlides" src="{% static 'landing/img/lp3.png' %}">
@@ -383,7 +384,7 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
         <p data-aos="flip-down">And then there was one strong gust of wind that set everything alright.</p>
                      <br>
 
-                <img class="story_strip7" style="width: 30vw;" src="{% static 'landing/img/espektro_logo.gif' %}">
+                <img class="story_strip7" style="width: 50vw;" src="{% static 'landing/img/espektro_logo.gif' %}">
                      <br>
                      <br>
                      <p data-aos-offset="250" style="color: #ffffff;text-shadow: 0px 0px 20px black;">
@@ -417,9 +418,11 @@ AOS.init({
             delay: 400
         });
 
-{#$(window).load(function () {#}
+$(document).ready(function () {
 
-
+        $(window).on('load',function(){
+            AOS.refresh();
+        });
         //Page top at Reload
         $(window).on('beforeunload', function () {
             $(window).scrollTop(0);
@@ -538,7 +541,7 @@ AOS.init({
             }, 4000);
         });
 
-{#        });#}
+        });
 
         //Restricting scroll for 2s
 
