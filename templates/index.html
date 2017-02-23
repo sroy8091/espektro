@@ -26,10 +26,16 @@
 </head>
 <body>
 
+<div id="pageloader">
+    <div class="loader-item">
+        <img class="img-responsive mySlides" src="{% static 'landing/img/lp_startimg.jpg' %}">
+    </div>
+</div>
+
 <div class="overlay "></div>
 <div class="overlay navbar-fixed"></div>
 <div id="svg_container">
-    <img class="img-responsive mySlides" src="{% static 'landing/img/lp_startimg.jpg' %}">
+{#    <img class="img-responsive mySlides" src="{% static 'landing/img/lp_startimg.jpg' %}">#}
     <img class="img-responsive mySlides" src="{% static 'landing/img/lp1.png' %}">
     <img class="img-responsive mySlides" src="{% static 'landing/img/lp2.png' %}">
     <img class="img-responsive mySlides" src="{% static 'landing/img/lp3.png' %}">
@@ -380,8 +386,8 @@ Robinson Crusoe, with a glint in his eyes, his gun in his hands.</p>
                 <img class="img-responsive story_strip7" style="width: 50vw;" src="{% static 'landing/img/espektro_logo.gif' %}">
                      <br>
                      <br>
-                     <a href="/home" style="z-index: 100000"><p data-aos="fade" data-aos-offset="250" style="color: #ffffff;text-shadow: 0px 0px 15px black;">
-                         See you soon at the confluence of it all. Have you registered yet?</p></a>
+                     <p data-aos="flip-up" data-aos-offset="250" style="color: #ffffff;text-shadow: 0px 0px 15px black;">
+                         See you soon at the confluence of it all. Have you registered yet?</p>
                      <br>
 
                  </section>
