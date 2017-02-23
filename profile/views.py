@@ -59,24 +59,15 @@ def UserFormView(request):
 
         if form.is_valid(): # and detailform.is_valid():
             user = form.save(commit=False)
-            print "1234"
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
-            print "456"
             user.set_password(password)
-            print "789"
             user.save()
-            print "100"
             userdetail = UserDetail.objects.create(user_id=user.id)
-            print "9898"
-
 
             user = authenticate(username=username, password=password)
-            print "bbb"
             if user is not None:
-                print "ccc"
                 if user.is_active:
-                    print "ddd"
                     login(request, user)
                     return redirect('/profile/edit')
 
@@ -85,7 +76,6 @@ def UserFormView(request):
     else:
         form = UserForm()
         detailform = UserDetailEditForm()
-        print "1"
         return render(request, 'profile/registration_form.html', {'form': form})
 
 @login_required
@@ -94,7 +84,7 @@ def edit(request):
     if request.method == 'POST':
         #update details
         user_form = UserEditForm(instance=request.user,data=request.POST)
-        user_detail_form = UserDetailEditForm(instance=p.userdetail,data=request.POST, files=request.FILES)
+        user_detail_form = UserDetailEditForm(instance=p.UserDetail,data=request.POST, files=request.FILES)
         print user_form
         print user_detail_form
         if user_form.is_valid() and user_detail_form.is_valid():
@@ -103,7 +93,7 @@ def edit(request):
     else:
         #show details
         user_form = UserEditForm(instance=request.user)
-        user_detail_form = UserDetailEditForm(instance=p.userdetail)
+        user_detail_form = UserDetailEditForm(instance=p.UserDetail)
 
 
     return render(request, 'profile/edit.html', { 'user_form':user_form, 'user_detail_form':user_detail_form})

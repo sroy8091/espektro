@@ -123,6 +123,10 @@
                 <a href="/maps"><span class="title">Maps</span></a>
                 <span class="icon-thumbnail"><i class="pg-map"></i></span>
             </li>
+            <li>
+                <a href="/"><span class="title">Story</span> </a>
+                <span class="icon-thumbnail">S</span>
+            </li>
         </ul>
         <div class="clearfix"></div>
     </div>
@@ -177,18 +181,26 @@
             <div class=" pull-right">
                 <div class="visible-lg visible-md m-t-10">
                     <div class="pull-left p-r-10 p-t-10 fs-16 font-heading">
-                        <span class="semi-bold" style="font-size:20px; color:red;">{{ request.user.first_name }}</span> <span
+                        <span class="semi-bold" style="font-size:20px; color:red;">{% if request.user.first_name %}{{ request.user.first_name }}{% else %} {{ request.user.username }}{% endif %}</span> <span
                             class="text-master" style="font-size:20px; color:rgba(255,255,255,1);">{{ request.user.last_name }}</span>
+
                     </div>
 
                     <div class="dropdown pull-right">
                         <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                             <span class="thumbnail-wrapper d32 circular inline m-t-5">
-                                <img src="{{ request.user.userdetail.image.thumbnail.url }}" alt=""
-                                     data-src="url({{ request.user.userdetail.image.thumbnail.url }})"
-                                     data-src-retina="url({{ request.user.userdetail.image.thumbnail.url }})" width="32"
+                                {% if request.user.UserDetail.image %}
+                                <img src="{{ request.user.UserDetail.image.url }}" alt=""
+                                     data-src="url({{ request.user.UserDetail.image.url }})"
+                                     data-src-retina="url({{ request.user.UserDetail.image.url }})" width="32"
                                      height="32">
+                                {% else %}
+                                 <img src="https://www.helptobuyese.org.uk/Sitefinity/WebsiteTemplates/BPHA-HTB/App_Themes/BPHA-HTB/Images/user-avatar.png" alt=""
+                                     data-src="url({{ request.user_details.image.thumbnail.url }})"
+                                     data-src-retina="{% static 'assets/img/profiles/avatar_small2x.jpg' %}" width="32"
+                                     height="32">
+                                {% endif %} 
                             </span>
                         </button>
 
@@ -232,7 +244,7 @@
             <div class=" pull-right">
                 <div class="visible-lg visible-md m-t-10">
                     <div class="pull-left p-r-10 p-t-10 fs-16 font-heading">
-{#                        <span class="semi-bold" style="font-size:20px; color:red;">SOUVIK</span> #}
+{#                        <span class="semi-bold" style="font-size:20px; color:red; opacity:0;">SOUVIK</span> #}
                         <span class="text-master" style="font-size:20px; color:rgba(255,255,255,1);">LOGIN</span>
                     </div>
 
