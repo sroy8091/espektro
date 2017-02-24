@@ -153,7 +153,7 @@ def accept_invite(request, id, secret_key):
         get_user=get_object_or_404(UserDetail, user=get_user)
         if(get_user in get_team.members.all()):
             messages.error(request, "You are already a part of this team.")
-        elif(len(get_team.members.all()) > 1): #replace >1 with >= no of participants in team.event
+        elif(len(get_team.members.all()) > get_team.number_of_members): #replace >1 with >= no of participants in team.event
             messages.error(request, "This team already has "+ str(len(get_team.members.all())) + " members.")
         else:
             get_team.members.add(get_user)
