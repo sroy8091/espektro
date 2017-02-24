@@ -110,8 +110,8 @@ def team_create(request):
             new_team.leader = p
             new_team.secret_key = get_random_string(20)
             new_team.number_of_members = new_team.event.NumberParticipants
-            # new_team.save()
-            # new_team.members.add(p)
+            new_team.save()
+            new_team.members.add(p.UserDetail)
             new_team.save()
             created = True
             return redirect('/profile/teams')
@@ -150,7 +150,7 @@ def accept_invite(request, id, secret_key):
     if request.method == 'POST':
         form = TeamAcceptForm(request.POST)
         get_user=request.user
-        get_user=get_object_or_404(UserDetail, user=get_user)
+        get_user=get_user.UserDetail
         if(get_user in get_team.members.all()):
             messages.error(request, "You are already a part of this team.")
         elif(len(get_team.members.all()) > get_team.number_of_members): #replace >1 with >= no of participants in team.event
@@ -158,6 +158,7 @@ def accept_invite(request, id, secret_key):
         else:
             get_team.members.add(get_user)
             messages.success(request, "You have been added to this team.")
+            return redirect('/profile/teams')
     else:
         form = TeamAcceptForm()
         
@@ -170,7 +171,7 @@ class TeamDetail(generic.DetailView):
 @login_required
 def my_teams(request):
     usr = request.user
-    usrteams = usr.team_set.all()
+    usrteams = usr.UserDetail.my_teams.all()
     evnt = usr.events_registered
     usrevents = evnt.all()
     return render(request, 'profile/my_teams.html', {'usrteams':usrteams, 'usrevents':usrevents})

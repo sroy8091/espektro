@@ -17,6 +17,11 @@
                         <button type="submit" class="btn btn-block">You have accepted this invitation. </button>
                         {% endif %}
                     </div>
+                    {% if messages %}
+                        {% for message in messages %}
+                           {{ message}}
+                        {% endfor %}
+                    {% endif %}
                 </div>
             </form>
     </div>
