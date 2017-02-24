@@ -110,10 +110,11 @@ def team_create(request):
             new_team.leader = p
             new_team.secret_key = get_random_string(20)
             new_team.number_of_members = new_team.event.NumberParticipants
-            new_team.save()
-            new_team.members.add(p.UserDetail)
-            new_team.save()
-            created = True
+            if new_team.number_of_members >1:
+                new_team.save()
+                new_team.members.add(p.UserDetail)
+                new_team.save()
+                created = True
             return redirect('/profile/teams')
     else:
         form = team_create_form()

@@ -6,7 +6,7 @@
         <center>
             <br>
             <h2 class="reg_form_heading">My Teams</h2> {% for team in usrteams %}
-            <a href="{% url 'profile:invite' id=team.id %}">{{ team.name }}</a> -- {{ team.event }}
+            <a href="{% url 'profile:team_detail' pk=team.id %}">{{ team.name }}</a> -- {{ team.event }}
             <br> {% endfor %}
         </center>
     </div>

@@ -1,4 +1,28 @@
-{% extends '../templates/base.html' %} {% block title%} {{ team }} {% endblock %} {% block body %}
+{% extends '../templates/base.html' %} {% block title%} {{ team }} {% endblock %}{% block styles %} {% load staticfiles %}
+<link href="{% static 'css/edit_profile.css' %}" rel="stylesheet"> {% endblock %} {% block body %}
+<div class="edit_profile_bg">
+    <div class="reg_form-container">
+        <!-- <a id="esp_logo" href="#"><img src="esp_logo.png"></a> -->
+        <center>
+            <br>
+            <h2 class="reg_form_heading">
+                {{ team.name }}</h2><h2>{{ team.event }}</h2>
+                <h4>Leader: {{team.leader }}</h4>
+                You need {{ team.number_of_members }} member{{ team.number_of_members|pluralize }} to partcipate in this event. <a href="{% url 'profile:invite' id=team.id %}">Invite more?</a>
+                <br><br>
+                <h4>Members</h4>
+                {% for member in team.members.all %}
+                    {{ member.user.username }} ({{member.user.first_name}} {{member.last_name}}) {% if member.college %} from {{ member.college }} {% endif %}<br>
+                {% endfor %}
+
+        </center>
+
+    </div>
+</div>
+{% endblock %}
+
+
+<!--
 <div class="container-fluid">
     <div class="col-sm-12 col-md-7">
         <div class="panel-body">
@@ -14,4 +38,5 @@
         </div>
     </div>
 </div>
-{% endblock %}
+
+-->
